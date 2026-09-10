@@ -1,0 +1,69 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "statement": "H1 clean RMSE ratio is 1.0",
+      "evidence_class": "SIMULATED",
+      "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+      "source": "evidence/final/confirmatory_metrics.json",
+      "json_path": "h1.ratio",
+      "expected": 1.0,
+      "tolerance": 1e-12,
+      "status": "VERIFIED",
+      "qualifiers": "Frozen protected simulation",
+      "prohibited_stronger_claim": "Universal noninferiority"
+    },
+    {
+      "claim_id": "C02",
+      "statement": "H2 mean paired regret difference is -0.0021039604",
+      "evidence_class": "SIMULATED",
+      "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+      "source": "evidence/final/confirmatory_metrics.json",
+      "json_path": "h2.mean_paired_regret_difference",
+      "expected": -0.0021039603960396054,
+      "tolerance": 1e-12,
+      "status": "VERIFIED",
+      "qualifiers": "Synthetic normalized frozen loss",
+      "prohibited_stronger_claim": "Real revenue gain"
+    },
+    {
+      "claim_id": "C03",
+      "statement": "Selection-aware aggregate coverage is 0.9089027",
+      "evidence_class": "SIMULATED",
+      "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+      "source": "evidence/final/confirmatory_metrics.json",
+      "json_path": "selection_aware_coverage",
+      "expected": 0.9089026915113871,
+      "tolerance": 1e-12,
+      "status": "VERIFIED",
+      "qualifiers": "Aggregate nonabstained worlds",
+      "prohibited_stronger_claim": "Universal 95 percent coverage"
+    },
+    {
+      "claim_id": "C04",
+      "statement": "AWARE selected DiD in 483 worlds",
+      "evidence_class": "SIMULATED",
+      "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+      "source": "artifacts/results.duckdb",
+      "query": "SELECT count(*) FROM final_selectors WHERE selected_method='independent_did'",
+      "expected": 483,
+      "tolerance": 0,
+      "status": "VERIFIED",
+      "qualifiers": "500 frozen worlds",
+      "prohibited_stronger_claim": "Broad estimator switching"
+    },
+    {
+      "claim_id": "C05",
+      "statement": "Batch-256 steady GPU speedup is 24.839449",
+      "evidence_class": "MEASURED",
+      "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+      "source": "evidence/runtime/e19_scaling.json",
+      "json_path": "gpu_batch_scaling.2.steady_gpu_speedup",
+      "expected": 24.839449072096272,
+      "tolerance": 1e-9,
+      "status": "VERIFIED",
+      "qualifiers": "Synthetic kernel; compile excluded",
+      "prohibited_stronger_claim": "Application-wide GPU speedup"
+    }
+  ]
+}

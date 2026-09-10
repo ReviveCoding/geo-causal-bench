@@ -1,0 +1,50 @@
+{
+  "all_pass": true,
+  "claims": {
+    "all_pass": true,
+    "claims": [
+      {
+        "actual": 1.0,
+        "claim_id": "C01",
+        "passed": true
+      },
+      {
+        "actual": -0.0021039603960396054,
+        "claim_id": "C02",
+        "passed": true
+      },
+      {
+        "actual": 0.9089026915113871,
+        "claim_id": "C03",
+        "passed": true
+      },
+      {
+        "actual": 483,
+        "claim_id": "C04",
+        "passed": true
+      },
+      {
+        "actual": 24.839449072096272,
+        "claim_id": "C05",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "all_pass": true,
+    "checks": {
+      "dataset_manifests": true,
+      "figures": true,
+      "freeze_hash": true,
+      "invalid_protocol_preserved": true,
+      "locks": true,
+      "protocol_match": true,
+      "scoring_code_hash": true,
+      "selector_hash": true,
+      "truth_identity_match": true,
+      "truth_ledger_count": true,
+      "truth_ledger_unique": true
+    },
+    "protocol_id": "AWARE-GEO-e52a8660a97ef174"
+  }
+}

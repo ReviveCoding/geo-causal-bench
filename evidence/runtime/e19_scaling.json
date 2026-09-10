@@ -1,0 +1,65 @@
+{
+  "bounded_worker_max": 4,
+  "cpu_worker_scaling": [
+    {
+      "checksum": 3389417.4764948958,
+      "runtime_sec": 1.2394175250083208,
+      "workers": 1,
+      "worlds": 80,
+      "worlds_per_sec": 64.54644894541323
+    },
+    {
+      "checksum": 3389417.4764948958,
+      "runtime_sec": 0.29047697997884825,
+      "workers": 2,
+      "worlds": 80,
+      "worlds_per_sec": 275.4090875146987
+    },
+    {
+      "checksum": 3389417.4764948958,
+      "runtime_sec": 0.16993840399663895,
+      "workers": 4,
+      "worlds": 80,
+      "worlds_per_sec": 470.758805064347
+    }
+  ],
+  "gpu_batch_scaling": [
+    {
+      "batch": 16,
+      "compile_sec": 0.40469002700410783,
+      "cpu_numpy_sec": 0.006993257004069164,
+      "cpu_result": 516.1655908145516,
+      "cpu_worlds_per_sec": 2287.9182033049956,
+      "gpu_result": 517.7642822265625,
+      "gpu_steady_sec": 0.0026042409881483763,
+      "gpu_worlds_per_sec": 6143.8246586296345,
+      "steady_gpu_speedup": 2.6853340516084083
+    },
+    {
+      "batch": 64,
+      "compile_sec": 0.36644188800710253,
+      "cpu_numpy_sec": 0.020804137020604685,
+      "cpu_result": 516.5895356924523,
+      "cpu_worlds_per_sec": 3076.311213323272,
+      "gpu_result": 516.6558227539062,
+      "gpu_steady_sec": 0.006061491003492847,
+      "gpu_worlds_per_sec": 10558.458300626186,
+      "steady_gpu_speedup": 3.432181456446376
+    },
+    {
+      "batch": 256,
+      "compile_sec": 0.4019907230103854,
+      "cpu_numpy_sec": 0.06611993099795654,
+      "cpu_result": 516.6566061075288,
+      "cpu_worlds_per_sec": 3871.752376872743,
+      "gpu_result": 516.310791015625,
+      "gpu_steady_sec": 0.0026618920092005283,
+      "gpu_worlds_per_sec": 96172.1959850982,
+      "steady_gpu_speedup": 24.839449072096272
+    }
+  ],
+  "jax_backend": "gpu",
+  "jax_devices": [
+    "cuda:0"
+  ]
+}

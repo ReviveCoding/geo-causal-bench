@@ -94,13 +94,27 @@ def _sdid(frame: pd.DataFrame) -> tuple[float, float]:
 METHODS: dict[str, Callable[[pd.DataFrame], tuple[float, float]]] = {
     "B0_naive_twfe": lambda frame: _twfe(frame),
     "B1_twfe_event_study_aggregate": lambda frame: _twfe(frame),
-    "B2_callaway_santanna_reference": lambda frame: _group_time(
+    "B2_callaway_santanna_independent": lambda frame: _group_time(
         frame, equal_cohort=False
     ),
-    "B3_sun_abraham_reference": lambda frame: _group_time(frame, equal_cohort=True),
-    "B4_sdid_reference": _sdid,
+    "B3_sun_abraham_independent": lambda frame: _group_time(frame, equal_cohort=True),
+    "B4_sdid_independent": _sdid,
     "B5_ascm_covariate_adjusted": lambda frame: _twfe(frame, conditional=True),
 }
+
+
+def _event_profile(frame: pd.DataFrame) -> dict[int, float]:
+    never = frame.loc[frame.cohort > frame.time.max(), "unit"].unique()
+    control = frame.loc[frame.unit.isin(never)].groupby("time")["outcome"].mean()
+    profile: dict[int, float] = {}
+    treated = frame.loc[frame.cohort <= frame.time.max()].copy()
+    for event, group in treated.groupby("event_time"):
+        if int(event) < -3 or int(event) > 6:
+            continue
+        observed_gap = group.groupby("time")["outcome"].mean() - control
+        profile[int(event)] = float(observed_gap.dropna().mean())
+    baseline = profile.get(-1, 0.0)
+    return {event: value - baseline for event, value in profile.items()}
 
 
 def run_observational_benchmark(
@@ -114,6 +128,23 @@ def run_observational_benchmark(
             seed=int(np.random.SeedSequence([seed, 16, index]).generate_state(1)[0]),
             world_id=world_id,
             scenario_id=scenario,
+        )
+        event_profile = _event_profile(frame)
+        common_events = sorted(set(event_profile) & set(truth.event_att))
+        dynamic_rmse = float(
+            np.sqrt(
+                np.mean(
+                    [
+                        (event_profile[event] - truth.event_att[event]) ** 2
+                        for event in common_events
+                    ]
+                )
+            )
+        )
+        pretrend_abs = float(
+            np.mean(
+                [abs(value) for event, value in event_profile.items() if event < -1]
+            )
         )
         for method, estimator in METHODS.items():
             try:
@@ -143,6 +174,9 @@ def run_observational_benchmark(
                     "covered_truth": estimate - 1.96 * se
                     <= truth.overall_att
                     <= estimate + 1.96 * se,
+                    "group_time_att_abs_error": abs(estimate - truth.overall_att),
+                    "dynamic_event_time_rmse": dynamic_rmse,
+                    "pretrend_abs_mean": pretrend_abs,
                     "status": status,
                     "failure_reason": reason,
                 }

@@ -1,0 +1,7 @@
+{
+  "device": "cuda",
+  "n_estimators": 64,
+  "runtime_sec": 0.9758589649864007,
+  "training_rows": 800,
+  "workload": "A12_XGBoost_reliability_model"
+}

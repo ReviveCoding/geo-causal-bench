@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>AWARE-Geo Results</title>
+<style>body{font:16px system-ui;max-width:1100px;margin:2rem auto;color:#172033} .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}.card{padding:1rem;border:1px solid #ccd5e0;border-radius:.7rem}img{max-width:100%}code{background:#eef2f7;padding:.15rem}</style></head>
+<body><h1>AWARE-Geo frozen results</h1><p>Protocol <code>AWARE-GEO-e52a8660a97ef174</code>. Evidence is simulated unless labeled external/measured.</p>
+<div class="cards"><div class="card"><b>Decision</b><br>PROMOTE_AWARE</div><div class="card"><b>H1 ratio</b><br>1.000</div><div class="card"><b>H2 difference</b><br>-0.00210</div><div class="card"><b>Coverage</b><br>0.9089</div></div>
+<p>The result is narrow: 483/500 selections were fixed DiD; compound-OOD coverage was 0.467. Protocol 001 is invalidated and excluded.</p>
+<h2>Scorecard</h2><img src="../reports/figures/F20.png" alt="promotion scorecard">
+<h2>Scenario coverage</h2><img src="../reports/figures/F08.png" alt="coverage heatmap">
+<h2>Ablations</h2><img src="../reports/figures/F15.png" alt="ablation regret">
+<p>Canonical sources: Parquet under <code>evidence/</code>, DuckDB at <code>artifacts/results.duckdb</code>, and the claim ledger in <code>reports/CLAIM_LEDGER.md</code>.</p></body></html>

@@ -1,0 +1,2008 @@
+{
+  "observed_root": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/data/protected/final/observed",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "truth_root": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/data/protected/final/truth",
+  "world_index": [
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00000"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00001"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00002"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00003"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00004"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00005"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00006"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00007"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00008"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00009"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00010"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00011"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00012"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00013"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00014"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00015"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00016"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00017"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00018"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00019"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00020"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00021"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00022"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00023"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00024"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00025"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00026"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00027"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00028"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00029"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00030"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00031"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00032"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00033"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00034"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00035"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00036"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00037"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00038"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00039"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00040"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00041"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00042"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00043"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00044"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00045"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00046"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00047"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00048"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00049"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00050"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00051"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00052"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00053"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00054"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00055"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00056"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00057"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00058"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00059"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00060"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00061"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00062"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00063"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00064"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00065"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00066"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00067"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00068"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00069"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00070"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00071"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00072"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00073"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00074"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00075"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00076"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00077"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00078"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00079"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00080"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00081"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00082"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00083"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00084"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00085"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00086"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00087"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00088"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00089"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00090"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00091"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00092"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00093"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00094"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00095"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00096"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00097"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00098"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00099"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00100"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00101"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00102"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00103"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00104"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00105"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00106"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00107"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00108"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00109"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00110"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00111"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00112"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00113"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00114"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00115"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00116"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00117"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00118"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00119"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00120"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00121"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00122"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00123"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00124"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00125"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00126"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00127"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00128"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00129"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00130"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00131"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00132"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00133"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00134"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00135"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00136"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00137"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00138"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00139"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00140"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00141"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00142"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00143"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00144"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00145"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00146"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00147"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00148"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00149"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00150"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00151"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00152"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00153"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00154"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00155"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00156"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00157"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00158"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00159"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00160"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00161"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00162"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00163"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00164"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00165"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00166"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00167"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00168"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00169"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00170"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00171"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00172"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00173"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00174"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00175"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00176"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00177"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00178"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00179"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00180"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00181"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00182"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00183"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00184"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00185"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00186"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00187"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00188"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00189"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00190"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00191"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00192"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00193"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00194"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00195"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00196"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00197"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00198"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00199"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00200"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00201"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00202"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00203"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00204"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00205"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00206"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00207"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00208"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00209"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00210"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00211"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00212"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00213"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00214"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00215"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00216"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00217"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00218"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00219"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00220"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00221"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00222"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00223"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00224"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00225"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00226"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00227"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00228"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00229"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00230"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00231"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00232"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00233"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00234"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00235"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00236"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00237"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00238"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00239"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00240"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00241"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00242"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00243"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00244"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00245"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00246"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00247"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00248"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00249"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00250"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00251"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00252"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00253"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00254"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00255"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00256"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00257"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00258"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00259"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00260"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00261"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00262"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00263"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00264"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00265"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00266"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00267"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00268"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00269"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00270"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00271"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00272"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00273"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00274"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00275"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00276"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00277"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00278"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00279"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00280"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00281"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00282"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00283"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00284"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00285"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00286"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00287"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00288"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00289"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00290"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00291"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00292"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00293"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00294"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00295"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00296"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00297"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00298"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00299"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00300"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00301"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00302"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00303"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00304"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00305"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00306"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00307"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00308"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00309"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00310"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00311"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00312"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00313"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00314"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00315"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00316"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00317"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00318"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00319"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00320"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00321"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00322"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00323"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00324"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00325"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00326"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00327"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00328"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00329"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00330"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00331"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00332"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00333"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00334"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00335"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00336"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00337"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00338"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00339"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00340"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00341"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00342"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00343"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00344"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00345"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00346"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00347"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00348"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00349"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00350"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00351"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00352"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00353"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00354"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00355"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00356"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00357"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00358"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00359"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00360"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00361"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00362"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00363"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00364"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00365"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00366"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00367"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00368"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00369"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00370"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00371"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00372"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00373"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00374"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00375"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00376"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00377"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00378"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00379"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00380"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00381"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00382"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00383"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00384"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00385"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00386"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00387"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00388"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00389"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00390"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00391"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00392"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00393"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00394"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00395"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00396"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00397"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00398"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00399"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00400"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00401"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00402"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00403"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00404"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00405"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00406"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00407"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00408"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00409"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00410"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00411"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00412"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00413"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00414"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00415"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00416"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00417"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00418"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00419"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00420"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00421"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00422"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00423"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00424"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00425"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00426"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00427"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00428"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00429"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00430"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00431"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00432"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00433"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00434"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00435"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00436"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00437"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00438"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00439"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00440"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00441"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00442"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00443"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00444"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00445"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00446"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00447"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00448"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00449"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00450"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00451"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00452"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00453"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00454"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00455"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00456"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00457"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00458"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00459"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00460"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00461"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00462"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00463"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00464"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00465"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00466"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00467"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00468"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00469"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00470"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00471"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00472"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00473"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00474"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00475"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00476"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00477"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00478"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00479"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00480"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00481"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00482"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00483"
+    },
+    {
+      "scenario_id": "S02",
+      "world_id": "FINAL-00484"
+    },
+    {
+      "scenario_id": "S03",
+      "world_id": "FINAL-00485"
+    },
+    {
+      "scenario_id": "S04",
+      "world_id": "FINAL-00486"
+    },
+    {
+      "scenario_id": "S05",
+      "world_id": "FINAL-00487"
+    },
+    {
+      "scenario_id": "S06",
+      "world_id": "FINAL-00488"
+    },
+    {
+      "scenario_id": "S07",
+      "world_id": "FINAL-00489"
+    },
+    {
+      "scenario_id": "S08",
+      "world_id": "FINAL-00490"
+    },
+    {
+      "scenario_id": "S09",
+      "world_id": "FINAL-00491"
+    },
+    {
+      "scenario_id": "S10",
+      "world_id": "FINAL-00492"
+    },
+    {
+      "scenario_id": "S11",
+      "world_id": "FINAL-00493"
+    },
+    {
+      "scenario_id": "S12",
+      "world_id": "FINAL-00494"
+    },
+    {
+      "scenario_id": "S13",
+      "world_id": "FINAL-00495"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00496"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00497"
+    },
+    {
+      "scenario_id": "S00",
+      "world_id": "FINAL-00498"
+    },
+    {
+      "scenario_id": "S01",
+      "world_id": "FINAL-00499"
+    }
+  ],
+  "worlds": 500
+}

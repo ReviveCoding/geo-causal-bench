@@ -10,12 +10,14 @@ import typer
 
 from geocausal.artifacts import canonical_hash
 from geocausal.config import ExperimentConfig
+from geocausal.simulation.ablations import run_ablations
 from geocausal.simulation.benchmark import (
     run_development,
     run_null,
     run_ood_estimator_benchmark,
     run_qualification,
 )
+from geocausal.simulation.observational import run_observational_benchmark
 from geocausal.simulation.protected import (
     create_protected_seed_set,
     evaluate_without_truth,
@@ -103,6 +105,34 @@ def protect_seeds() -> None:
     root = _root()
     config = ExperimentConfig.from_yaml(root / "configs" / "experiments" / "base.yaml")
     typer.echo(json.dumps(create_protected_seed_set(root, config), indent=2))
+
+
+@app.command()
+def ablations() -> None:
+    """Run the post-final E15 ablation family."""
+    root = _root()
+    freeze = json.loads(
+        (root / "artifacts" / "freeze" / "freeze_manifest.json").read_text()
+    )
+    config = ExperimentConfig.from_yaml(root / "configs" / "frozen" / "experiment.yaml")
+    selector = json.loads((root / freeze["selector_artifact"]).read_text())
+    typer.echo(
+        json.dumps(
+            run_ablations(root, config, freeze["protocol_id"], selector), indent=2
+        )
+    )
+
+
+@app.command()
+def observational() -> None:
+    """Run the separately governed E16 staggered-panel benchmark."""
+    root = _root()
+    freeze = json.loads(
+        (root / "artifacts" / "freeze" / "freeze_manifest.json").read_text()
+    )
+    typer.echo(
+        json.dumps(run_observational_benchmark(root, freeze["protocol_id"]), indent=2)
+    )
 
 
 @app.command()

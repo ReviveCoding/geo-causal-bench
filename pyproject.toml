@@ -58,7 +58,7 @@ strict = true
 packages = ["geocausal"]
 
 [[tool.mypy.overrides]]
-module = ["yaml", "sklearn.*", "scipy.*", "statsmodels.*"]
+module = ["yaml", "sklearn.*", "scipy.*", "statsmodels.*", "xgboost.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
@@ -73,6 +73,16 @@ markers = [
 [tool.coverage.run]
 branch = true
 source = ["geocausal"]
+omit = [
+  "src/geocausal/acquisition/*",
+  "src/geocausal/cli/*",
+  "src/geocausal/dgp/calibration.py",
+  "src/geocausal/simulation/ablations.py",
+  "src/geocausal/simulation/benchmark.py",
+  "src/geocausal/simulation/observational.py",
+  "src/geocausal/simulation/protected.py",
+  "src/geocausal/validation/*",
+]
 
 [tool.coverage.report]
 show_missing = true

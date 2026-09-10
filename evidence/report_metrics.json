@@ -1,0 +1,464 @@
+{
+  "ablations": [
+    {
+      "ablation_id": "A0_full_aware",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A10_soft_blend",
+      "abstention": 0.0,
+      "coverage": 0.71,
+      "false_launch": 0.054,
+      "regret": 0.5798650009247898
+    },
+    {
+      "ablation_id": "A11_equal_weight_blend",
+      "abstention": 0.0,
+      "coverage": 0.71,
+      "false_launch": 0.054,
+      "regret": 0.5800953118176027
+    },
+    {
+      "ablation_id": "A12_boosted_nonlinear",
+      "abstention": 0.968,
+      "coverage": 0.9375,
+      "false_launch": 0.0,
+      "regret": 0.3515999999999971
+    },
+    {
+      "ablation_id": "A13_half_placebo_budget",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A1_no_placebo",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A2_no_coverage",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A3_no_prefit_r2",
+      "abstention": 0.002,
+      "coverage": 0.9078156312625251,
+      "false_launch": 0.022,
+      "regret": 0.471517002519344
+    },
+    {
+      "ablation_id": "A4_no_trend",
+      "abstention": 0.032,
+      "coverage": 0.9090909090909091,
+      "false_launch": 0.022,
+      "regret": 0.46981700251934383
+    },
+    {
+      "ablation_id": "A5_no_autocorrelation",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A6_no_donor_concentration",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A7_no_delivery_diagnostic",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A8_no_carryover_diagnostic",
+      "abstention": 0.034,
+      "coverage": 0.9089026915113871,
+      "false_launch": 0.022,
+      "regret": 0.4697170025193438
+    },
+    {
+      "ablation_id": "A9_no_abstention",
+      "abstention": 0.0,
+      "coverage": 0.908,
+      "false_launch": 0.022,
+      "regret": 0.471617002519344
+    }
+  ],
+  "decision": [
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.44771700251934365,
+      "selector_id": "P0_AWARE_GATE",
+      "worst_regret": 2.8289722485028834
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.4697170025193438,
+      "selector_id": "P0_AWARE_GATE",
+      "worst_regret": 3.8289722485028834
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.5137170025193437,
+      "selector_id": "P0_AWARE_GATE",
+      "worst_regret": 5.828972248502883
+    },
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.44771700251934365,
+      "selector_id": "P1_AWARE_SELECT",
+      "worst_regret": 2.8289722485028834
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.4697170025193438,
+      "selector_id": "P1_AWARE_SELECT",
+      "worst_regret": 3.8289722485028834
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.034,
+      "regret": 0.5137170025193437,
+      "selector_id": "P1_AWARE_SELECT",
+      "worst_regret": 5.828972248502883
+    },
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.054,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.5258650009247912,
+      "selector_id": "P2_AWARE_BLEND",
+      "worst_regret": 2.8698748687951863
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.054,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.5798650009247898,
+      "selector_id": "P2_AWARE_BLEND",
+      "worst_regret": 3.8698748687951863
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.054,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.6878650009247879,
+      "selector_id": "P2_AWARE_BLEND",
+      "worst_regret": 5.869874868795186
+    },
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.4496170025193439,
+      "selector_id": "SB2_strongest_fixed",
+      "worst_regret": 2.8289722485028834
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.471617002519344,
+      "selector_id": "SB2_strongest_fixed",
+      "worst_regret": 3.8289722485028834
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.515617002519344,
+      "selector_id": "SB2_strongest_fixed",
+      "worst_regret": 5.828972248502883
+    },
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.4496170025193439,
+      "selector_id": "SB4_lowest_prefit_simple",
+      "worst_regret": 2.8289722485028834
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.471617002519344,
+      "selector_id": "SB4_lowest_prefit_simple",
+      "worst_regret": 3.8289722485028834
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.022,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.515617002519344,
+      "selector_id": "SB4_lowest_prefit_simple",
+      "worst_regret": 5.828972248502883
+    },
+    {
+      "cost_regime": "balanced",
+      "false_launch": 0.0,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.0,
+      "selector_id": "SO0_ORACLE",
+      "worst_regret": 0.0
+    },
+    {
+      "cost_regime": "frozen_primary",
+      "false_launch": 0.0,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.0,
+      "selector_id": "SO0_ORACLE",
+      "worst_regret": 0.0
+    },
+    {
+      "cost_regime": "launch_averse",
+      "false_launch": 0.0,
+      "false_stop": 0.0,
+      "redesign": 0.0,
+      "regret": 0.0,
+      "selector_id": "SO0_ORACLE",
+      "worst_regret": 0.0
+    }
+  ],
+  "final_method": [
+    {
+      "bias": 863.0565941431462,
+      "coverage": 0.908,
+      "failure_rate": 0.0,
+      "method_id": "independent_did",
+      "rejection": 0.216,
+      "rmse": 12127.662646738789
+    },
+    {
+      "bias": 503.48356021498216,
+      "coverage": 0.91,
+      "failure_rate": 0.0,
+      "method_id": "independent_ridge_sc",
+      "rejection": 0.162,
+      "rmse": 16713.224568379585
+    },
+    {
+      "bias": -276.7422647928604,
+      "coverage": 0.896,
+      "failure_rate": 0.0,
+      "method_id": "independent_simplex_sc",
+      "rejection": 0.154,
+      "rmse": 17508.686266849796
+    },
+    {
+      "bias": -1592.4916987710533,
+      "coverage": 0.904,
+      "failure_rate": 0.0,
+      "method_id": "independent_tbr",
+      "rejection": 0.17,
+      "rmse": 15307.105540387794
+    }
+  ],
+  "final_scenario": [
+    {
+      "abstention": 0.020833333333333332,
+      "coverage": 0.9680851063829787,
+      "fixed_regret": 0.39999999999999925,
+      "regret": 0.39895833333333264,
+      "scenario_id": "S00",
+      "worlds": 96
+    },
+    {
+      "abstention": 0.03125,
+      "coverage": 0.9354838709677419,
+      "fixed_regret": 0.5071553827657154,
+      "regret": 0.5055928827657153,
+      "scenario_id": "S01",
+      "worlds": 32
+    },
+    {
+      "abstention": 0.0,
+      "coverage": 1.0,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.4000000000000002,
+      "scenario_id": "S02",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.06451612903225806,
+      "coverage": 0.9655172413793104,
+      "fixed_regret": 0.406451612903226,
+      "regret": 0.4000000000000002,
+      "scenario_id": "S03",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.03225806451612903,
+      "coverage": 0.5666666666666667,
+      "fixed_regret": 0.9197764946598231,
+      "regret": 0.9181635914340167,
+      "scenario_id": "S04",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.0,
+      "coverage": 1.0,
+      "fixed_regret": 0.38709677419354854,
+      "regret": 0.38709677419354854,
+      "scenario_id": "S05",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.06451612903225806,
+      "coverage": 0.9655172413793104,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.3967741935483873,
+      "scenario_id": "S06",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.03225806451612903,
+      "coverage": 0.9,
+      "fixed_regret": 0.4032258064516131,
+      "regret": 0.40161290322580667,
+      "scenario_id": "S07",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.12903225806451613,
+      "coverage": 0.9629629629629629,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.3935483870967744,
+      "scenario_id": "S08",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.03225806451612903,
+      "coverage": 1.0,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.39838709677419376,
+      "scenario_id": "S09",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.0,
+      "coverage": 0.9354838709677419,
+      "fixed_regret": 0.4032258064516131,
+      "regret": 0.4032258064516131,
+      "scenario_id": "S10",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.06451612903225806,
+      "coverage": 0.9655172413793104,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.3967741935483872,
+      "scenario_id": "S11",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.0,
+      "coverage": 0.967741935483871,
+      "fixed_regret": 0.4000000000000002,
+      "regret": 0.4000000000000002,
+      "scenario_id": "S12",
+      "worlds": 31
+    },
+    {
+      "abstention": 0.03225806451612903,
+      "coverage": 0.4666666666666667,
+      "fixed_regret": 0.9247244411842814,
+      "regret": 0.9231115379584751,
+      "scenario_id": "S13",
+      "worlds": 31
+    }
+  ],
+  "observational": [
+    {
+      "bias": 0.17341098836211086,
+      "coverage": 0.36333333333333334,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B0_naive_twfe",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.42782620179752123
+    },
+    {
+      "bias": 0.17341098836211086,
+      "coverage": 0.36333333333333334,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B1_twfe_event_study_aggregate",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.42782620179752123
+    },
+    {
+      "bias": 0.13584007216188967,
+      "coverage": 0.5066666666666667,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B2_callaway_santanna_independent",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.5407979563344091
+    },
+    {
+      "bias": 0.1379666239489557,
+      "coverage": 0.5133333333333333,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B3_sun_abraham_independent",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.540801067198887
+    },
+    {
+      "bias": 0.17706888961569078,
+      "coverage": 0.3,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B4_sdid_independent",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.6097231959663111
+    },
+    {
+      "bias": 0.10640139972968352,
+      "coverage": 0.43,
+      "dynamic_rmse": 0.8746841692864232,
+      "method_id": "B5_ascm_covariate_adjusted",
+      "pretrend_abs": 0.30609587372431857,
+      "rmse": 0.3690105267062723
+    }
+  ]
+}

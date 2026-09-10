@@ -1,0 +1,12 @@
+{
+  "analysis_days": 30,
+  "ci_high": 32406.30078125,
+  "ci_low": 30309.728515625,
+  "dataset_id": "D4_ANALYSIS_SINGLE",
+  "design_provenance_retained": true,
+  "estimate": 31559.994140625,
+  "known_truth": false,
+  "method_id": "R1_official_geox_tbr",
+  "p_value": 0.0019960079807788134,
+  "percent_lift": 0.05804085731506348
+}
