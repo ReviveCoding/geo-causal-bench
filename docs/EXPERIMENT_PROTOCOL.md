@@ -41,3 +41,18 @@ diagnostics/eligibility/selection, commits method or abstention, exposes final
 observations, estimates, and only then allows scoring to open truth with a
 logged timestamp/protocol/world hash. Canonical scoring completes before
 analysis. A scientific-semantic post-freeze change creates a new protocol.
+
+## Pre-freeze interval and gate calibration
+
+The independent high-throughput estimators use empirical procedure-level
+standard-error multipliers selected from the first 1,000-world E08 null run:
+1.9 for TBR, 1.8 for DiD, and 3.2 for ridge/simplex synthetic controls. These
+are not upstream-native intervals. The initial uncalibrated rejection rates
+(0.287, 0.248, 0.510, 0.505 respectively) remain preserved evidence.
+
+Development diagnostics had median pre-R2 0.27 and 5th percentile -0.32; the
+initial 0.50 cutoff caused 95.8% clean abstention. Pre-freeze gates are therefore
+pre-R2 >= -0.50, normalized trend gap <= 0.01, residual ACF <= 0.80,
+missingness <= 0.03, and for SC methods donor HHI <= 0.20/effective donors >= 5.
+Placebo evidence remains in predicted risk; one binary placebo is not a hard
+gate.

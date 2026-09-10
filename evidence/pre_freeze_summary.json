@@ -1,0 +1,150 @@
+{
+  "E07_clean": [
+    {
+      "coverage": 0.9375,
+      "failure_rate": 0.0,
+      "method_id": "independent_did",
+      "rejection": 0.1875,
+      "rmse": 9210.522778030949,
+      "worlds": 16
+    },
+    {
+      "coverage": 1.0,
+      "failure_rate": 0.0,
+      "method_id": "independent_ridge_sc",
+      "rejection": 0.0,
+      "rmse": 10661.133131624498,
+      "worlds": 16
+    },
+    {
+      "coverage": 1.0,
+      "failure_rate": 0.0,
+      "method_id": "independent_simplex_sc",
+      "rejection": 0.0,
+      "rmse": 11595.846027981574,
+      "worlds": 16
+    },
+    {
+      "coverage": 0.875,
+      "failure_rate": 0.0,
+      "method_id": "independent_tbr",
+      "rejection": 0.0625,
+      "rmse": 13534.587009002147,
+      "worlds": 16
+    }
+  ],
+  "E08_null": [
+    {
+      "coverage": 0.959,
+      "failure_rate": 0.0,
+      "method_id": "independent_did",
+      "rejection": 0.041,
+      "rmse": 7760.439735652889,
+      "worlds": 1000
+    },
+    {
+      "coverage": 0.974,
+      "failure_rate": 0.0,
+      "method_id": "independent_ridge_sc",
+      "rejection": 0.026,
+      "rmse": 11572.503770851315,
+      "worlds": 1000
+    },
+    {
+      "coverage": 0.97,
+      "failure_rate": 0.0,
+      "method_id": "independent_simplex_sc",
+      "rejection": 0.03,
+      "rmse": 11641.820070757152,
+      "worlds": 1000
+    },
+    {
+      "coverage": 0.939,
+      "failure_rate": 0.0,
+      "method_id": "independent_tbr",
+      "rejection": 0.061,
+      "rmse": 11213.963378117904,
+      "worlds": 1000
+    }
+  ],
+  "E09_single_stress": [
+    {
+      "coverage": 0.9184782608695652,
+      "failure_rate": 0.0,
+      "method_id": "independent_did",
+      "rejection": 0.21195652173913043,
+      "rmse": 13283.060788392862,
+      "worlds": 184
+    },
+    {
+      "coverage": 0.907608695652174,
+      "failure_rate": 0.0,
+      "method_id": "independent_ridge_sc",
+      "rejection": 0.15217391304347827,
+      "rmse": 16838.76151251899,
+      "worlds": 184
+    },
+    {
+      "coverage": 0.9347826086956522,
+      "failure_rate": 0.0,
+      "method_id": "independent_simplex_sc",
+      "rejection": 0.14130434782608695,
+      "rmse": 16568.345714189825,
+      "worlds": 184
+    },
+    {
+      "coverage": 0.9021739130434783,
+      "failure_rate": 0.0,
+      "method_id": "independent_tbr",
+      "rejection": 0.18478260869565216,
+      "rmse": 15453.297542298722,
+      "worlds": 184
+    }
+  ],
+  "E10_compound_ood": [
+    {
+      "coverage": 0.5766666666666667,
+      "failure_rate": 0.0,
+      "method_id": "independent_did",
+      "rejection": 0.45,
+      "rmse": 24855.88281304538,
+      "worlds": 300
+    },
+    {
+      "coverage": 0.6433333333333333,
+      "failure_rate": 0.0,
+      "method_id": "independent_ridge_sc",
+      "rejection": 0.37,
+      "rmse": 29719.21386527939,
+      "worlds": 300
+    },
+    {
+      "coverage": 0.6433333333333333,
+      "failure_rate": 0.0,
+      "method_id": "independent_simplex_sc",
+      "rejection": 0.38333333333333336,
+      "rmse": 29882.664029695603,
+      "worlds": 300
+    },
+    {
+      "coverage": 0.6366666666666667,
+      "failure_rate": 0.0,
+      "method_id": "independent_tbr",
+      "rejection": 0.37,
+      "rmse": 25302.029131844396,
+      "worlds": 300
+    }
+  ],
+  "E11_development_rows": 800,
+  "E12_qualification": {
+    "abstention_rate": 0.006666666666666667,
+    "clean_abstention_rate": 0.0,
+    "coverage": 0.912751677852349,
+    "fixed_mean_regret": 0.4347395242555288,
+    "mean_regret": 0.4344061909221955,
+    "selection_frequency": {
+      "independent_did": 298
+    },
+    "worlds": 300
+  }
+}

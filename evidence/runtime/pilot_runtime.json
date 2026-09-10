@@ -1,0 +1,121 @@
+{
+  "mean_world_sec": 0.009837671932473313,
+  "p95_world_sec": 0.012817976748920046,
+  "projected_track_a_wall_sec_single_process": 22.134761848064954,
+  "projected_track_a_worlds": 2250,
+  "rows": [
+    {
+      "estimation_and_diagnostics_sec": 0.014712853997480124,
+      "generation_sec": 0.0033452729985583574,
+      "scenario": "S00",
+      "total_sec": 0.01805812699603848,
+      "world": 0
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.007345669000642374,
+      "generation_sec": 0.003725590999238193,
+      "scenario": "S01",
+      "total_sec": 0.011071259999880567,
+      "world": 1
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006798546994104981,
+      "generation_sec": 0.002314612007467076,
+      "scenario": "S02",
+      "total_sec": 0.009113159001572058,
+      "world": 2
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.007920420990558341,
+      "generation_sec": 0.002313161996426061,
+      "scenario": "S03",
+      "total_sec": 0.010233582986984402,
+      "world": 3
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.007154115999583155,
+      "generation_sec": 0.002317851991392672,
+      "scenario": "S04",
+      "total_sec": 0.009471967990975827,
+      "world": 4
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.0069119219842832536,
+      "generation_sec": 0.0022537889890372753,
+      "scenario": "S05",
+      "total_sec": 0.009165710973320529,
+      "world": 5
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.007092884974554181,
+      "generation_sec": 0.002369968016864732,
+      "scenario": "S06",
+      "total_sec": 0.009462852991418913,
+      "world": 6
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.00761135300854221,
+      "generation_sec": 0.002283708978211507,
+      "scenario": "S07",
+      "total_sec": 0.009895061986753717,
+      "world": 7
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006935292010894045,
+      "generation_sec": 0.0023598059779033065,
+      "scenario": "S08",
+      "total_sec": 0.009295097988797352,
+      "world": 8
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.007667451980523765,
+      "generation_sec": 0.0024314559996128082,
+      "scenario": "S09",
+      "total_sec": 0.010098907980136573,
+      "world": 9
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006763754005078226,
+      "generation_sec": 0.0023772290151100606,
+      "scenario": "S10",
+      "total_sec": 0.009140983020188287,
+      "world": 10
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006336886988719925,
+      "generation_sec": 0.002236028987681493,
+      "scenario": "S11",
+      "total_sec": 0.008572915976401418,
+      "world": 11
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006823281990364194,
+      "generation_sec": 0.002080842008581385,
+      "scenario": "S12",
+      "total_sec": 0.008904123998945579,
+      "world": 12
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006300676002865657,
+      "generation_sec": 0.0021589820098597556,
+      "scenario": "S13",
+      "total_sec": 0.008459658012725413,
+      "world": 13
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.005959723988780752,
+      "generation_sec": 0.002016002021264285,
+      "scenario": "S00",
+      "total_sec": 0.007975726010045037,
+      "world": 14
+    },
+    {
+      "estimation_and_diagnostics_sec": 0.006461304001277313,
+      "generation_sec": 0.0020223110041115433,
+      "scenario": "S01",
+      "total_sec": 0.008483615005388856,
+      "world": 15
+    }
+  ],
+  "worlds": 16
+}

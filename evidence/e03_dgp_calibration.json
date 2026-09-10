@@ -1,0 +1,24 @@
+{
+  "known_gap": "Cross-geo correlation spans 0.04 (GeoX) to 0.83 (GeoLift); scenarios vary dependence rather than matching one universal value.",
+  "public_anchor_datasets": [
+    "D1_PRE",
+    "D4_DESIGN_SINGLE"
+  ],
+  "public_median_targets": {
+    "mean_acf1": 0.6373427438992592,
+    "mean_cross_geo_correlation": 0.43565925687941204,
+    "outcome_cv": 0.6408826395467907,
+    "outcome_mean": 2472.9976986053716,
+    "top_geo_concentration": 0.05283532954444112
+  },
+  "scale_target": "D4_DESIGN_SINGLE",
+  "simulated_clean_summary": {
+    "cv": 0.6618033428626479,
+    "mean": 533.9461770833333,
+    "mean_acf1": 0.31713743685371726,
+    "mean_cross_geo_correlation": 0.12510472345640336,
+    "top_geo_concentration": 0.06612988013114812
+  },
+  "status": "CALIBRATED_WITH_DECLARED_GAPS",
+  "worlds": 100
+}

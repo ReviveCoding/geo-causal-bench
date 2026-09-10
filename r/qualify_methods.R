@@ -70,7 +70,7 @@ qualify("sunab_official_base_stagg_att", -1.133749, 0.00001, {
     data = base_stagg,
     cluster = ~id
   )
-  as.numeric(summary(fit, agg = "ATT")$coefficients["ATT"])
+  as.numeric(stats::coef(summary(fit, agg = "ATT"))["ATT"])
 })
 
 qualify("augsynth_kansas_scm", -0.0294, 0.005, {

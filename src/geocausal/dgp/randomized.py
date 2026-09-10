@@ -84,7 +84,9 @@ def generate_world(
     rng = np.random.default_rng(seed)
     total_days = pre_days + test_days + cooldown_days
     time = np.arange(total_days, dtype=np.float64)
-    alpha = rng.normal(4.2, 0.55, n_geos)
+    # GeoX's public single-cell panel anchors a mean near 535 and CV near 0.66.
+    # The log-scale intercept/dispersion are frozen only after E03 validation.
+    alpha = rng.normal(6.1, 0.55, n_geos)
     loadings = rng.normal(0.0, 0.22, (n_geos, 2))
     factors = np.vstack(
         [np.sin(2 * np.pi * time / 31), np.cumsum(rng.normal(0, 0.035, total_days))]

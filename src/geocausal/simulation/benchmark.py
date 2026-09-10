@@ -128,7 +128,8 @@ def run_development(
         )
         estimates = estimate_all(world)
         scale = max(
-            world.outcomes[:, : config.pre_days].sum() * 0.01, abs(truth.itt_total)
+            np.nansum(world.outcomes[:, : config.pre_days]) * 0.01,
+            abs(truth.itt_total),
         )
         for method_id, estimate in estimates.items():
             features = diagnostic_features(world, method_id)
@@ -206,6 +207,119 @@ def run_null(root: Path, config: ExperimentConfig, protocol_id: str) -> dict[str
     return {"worlds": config.worlds.null_calibration, "type_i_rate": rates}
 
 
+def run_qualification(
+    root: Path,
+    config: ExperimentConfig,
+    protocol_id: str,
+    selector_artifact: dict[str, Any],
+) -> dict[str, Any]:
+    """Evaluate the complete selector on non-protected qualification worlds."""
+    selector = AwareSelector.restore(selector_artifact)
+    fixed_method = str(selector_artifact["strongest_fixed"])
+    rows: list[dict[str, Any]] = []
+    scenarios = [f"S{i:02d}" for i in range(13)]
+    for index in range(config.worlds.qualification):
+        scenario = scenarios[index % len(scenarios)]
+        world, truth = generate_world(
+            seed=_seed(config.seed, 12, index),
+            world_id=f"QUAL-{index:05d}",
+            scenario_id=scenario,
+            effect_scale=(0.0, 0.025, 0.05, 0.075)[index % 4],
+        )
+        estimates = estimate_all(world)
+        features = {method: diagnostic_features(world, method) for method in METHODS}
+        selection = selector.select(features)
+        selected = (
+            None if selection.abstained else estimates[selection.selected_method or ""]
+        )
+        materiality = max(
+            float(np.nansum(world.outcomes[:, : world.pre_days]) * 0.005), 1.0
+        )
+        selected_decision = decide(selected, truth.itt_total, materiality=materiality)
+        fixed_decision = decide(
+            estimates[fixed_method], truth.itt_total, materiality=materiality
+        )
+        rows.append(
+            {
+                "protocol_id": protocol_id,
+                "world_id": world.world_id,
+                "scenario_id": scenario,
+                "selected_method": selection.selected_method,
+                "abstained": selection.abstained,
+                "predicted_risk": selection.predicted_risk,
+                "true_effect": truth.itt_total,
+                "estimate": None if selected is None else selected.estimate,
+                "covered_truth": None
+                if selected is None
+                else selected.ci_low <= truth.itt_total <= selected.ci_high,
+                "decision_regret": selected_decision.regret,
+                "fixed_decision_regret": fixed_decision.regret,
+                "fixed_method": fixed_method,
+            }
+        )
+    frame = pd.DataFrame(rows)
+    path = root / "evidence" / "qualification" / "fact_selector_result.parquet"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    frame.to_parquet(path, index=False)
+    non_abstained = frame.loc[~frame.abstained]
+    summary = {
+        "worlds": len(frame),
+        "abstention_rate": float(frame.abstained.mean()),
+        "clean_abstention_rate": float(
+            frame.loc[frame.scenario_id == "S00", "abstained"].mean()
+        ),
+        "coverage": float(non_abstained.covered_truth.mean()),
+        "mean_regret": float(frame.decision_regret.mean()),
+        "fixed_mean_regret": float(frame.fixed_decision_regret.mean()),
+        "selection_frequency": dict(Counter(frame.selected_method.dropna())),
+    }
+    atomic_write_json(root / "evidence" / "qualification" / "summary.json", summary)
+    return summary
+
+
+def run_ood_estimator_benchmark(
+    root: Path,
+    config: ExperimentConfig,
+    protocol_id: str,
+    *,
+    worlds: int = 300,
+) -> dict[str, Any]:
+    """Run S13 estimator-only evidence without exposing it to AWARE fitting."""
+    rows: list[dict[str, Any]] = []
+    for index in range(worlds):
+        world, truth = generate_world(
+            seed=_seed(config.seed, 10, index),
+            world_id=f"OOD-{index:05d}",
+            scenario_id="S13",
+            effect_scale=(0.0, 0.025, 0.05, 0.075)[index % 4],
+        )
+        for method, estimate in estimate_all(world).items():
+            rows.append(
+                _estimator_row(
+                    protocol_id=protocol_id,
+                    phase="E10",
+                    scenario="S13",
+                    world_id=world.world_id,
+                    truth=truth,
+                    estimate=estimate,
+                    diagnostics=diagnostic_features(world, method),
+                )
+            )
+    frame = pd.DataFrame(rows)
+    path = root / "evidence" / "qualification" / "fact_ood_estimator_result.parquet"
+    frame.to_parquet(path, index=False)
+    summary = (
+        frame.groupby("method_id")
+        .agg(
+            rmse=("sq_error", lambda value: float(np.sqrt(value.mean()))),
+            coverage=("covered_truth", "mean"),
+            failure_rate=("status", lambda value: float((value != "SUCCESS").mean())),
+        )
+        .reset_index()
+    )
+    return {"worlds": worlds, "selector_training_access": False, "summary": summary.to_dict(orient="records")}
+
+
 def _bootstrap_ci(values: np.ndarray, seed: int) -> tuple[float, float]:
     rng = np.random.default_rng(seed)
     indices = rng.integers(0, len(values), size=(2000, len(values)))
@@ -267,7 +381,7 @@ def run_final(
         )
         truth = hidden_truth
         materiality = max(
-            float(world.outcomes[:, : config.pre_days].sum() * 0.005), 1.0
+            float(np.nansum(world.outcomes[:, : config.pre_days]) * 0.005), 1.0
         )
         selected_estimate = (
             None if selection.abstained else estimates[selection.selected_method or ""]

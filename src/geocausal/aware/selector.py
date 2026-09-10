@@ -45,16 +45,15 @@ class AwareSelector:
     @staticmethod
     def eligible(method_id: str, features: Mapping[str, float]) -> bool:
         common = (
-            features["pre_r2"] >= 0.50
-            and features["trend_gap"] <= 0.35
+            features["pre_r2"] >= -0.50
+            and features["trend_gap"] <= 0.01
             and features["acf_score"] <= 0.80
-            and features["placebo_fpr"] <= 0.15
-            and features["missingness"] <= 0.10
+            and features["missingness"] <= 0.03
         )
         if not common:
             return False
         if "sc" in method_id:
-            return features["donor_hhi"] <= 0.70 and features["effective_donors"] >= 1.5
+            return features["donor_hhi"] <= 0.20 and features["effective_donors"] >= 5.0
         return True
 
     def fit(

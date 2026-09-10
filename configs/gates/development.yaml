@@ -1,8 +1,8 @@
-min_pre_r2: 0.50
-max_trend_gap: 0.35
+min_pre_r2: -0.50
+max_trend_gap: 0.01
 max_acf_score: 0.80
-max_donor_hhi: 0.70
-max_placebo_fpr: 0.15
-min_placebo_coverage: 0.80
+max_missingness: 0.03
+max_donor_hhi: 0.20
+min_effective_donors: 5.0
 abstention_predicted_loss: 1.25
 clean_abstention_limit: 0.10

@@ -28,7 +28,15 @@ class Estimate:
 
 
 def _finish(method_id: str, estimate: float, standard_error: float) -> Estimate:
-    standard_error = max(float(standard_error), 1e-9)
+    # Frozen candidates from the first pre-freeze E08 null calibration. These
+    # are empirical procedure intervals, not upstream-native intervals.
+    calibration = {
+        "independent_tbr": 1.9,
+        "independent_did": 1.8,
+        "independent_ridge_sc": 3.2,
+        "independent_simplex_sc": 3.2,
+    }[method_id]
+    standard_error = max(float(standard_error) * calibration, 1e-9)
     z = estimate / standard_error
     # Stable two-sided normal approximation without an extra distribution object.
     p_value = float(math.erfc(abs(z) / np.sqrt(2)))

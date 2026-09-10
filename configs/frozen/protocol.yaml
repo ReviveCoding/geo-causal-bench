@@ -1,0 +1,29 @@
+protocol_name: AWARE-GEO-CONFIRMATORY-001
+primary_selector: P1_AWARE_SELECT
+primary_comparator: independent_did
+h1:
+  test: clean_noninferiority_relative_rmse
+  margin_ratio: 1.05
+h2:
+  test: paired_stress_decision_regret
+  pass_rule: upper_95_ci_below_zero
+multiplicity:
+  primary: conjunctive_H1_H2
+  secondary: Holm_within_declared_families
+  exploratory: BH_FDR
+critical_gates:
+  null_type_i_max: 0.075
+  selection_aware_coverage_min: 0.90
+  clean_abstention_max: 0.10
+  complete_truth_ledger: true
+business_costs:
+  false_launch_base: 3.0
+  false_stop_base: 1.5
+  hold: 0.4
+  redesign: 0.35
+final_scenario_mixture:
+  clean_weight: 3
+  each_stress_weight: 1
+  scenarios: [S00, S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13]
+report_schema_version: 1
+claim_ledger_schema_version: 1

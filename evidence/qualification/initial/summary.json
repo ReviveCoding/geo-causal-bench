@@ -1,0 +1,11 @@
+{
+  "abstention_rate": 0.96,
+  "clean_abstention_rate": 0.9583333333333334,
+  "coverage": 0.8333333333333334,
+  "fixed_mean_regret": 0.5374768414950787,
+  "mean_regret": 0.3520000000000001,
+  "selection_frequency": {
+    "independent_did": 12
+  },
+  "worlds": 300
+}
