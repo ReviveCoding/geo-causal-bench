@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "data/manifests/sources.csv": "ef372234ce9138abdc78dc37578b8f107e18edd08ca6597758a71d07b339bf8f"
+  },
+  "code_identity": "002944c9945f9be49433b0fb9dd8e2fa0a97bd68",
+  "completion_timestamp": "2026-09-10T01:01:04.890335+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "548120b2687b47705ac6a80cea9f51a90fb0709014a8c9d98094580026d20206"
+  },
+  "next_legal_transition": "E02",
+  "phase": "E01",
+  "protocol_id": "AWARE-GEO-DEVELOPMENT-001",
+  "start_timestamp": "2026-09-10T01:01:04.890335+00:00",
+  "status": "COMPLETE"
+}

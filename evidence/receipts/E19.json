@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "evidence/runtime/e19_scaling.json": "175cac4945f6474a571aca112acc6ee0d4a42f7aa91dc6e393eb36b93308d6f8"
+  },
+  "code_identity": "b9d8009fbfb54ffc77cf2ab707f83f32018c2401",
+  "completion_timestamp": "2026-09-10T02:26:38.997100+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "1e07db25cc9afa45c5ae7db408f0d7cb62af85a79cd8bef81d4faba9d9c76b26"
+  },
+  "next_legal_transition": "E20",
+  "phase": "E19",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "start_timestamp": "2026-09-10T02:26:38.997100+00:00",
+  "status": "COMPLETE"
+}

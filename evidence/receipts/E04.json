@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "tests/scientific/test_randomized_dgp.py": "ffab9d7088ae93eb07dd2cd8ad70b62d69ebc2a6862565487817c0f06e1a226d"
+  },
+  "code_identity": "002944c9945f9be49433b0fb9dd8e2fa0a97bd68",
+  "completion_timestamp": "2026-09-10T01:38:40.697641+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "fbc50832c372db3a483ee3edc5f5fedfb2472b26142b5d0ecbf074de82fdded8"
+  },
+  "next_legal_transition": "E05",
+  "phase": "E04",
+  "protocol_id": "AWARE-GEO-DEVELOPMENT-001",
+  "start_timestamp": "2026-09-10T01:38:40.697641+00:00",
+  "status": "COMPLETE"
+}

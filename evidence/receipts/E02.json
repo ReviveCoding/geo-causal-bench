@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "data/anchors/public_anchor_summary.parquet": "afbe02c702eb7d067a27d8329e8b91088210519388f22fea835c81f9574f02e5"
+  },
+  "code_identity": "002944c9945f9be49433b0fb9dd8e2fa0a97bd68",
+  "completion_timestamp": "2026-09-10T01:47:34.414572+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "c1d388b28943cfc4a1dd80bd4260689887802c4a0fed1a7328e03f545d2c492d"
+  },
+  "next_legal_transition": "E03",
+  "phase": "E02",
+  "protocol_id": "AWARE-GEO-DEVELOPMENT-001",
+  "start_timestamp": "2026-09-10T01:47:34.414572+00:00",
+  "status": "COMPLETE"
+}

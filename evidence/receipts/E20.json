@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "evidence/e20_audit.json": "a184efce25cdd374a0781ef5537032529d1d7ad162c65c0e01d31fa25564566d"
+  },
+  "code_identity": "b9d8009fbfb54ffc77cf2ab707f83f32018c2401",
+  "completion_timestamp": "2026-09-10T02:46:40.472544+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "880c0aa8a7669a6acc23c07af943d08f8589a487bad853d4eaf7a891e97f3d5e"
+  },
+  "next_legal_transition": "AUDIT_COMPLETE",
+  "phase": "E20",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "start_timestamp": "2026-09-10T02:46:40.472544+00:00",
+  "status": "COMPLETE"
+}

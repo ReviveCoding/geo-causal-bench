@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "evidence/external/fact_external_case.parquet": "e424e6671e6f6ed6a8b114603784f16d81fc062f0d3d7e75e3563c04e1dc7333"
+  },
+  "code_identity": "b9d8009fbfb54ffc77cf2ab707f83f32018c2401",
+  "completion_timestamp": "2026-09-10T02:24:30.743345+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "8b10922f960a8e3c857c252ef17973ca0c47902d731b115df256706e422187a1"
+  },
+  "next_legal_transition": "E18",
+  "phase": "E17",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "start_timestamp": "2026-09-10T02:24:30.743345+00:00",
+  "status": "COMPLETE"
+}

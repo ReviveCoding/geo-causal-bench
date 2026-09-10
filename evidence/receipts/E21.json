@@ -1,0 +1,16 @@
+{
+  "artifacts": {},
+  "code_identity": "b9d8009fbfb54ffc77cf2ab707f83f32018c2401",
+  "completion_timestamp": null,
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": "Optional GeoX-to-Meridian MMM extension not executed.",
+  "input_hashes": {
+    "E20": "8b874ad2541ac04f245d70bef7ebf7eabf2a0d6801aa39d1b11f2f0ca038aeb2"
+  },
+  "next_legal_transition": "NONE",
+  "phase": "E21",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "start_timestamp": null,
+  "status": "OMITTED_OPTIONAL"
+}

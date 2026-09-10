@@ -1,0 +1,18 @@
+{
+  "artifacts": {
+    "artifacts/aware/selector_development.json": "b2d93d9fea774d9ca4639ba87e62032dbe83c88395b24a826c51c58b64f178c1"
+  },
+  "code_identity": "002944c9945f9be49433b0fb9dd8e2fa0a97bd68",
+  "completion_timestamp": "2026-09-10T01:55:14.877168+00:00",
+  "environment_identity": "fd6da97abb19e24f52eef5f24693014e4d1586abb0f005dd4fd46b88e71a4c14",
+  "failure_category": null,
+  "failure_reason": null,
+  "input_hashes": {
+    "previous_receipt_or_root": "84b1cea47ff02883d5d6959a401f001856c5a16bc0411ac1e25e656498d63a29"
+  },
+  "next_legal_transition": "E12",
+  "phase": "E11",
+  "protocol_id": "AWARE-GEO-DEVELOPMENT-001",
+  "start_timestamp": "2026-09-10T01:55:14.877168+00:00",
+  "status": "COMPLETE"
+}
