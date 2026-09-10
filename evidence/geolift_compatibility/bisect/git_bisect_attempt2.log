@@ -1,0 +1,10 @@
+# bad: [7e70072232fe75057aa8b5d7af08c7e1aef53ae8] Removed old outcome models from augsynth
+# good: [65c5a6f34f4e4a8b1011182fe12309ef022d992f] Merge branch 'master' of github.com:ebenmichael/augsynth
+git bisect start '7e70072232fe75057aa8b5d7af08c7e1aef53ae8' '65c5a6f34f4e4a8b1011182fe12309ef022d992f'
+# bad: [7a90ea48877fae7925a72cb50bc03a315bc7c042] Quick patch to not always run permutation inference when running summary.augsynth
+git bisect bad 7a90ea48877fae7925a72cb50bc03a315bc7c042
+# bad: [ac5a3d670d937931cbb08d29d71ea6f6e737b843] Updated single synth vignette
+git bisect bad ac5a3d670d937931cbb08d29d71ea6f6e737b843
+# bad: [bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)
+git bisect bad bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c
+# first bad commit: [bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)

@@ -1,0 +1,8 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "status": "ENGINEERING_FAILURE",
+  "failure_reason": "The first qualification harness incorrectly required length(fit$ATT_se) == 105 under conformal inference. The authoritative pinned summary stores 105 time-indexed estimates, lower bounds, upper bounds, and p-values but no per-time Std.Error vector.",
+  "scientific_interpretation": "Test-contract defect; not evidence of a package or statistical failure.",
+  "resolution": "Validate the actual time-indexed conformal inference columns in fit$summary$att and retain ATT_se length as descriptive output."
+}

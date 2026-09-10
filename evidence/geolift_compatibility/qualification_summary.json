@@ -1,0 +1,99 @@
+{
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "evidence_class": "UPSTREAM_PINNED",
+  "status": "PASS",
+  "resolution": "Pin unmodified augsynth commit 65c5a6f34f4e4a8b1011182fe12309ef022d992f with unmodified GeoLift 2.7.5 commit db34ea4299ff0e28515ebac502b78c076c93c905.",
+  "local_patch_used": false,
+  "first_incompatible_commit": "bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c",
+  "checks": {
+    "baseline_class_unmodified": true,
+    "baseline_exact_dimension_error": true,
+    "baseline_active_stack": true,
+    "bisect_first_bad": true,
+    "pin_is_first_bad_parent": true,
+    "session_1_pass": true,
+    "session_2_pass": true,
+    "fresh_session_pass": true,
+    "all_invariants_pass": true,
+    "official_two_location_effect": true,
+    "three_plus_locations": true,
+    "protected_protocol_unchanged": true
+  },
+  "case_results": {
+    "single": {
+      "locations": "chicago",
+      "treated_count": 1,
+      "time_count": 105,
+      "y_obs_length": 105,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": -209.0042463011512,
+      "percent_lift": -7.3,
+      "incremental": -3135.0636945172664,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "two": {
+      "locations": [
+        "chicago",
+        "portland"
+      ],
+      "treated_count": 2,
+      "time_count": 105,
+      "y_obs_length": 210,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 155.55592770522782,
+      "percent_lift": 5.4,
+      "incremental": 4666.677831156834,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "three": {
+      "locations": [
+        "chicago",
+        "portland",
+        "atlanta"
+      ],
+      "treated_count": 3,
+      "time_count": 105,
+      "y_obs_length": 315,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 125.10961166439944,
+      "percent_lift": 3.8,
+      "incremental": 5629.932524897973,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "reversed": {
+      "locations": [
+        "portland",
+        "chicago"
+      ],
+      "treated_count": 2,
+      "time_count": 105,
+      "y_obs_length": 210,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 155.55592770522782,
+      "percent_lift": 5.4,
+      "incremental": 4666.677831156834,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    }
+  },
+  "limitations": [
+    "Both tested augsynth revisions report package version 0.2.0; commit pinning is mandatory.",
+    "Top-level GeoLift aggregate confidence bounds are NA in this dependency constellation, although summary$att contains the expected 105-row conformal estimate/bound/p-value series.",
+    "This compatibility result does not modify or reinterpret AWARE-GEO protocol 002."
+  ]
+}

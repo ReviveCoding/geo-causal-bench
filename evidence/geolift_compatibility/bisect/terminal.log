@@ -1,0 +1,120 @@
+Script started on 2026-09-09 23:49:47-04:00 [<not executed on terminal>]
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/7a90ea48877fae7925a72cb50bc03a315bc7c042/augsynth’
+CANDIDATE_SKIP install failure 7a90ea48877fae7925a72cb50bc03a315bc7c042
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[08c075bbccd12bfb805110f64d539cef7e359701] Fixed slight error above tolerance in some tests due to osqp change
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/08c075bbccd12bfb805110f64d539cef7e359701/augsynth’
+CANDIDATE_SKIP install failure 08c075bbccd12bfb805110f64d539cef7e359701
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[5e55bdd3de3e1db16285bf4731d8282c05a822d0] Made underlying synth solver more memory and time efficient by never computing the gram matrix
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/5e55bdd3de3e1db16285bf4731d8282c05a822d0/augsynth’
+CANDIDATE_SKIP install failure 5e55bdd3de3e1db16285bf4731d8282c05a822d0
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f] Fix `progfunc = "GSYN"` under gsynth >= 1.3.0: numeric time index (#107) and fect-era return schema (#119)
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f/augsynth’
+CANDIDATE_SKIP install failure 2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[ac5a3d670d937931cbb08d29d71ea6f6e737b843] Updated single synth vignette
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/ac5a3d670d937931cbb08d29d71ea6f6e737b843/augsynth’
+CANDIDATE_SKIP install failure ac5a3d670d937931cbb08d29d71ea6f6e737b843
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[f942957c7a91febbbdcdee11347d221b177128c6] Built the vignette with typo fixed
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/f942957c7a91febbbdcdee11347d221b177128c6/augsynth’
+CANDIDATE_SKIP install failure f942957c7a91febbbdcdee11347d221b177128c6
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[43964a2674db1639d85dca39436797506d170bf2] Removed option to fit factors in staggered adoption settings
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/43964a2674db1639d85dca39436797506d170bf2/augsynth’
+CANDIDATE_SKIP install failure 43964a2674db1639d85dca39436797506d170bf2
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[05a303f1339f83129c3b5656754861aec3fa282e] Fixed typo in single synth vignette
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/05a303f1339f83129c3b5656754861aec3fa282e/augsynth’
+CANDIDATE_SKIP install failure 05a303f1339f83129c3b5656754861aec3fa282e
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+ERROR: dependency ‘LiblineaR’ is not available for package ‘augsynth’
+Perhaps try a variation of:
+install.packages('LiblineaR')
+* removing ‘/home/bjw-0/.cache/geo-causal-bench/geolift-compat/candidate-libs/bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c/augsynth’
+CANDIDATE_SKIP install failure bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[e1e8d1c45e86bdfbbcb0f85b33dd21da8f5a3c38] Fixed documentation issues leading to warnings and notes
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+* installing *source* package ‘augsynth’ ...
+** this is package ‘augsynth’ version ‘0.2.0’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+* DONE (augsynth)
+[?25h[?25h[?25h[?25h[?25h[?25h[1m[33mError[39m in `tibble()`:[22m
+[1m[22m[33m![39m Tibble columns must have compatible sizes.
+[36m•[39m Size 105: Existing data.
+[36m•[39m Size 210: Column `Yobs`.
+[36mℹ[39m Only values of size one are recycled.
+Backtrace:
+[90m     [39m▆
+[90m  1. [39m└─[1mGeoLift[22m::GeoLift(...)
+[90m  2. [39m  ├─[1mbase[22m::summary(...)
+[90m  3. [39m  └─[1maugsynth[22m:::summary.augsynth(...)
+[90m  4. [39m    └─augsynth::treated_table(augsynth)
+[90m  5. [39m      └─[1m[94mtibble::tibble([39m[22m...[1m[94m)[39m[22m
+[90m  6. [39m        └─tibble:::tibble_quos(xs, .rows, .name_repair)
+[90m  7. [39m          └─tibble:::vectbl_recycle_rows(...)
+[90m  8. [39m            └─tibble:::abort_incompatible_size(...)
+[90m  9. [39m              └─tibble:::tibble_abort(...)
+[90m 10. [39m                └─[1mrlang[22m::abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
+Execution halted
+[?25hThere are only 'skip'ped commits left to test.
+The first bad commit could be any of:
+7a90ea48877fae7925a72cb50bc03a315bc7c042
+08c075bbccd12bfb805110f64d539cef7e359701
+f942957c7a91febbbdcdee11347d221b177128c6
+05a303f1339f83129c3b5656754861aec3fa282e
+2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f
+5e55bdd3de3e1db16285bf4731d8282c05a822d0
+ac5a3d670d937931cbb08d29d71ea6f6e737b843
+43964a2674db1639d85dca39436797506d170bf2
+bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c
+e1e8d1c45e86bdfbbcb0f85b33dd21da8f5a3c38
+We cannot bisect more!
+error: bisect run cannot continue any more
+
+Script done on 2026-09-09 23:50:13-04:00 [COMMAND_EXIT_CODE="2"]

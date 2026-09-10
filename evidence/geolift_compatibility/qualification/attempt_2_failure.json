@@ -1,0 +1,8 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "status": "ENGINEERING_FAILURE",
+  "failure_reason": "The initial strict comparison of every inference-table field between locations=c('chicago','portland') and the reversed order failed, while point-series and aggregate-effect ordering checks passed.",
+  "resolution": "The targeted ordering diagnostic showed zero difference for every finite point and inference field and identical NA patterns. The harness had rejected matching NA confidence-interval scalars through a finite-only comparator; the test now compares NA patterns explicitly.",
+  "supporting_artifact": "evidence/geolift_compatibility/qualification/ordering_diagnostic.json"
+}

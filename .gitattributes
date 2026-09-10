@@ -9,4 +9,7 @@
 *.md   text eol=lf
 *.json text eol=lf
 
+# Preserve raw upstream/R terminal output byte-for-byte without whitespace fixes.
+evidence/geolift_compatibility/**/*.log -diff
+
 *.ps1 text eol=crlf

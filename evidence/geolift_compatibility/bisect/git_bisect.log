@@ -1,0 +1,34 @@
+# bad: [7e70072232fe75057aa8b5d7af08c7e1aef53ae8] Removed old outcome models from augsynth
+# good: [65c5a6f34f4e4a8b1011182fe12309ef022d992f] Merge branch 'master' of github.com:ebenmichael/augsynth
+git bisect start '7e70072232fe75057aa8b5d7af08c7e1aef53ae8' '65c5a6f34f4e4a8b1011182fe12309ef022d992f'
+# skip: [7a90ea48877fae7925a72cb50bc03a315bc7c042] Quick patch to not always run permutation inference when running summary.augsynth
+git bisect skip 7a90ea48877fae7925a72cb50bc03a315bc7c042
+# skip: [08c075bbccd12bfb805110f64d539cef7e359701] Fixed slight error above tolerance in some tests due to osqp change
+git bisect skip 08c075bbccd12bfb805110f64d539cef7e359701
+# skip: [5e55bdd3de3e1db16285bf4731d8282c05a822d0] Made underlying synth solver more memory and time efficient by never computing the gram matrix
+git bisect skip 5e55bdd3de3e1db16285bf4731d8282c05a822d0
+# skip: [2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f] Fix `progfunc = "GSYN"` under gsynth >= 1.3.0: numeric time index (#107) and fect-era return schema (#119)
+git bisect skip 2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f
+# skip: [ac5a3d670d937931cbb08d29d71ea6f6e737b843] Updated single synth vignette
+git bisect skip ac5a3d670d937931cbb08d29d71ea6f6e737b843
+# skip: [f942957c7a91febbbdcdee11347d221b177128c6] Built the vignette with typo fixed
+git bisect skip f942957c7a91febbbdcdee11347d221b177128c6
+# skip: [43964a2674db1639d85dca39436797506d170bf2] Removed option to fit factors in staggered adoption settings
+git bisect skip 43964a2674db1639d85dca39436797506d170bf2
+# skip: [05a303f1339f83129c3b5656754861aec3fa282e] Fixed typo in single synth vignette
+git bisect skip 05a303f1339f83129c3b5656754861aec3fa282e
+# skip: [bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)
+git bisect skip bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c
+# bad: [e1e8d1c45e86bdfbbcb0f85b33dd21da8f5a3c38] Fixed documentation issues leading to warnings and notes
+git bisect bad e1e8d1c45e86bdfbbcb0f85b33dd21da8f5a3c38
+# only skipped commits left to test
+# possible first bad commit: [e1e8d1c45e86bdfbbcb0f85b33dd21da8f5a3c38] Fixed documentation issues leading to warnings and notes
+# possible first bad commit: [43964a2674db1639d85dca39436797506d170bf2] Removed option to fit factors in staggered adoption settings
+# possible first bad commit: [5e55bdd3de3e1db16285bf4731d8282c05a822d0] Made underlying synth solver more memory and time efficient by never computing the gram matrix
+# possible first bad commit: [2a2cfd5a4d13b17d41292ae2c9c9dc2b5bcb764f] Fix `progfunc = "GSYN"` under gsynth >= 1.3.0: numeric time index (#107) and fect-era return schema (#119)
+# possible first bad commit: [08c075bbccd12bfb805110f64d539cef7e359701] Fixed slight error above tolerance in some tests due to osqp change
+# possible first bad commit: [7a90ea48877fae7925a72cb50bc03a315bc7c042] Quick patch to not always run permutation inference when running summary.augsynth
+# possible first bad commit: [f942957c7a91febbbdcdee11347d221b177128c6] Built the vignette with typo fixed
+# possible first bad commit: [05a303f1339f83129c3b5656754861aec3fa282e] Fixed typo in single synth vignette
+# possible first bad commit: [ac5a3d670d937931cbb08d29d71ea6f6e737b843] Updated single synth vignette
+# possible first bad commit: [bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)

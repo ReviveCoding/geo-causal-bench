@@ -1,0 +1,48 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "retrieval_timestamp_utc": "2026-09-10T05:26:56.455867+00:00",
+  "issue": {
+    "number": 118,
+    "state": "open",
+    "comments": 0,
+    "url": "https://github.com/ebenmichael/augsynth/issues/118",
+    "updated_at": "2026-07-30T11:46:07Z",
+    "body_sha256": "54370e6676a46ccfe9bc92efa4542dc1e1964915d493887ee919fc5cc0cd0eeb"
+  },
+  "history": {
+    "tested_bad_head": "7e70072232fe75057aa8b5d7af08c7e1aef53ae8",
+    "last_good_pin": "65c5a6f34f4e4a8b1011182fe12309ef022d992f",
+    "first_bad_commit": "bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c",
+    "first_bad_parent": "65c5a6f34f4e4a8b1011182fe12309ef022d992f",
+    "first_bad_metadata": [
+      "bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c",
+      "25aaa25c6963a72e1a6cbb2e843f4d73508cf61c",
+      "2026-05-20T17:57:24-04:00",
+      "Placebo tests and extended plotting functionality  (#88)"
+    ]
+  },
+  "source_hashes": {
+    "augsynth:7e70072232fe75057aa8b5d7af08c7e1aef53ae8:R/permutation.R": "7e7b730cadaed9e870824c61492eb253d7748b6bc4ef704e48db0422335ad559",
+    "augsynth:7e70072232fe75057aa8b5d7af08c7e1aef53ae8:R/augsynth.R": "6a620efecf747fd07d7bd10403d8dfeb215b6f296c901f9112d87785f94aa085",
+    "augsynth:65c5a6f34f4e4a8b1011182fe12309ef022d992f:R/augsynth.R": "aa2e63e0b0b99035c4e5ecea08df0443ac0fc28baf94ddcdbabe1472d714c2c0",
+    "GeoLift:db34ea4299ff0e28515ebac502b78c076c93c905:R/post_test_analysis.R": "e3173aaab6d778bf05b23d64bf567ec6d4d77936aaadad4b2e1a0e276f14b797"
+  },
+  "call_chain": [
+    "GeoLift::GeoLift",
+    "base::summary",
+    "augsynth:::summary.augsynth",
+    "augsynth::treated_table",
+    "tibble::tibble"
+  ],
+  "statistical_semantics": {
+    "augsynth_prediction": "colMeans of observed treated outcomes minus one treated-average synthetic counterfactual per time",
+    "geolift_average_att": "average effect per treated location and time",
+    "geolift_incremental": "sum of observed treated outcomes minus treated count times the average synthetic counterfactual",
+    "fault": "treated_table flattens treated_count by time observations instead of using the treated-location mean required by predict.augsynth"
+  },
+  "source_excerpts": {
+    "treated_table": "treated_table <- function(augsynth) {\n\n    if ( is_summary_augsynth( augsynth ) ) {\n        return( augsynth$treated_table )\n    }\n\n    # Calculate the time series of the treated, the synthetic control,\n    # and the overall donor pool average\n    trt_index <- which(augsynth$data$trt == 1)\n    df <- bind_cols(augsynth$data$X, augsynth$data$y)\n    # synth_unit <- t(df[-trt_index, ]) %*% augsynth$weights\n    synth_unit <- predict(augsynth)\n    average_unit <- df[-trt_index, ] %>% colMeans()\n    treated_unit <- t(df[trt_index, ])\n    lvls = tibble(\n        time = as.numeric( colnames(df) ),\n        Yobs = as.numeric( treated_unit ),\n        Yhat = as.numeric( synth_unit ),\n        raw_average = as.numeric( average_unit )\n    )\n\n    #lvls <- df %>%\n    #    group_by( !!sym(augsynth$time_var ), ever_Tx) %>%\n    #    summarise( Yavg = mean( Yobs ), .groups=\"drop\" ) %>%\n    #    pivot_wider( names_from = ever_Tx, values_from = Yavg )\n    #colnames(lvls)[2:3] <- c(\"raw_average\", \"Yobs\")\n\n    t0 <- ncol(augsynth$data$X)\n    tpost <- ncol(augsynth$data$y)\n    lvls$tx = rep( c(0,1), c( t0, tpost ) )\n    #lvls$Yhat = predict( augsynth )\n    lvls$ATT = lvls$Yobs - lvls$Yhat\n    lvls$rstat = lvls$ATT / sqrt( mean( lvls$ATT[ lvls$tx == 0 ]^2 ) )\n\n    lvls <- dplyr::relocate( lvls,\n                             time, tx, Yobs, Yhat, raw_average, ATT, rstat )\n\n    return( lvls )\n}",
+    "predict_augsynth": "predict.augsynth <- function(object, att = F, ...) {\n    # if (\"att\" %in% names(list(...))) {\n    #     att <- list(...)$att\n    # } else {\n    #     att <- F\n    # }\n    augsynth <- object\n\n    X <- augsynth$data$X\n    y <- augsynth$data$y\n    comb <- cbind(X, y)\n    trt <- augsynth$data$trt\n    mhat <- augsynth$mhat\n\n    m1 <- colMeans(mhat[trt==1,,drop=F])\n\n    resid <- (comb[trt==0,,drop=F] - mhat[trt==0,drop=F])\n\n    y0 <- m1 + t(resid) %*% augsynth$weights\n    if(att) {\n        return(colMeans(comb[trt == 1,, drop = F]) - c(y0))\n    } else {\n        rnames <- rownames(y0)\n        y0_vec <- c(y0)\n        names(y0_vec) <- rnames\n        return(y0_vec)\n    }\n}\n\n\n\n\n#' Add inference",
+    "geolift_summary_and_aggregation": "sum_augsyn <- summary(augsyn,\n    alpha = alpha,\n    stat_func = stat_func,\n    type = conformal_type,\n    ns = ns\n  )\n\n  # Confidence Intervals\n  if (ConfidenceIntervals == FALSE) {\n    ci <- c(NA, NA)\n  } else if (ConfidenceIntervals == TRUE) {\n    if (!(tolower(method) %in% c(\"conformal\", \"jackknife+\"))) {\n      stop(\"method must be one of {'conformal', 'jackknife+'}\")\n    } else {\n      if (tolower(stat_test) != \"total\") {\n        method <- \"conformal\" # jackknife+ is exclusively for \"Total\"\n      }\n      ci <- ConfIntervals(\n        augsynth = augsyn,\n        treatment_start_time = treatment_start_time,\n        treatment_end_time = treatment_end_time,\n        alpha = alpha,\n        stat_func = stat_func,\n        method = tolower(method),\n        grid_size = grid_size,\n        conformal_type = conformal_type,\n        ns = ns\n      )\n    }\n  }\n\n  if (paste(augsyn$call)[1] == \"single_augsynth\") {\n    mean <- sum_augsyn[[\"average_att\"]][[\"Estimate\"]]\n    se <- sum_augsyn[[\"average_att\"]][[\"Std.Error\"]]\n\n    loc_id <- c(which(augsyn$data$trt == 1))\n    locs_id <- as.data.frame(loc_id, nrow = length(loc_id))\n    locs_id$name <- unlist(unique(data_aux$location)[c(which(augsyn$data$trt == 1))])\n\n    y_obs <- c(augsyn$data$X[loc_id, ], augsyn$data$y[loc_id, ])\n    y_hat <- predict(augsyn, att = FALSE)\n    ATT <- predict(augsyn, att = TRUE)\n    ATT_se <- sum_augsyn$att$Std.Error\n\n    pred_conversions <- predict(augsyn)[treatment_start_time:treatment_end_time]\n\n    if (length(locations) == 1) {\n      lift <- (sum(augsyn$data$y[loc_id, ]) - sum(pred_conversions)) /\n        abs(sum(pred_conversions))\n    } else if (length(locations) > 1) {\n      lift <- (sum(colMeans(augsyn$data$y[loc_id, ])) -\n        sum(pred_conversions)) /\n        abs(sum(pred_conversions))\n    }\n\n    incremental <- sum(augsyn$data$y[loc_id, ]) - (sum(pred_conversions) * length(loc_id))\n\n    inference_df <- inference_df %>% dplyr::add_row(\n      ATT = mean,\n      Perc.Lift = 100 * round(lift, 3),\n      pvalue = sum_augsyn$average_att$p_val,\n      Lower.Conf.Int = ci[1],\n      Upper.Conf.Int = ci[2]\n    )\n  }\n\n  res <- list(\n    \"results\" = augsyn,\n    \"inference\" = inference_df,\n    \"data\" = data_aux,\n    \"y_obs\" = y_obs,\n    \"y_hat\" = y_hat,\n    \"ATT\" = ATT,\n    \"ATT_se\" = ATT_se,\n    \"TreatmentStart\" = treatment_start_time,\n    \"TreatmentEnd\" = treatment_end_time,\n    \"test_id\" = locs_id,\n    \"incremental\" = incremental,\n    \"Y_id\" = Y_id,\n    \"summary\" = sum_augsyn,\n    \"ConfidenceIntervals\" = ConfidenceIntervals,\n    \"lower_bound\" = ci[1] * ncol(augsyn$data$y) * nrow(locs_id),\n    \"upper_bound\" = ci[2] * ncol(augsyn$data$y) * nrow(locs_id),\n    \"df_weights\" = data.frame(\n      location = dimnames(augsyn$weights)[[1]],\n      weight = unname(augsyn$weights[, 1])\n    ),\n    \"stat_test\" = stat_test\n  )"
+  }
+}

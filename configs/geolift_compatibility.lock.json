@@ -1,0 +1,35 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "issue": "https://github.com/ebenmichael/augsynth/issues/118",
+  "r_version": "4.5.3",
+  "geolift": {
+    "repository": "https://github.com/facebookincubator/GeoLift.git",
+    "version": "2.7.5",
+    "commit": "db34ea4299ff0e28515ebac502b78c076c93c905",
+    "tree": "b8f240b62d591bc926e62dfd7e41aefe25c9a49f"
+  },
+  "augsynth": {
+    "repository": "https://github.com/ebenmichael/augsynth.git",
+    "version": "0.2.0",
+    "commit": "65c5a6f34f4e4a8b1011182fe12309ef022d992f",
+    "tree": "32b5a9578212c1796775b124236f720a002b5650",
+    "relationship": "parent of first incompatible commit bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c"
+  },
+  "historical_dependency": {
+    "package": "LiblineaR",
+    "version": "2.10-24",
+    "source_url": "https://cloud.r-project.org/src/contrib/LiblineaR_2.10-24.tar.gz",
+    "sha256": "3949a566f36e0c7578b9aa3584873b52c1b2058cdd7a1f7c87d5073f57f027c8"
+  },
+  "inherited_dependency_lock": {
+    "path": "renv.lock",
+    "sha256": "58f679aa37453b8bdb5444894569fcab86ef3a707c9eacfcb5d3819a2449c24d"
+  },
+  "prohibited_scope": [
+    "artifacts/freeze",
+    "evidence/final",
+    "evidence/e20_audit.json",
+    "evidence/receipts"
+  ]
+}

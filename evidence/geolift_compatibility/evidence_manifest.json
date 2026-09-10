@@ -1,0 +1,71 @@
+{
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "evidence_class": "UPSTREAM_PINNED",
+  "status": "PASS",
+  "files": {
+    "evidence/geolift_compatibility/baseline/complete_traceback.log": {
+      "sha256": "567316ea5f14720a15c967e3e7a0fcccee1befb3841f66f20979f903cd62f138",
+      "bytes": 13743
+    },
+    "evidence/geolift_compatibility/bisect/git_bisect.log": {
+      "sha256": "c56130f5876df182c42638196e61c1f49e9115189efe1e8c15b4e4b8abc596bf",
+      "bytes": 3392
+    },
+    "evidence/geolift_compatibility/bisect/git_bisect_attempt2.log": {
+      "sha256": "78684c15bdd289b36dac306fd9727cfd316231081e679d57f3c8e7b167c1c892",
+      "bytes": 909
+    },
+    "evidence/geolift_compatibility/bisect/terminal.log": {
+      "sha256": "4f0503f1659b2a78ea7c497c1a929d74e966dbe4136f34623a56baa32001fcb1",
+      "bytes": 8558
+    },
+    "evidence/geolift_compatibility/bisect/terminal_attempt2.log": {
+      "sha256": "f1bc95e29ce9074eec124bb4030951dcc6559fcbac7aa3f0fb5d8cf9070dfb46",
+      "bytes": 14231
+    },
+    "evidence/geolift_compatibility/protected_protocol_invariance.json": {
+      "sha256": "c4e0b2cd07fc744ae0606a4960786342ae9d0a8a83b1989eb11eaf160e477ab0",
+      "bytes": 1130
+    },
+    "evidence/geolift_compatibility/qualification/attempt_1_failure.json": {
+      "sha256": "7df9113ca1c117792c224f1f09220a38d2b913c08c99c892dee8291eacb6dfbe",
+      "bytes": 642
+    },
+    "evidence/geolift_compatibility/qualification/attempt_2_failure.json": {
+      "sha256": "1b2ccf41b35435ac14b7c30962e0227b7961ea70cfde82e11c5deacd66777c32",
+      "bytes": 726
+    },
+    "evidence/geolift_compatibility/qualification/fresh_session_comparison.json": {
+      "sha256": "d9a9b0b0fb7accac437ab6d690332a0b1c87879473d4b4c95fa6296c4a58dc64",
+      "bytes": 381
+    },
+    "evidence/geolift_compatibility/qualification/ordering_diagnostic.json": {
+      "sha256": "dbc8004b153619db74fd1437bef0cc7b32308995846141de270ebc6f713ac6b4",
+      "bytes": 19532
+    },
+    "evidence/geolift_compatibility/qualification/session_1.json": {
+      "sha256": "03fde3eff457f6067c0dd19fdecd811e44c295dd95419abd8c03d0ea9345f804",
+      "bytes": 2644
+    },
+    "evidence/geolift_compatibility/qualification/session_2.json": {
+      "sha256": "03fde3eff457f6067c0dd19fdecd811e44c295dd95419abd8c03d0ea9345f804",
+      "bytes": 2644
+    },
+    "evidence/geolift_compatibility/qualification_summary.json": {
+      "sha256": "97e2fbeaa625be7bd4625c39b83fe2a2a923e91a92781605ad31e7a2262c37ed",
+      "bytes": 3058
+    },
+    "evidence/geolift_compatibility/reproduction_run.log": {
+      "sha256": "6ec74d7196d1547363af991020b54d4b626251d5f832ed20ceb6f9acb7f5e409",
+      "bytes": 2868
+    },
+    "evidence/geolift_compatibility/source/issue_118.json": {
+      "sha256": "d6673a37d069388ec954209c743f982b56d7f6364f6ee01b5f13679fab11ba15",
+      "bytes": 4709
+    },
+    "evidence/geolift_compatibility/source/source_analysis.json": {
+      "sha256": "b67efa8c80a0f32d20d9a5ea6ce6003a06e5007cfb3e696261e7c6de02473c03",
+      "bytes": 7390
+    }
+  }
+}

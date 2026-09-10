@@ -1,0 +1,87 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "status": "PASS",
+  "seed": 20260909,
+  "package_versions": {
+    "GeoLift": "2.7.5",
+    "augsynth": "0.2.0"
+  },
+  "package_paths": {
+    "GeoLift": "/home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/library/GeoLift",
+    "augsynth": "/home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/library/augsynth"
+  },
+  "description_sha256": {
+    "GeoLift": "b90b8a93d4765f9afdccf86008564bd74449773ad524304c22483f8ec752625a",
+    "augsynth": "c7df545449a64177505f09a9ed740fab797af53ab7c2f9ca4b96cfa4753104fe"
+  },
+  "cases": {
+    "single": {
+      "locations": "chicago",
+      "treated_count": 1,
+      "time_count": 105,
+      "y_obs_length": 105,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": -209.0042463011512,
+      "percent_lift": -7.2999999999999998,
+      "incremental": -3135.0636945172664,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "two": {
+      "locations": ["chicago", "portland"],
+      "treated_count": 2,
+      "time_count": 105,
+      "y_obs_length": 210,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 155.55592770522782,
+      "percent_lift": 5.4000000000000004,
+      "incremental": 4666.6778311568341,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "three": {
+      "locations": ["chicago", "portland", "atlanta"],
+      "treated_count": 3,
+      "time_count": 105,
+      "y_obs_length": 315,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 125.10961166439944,
+      "percent_lift": 3.7999999999999998,
+      "incremental": 5629.9325248979731,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    },
+    "reversed": {
+      "locations": ["portland", "chicago"],
+      "treated_count": 2,
+      "time_count": 105,
+      "y_obs_length": 210,
+      "y_hat_length": 105,
+      "att_length": 105,
+      "inference_time_rows": 105,
+      "inference_standard_error_length": 0,
+      "average_att": 155.55592770522782,
+      "percent_lift": 5.4000000000000004,
+      "incremental": 4666.6778311568341,
+      "lower_bound": "NA",
+      "upper_bound": "NA"
+    }
+  },
+  "invariants": {
+    "single_location_regression": "PASS",
+    "multiple_treated_dimensions": "PASS",
+    "manual_aggregation": "PASS",
+    "treatment_ordering": "PASS",
+    "inference_time_dimension": "PASS"
+  }
+}

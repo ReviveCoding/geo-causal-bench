@@ -1,0 +1,49 @@
+Script started on 2026-09-10 00:16:55-04:00 [<not executed on terminal>]
+From https://github.com/ebenmichael/augsynth
+ * branch            65c5a6f34f4e4a8b1011182fe12309ef022d992f -> FETCH_HEAD
+HEAD is now at 65c5a6f Merge branch 'master' of github.com:ebenmichael/augsynth
+From https://github.com/facebookincubator/GeoLift
+ * branch              db34ea4299ff0e28515ebac502b78c076c93c905 -> FETCH_HEAD
+HEAD is now at db34ea42 Merge pull request #216 from facebookincubator/dependabot/npm_and_yarn/website/node-forge-1.4.0
+/home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/archives/LiblineaR_2.10-24.tar.gz: OK
+* installing *source* package ‘augsynth’ ...
+** this is package ‘augsynth’ version ‘0.2.0’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (augsynth)
+* installing *source* package ‘GeoLift’ ...
+** this is package ‘GeoLift’ version ‘2.7.5’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (GeoLift)
+/home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/library/GeoLift 
+ /home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/library/augsynth 
+Installed UPSTREAM_PINNED compatibility overlay at /home/bjw-0/.cache/geo-causal-bench/geolift-compat/pinned/library
+[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25hGEOLIFT_COMPATIBILITY_PASS /mnt/c/Users/bjw-0/Downloads/geo-causal-bench/evidence/geolift_compatibility/qualification/session_1.json 
+[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25h[?25hGEOLIFT_COMPATIBILITY_PASS /mnt/c/Users/bjw-0/Downloads/geo-causal-bench/evidence/geolift_compatibility/qualification/session_2.json 
+[?25h[?25hFRESH_SESSION_REPRODUCIBILITY_PASS
+Collected authoritative source and protected-scope metadata
+GeoLift compatibility evidence PASS (16 files)
+
+Script done on 2026-09-10 00:18:41-04:00 [COMMAND_EXIT_CODE="0"]

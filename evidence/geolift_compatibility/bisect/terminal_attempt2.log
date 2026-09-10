@@ -1,0 +1,320 @@
+Script started on 2026-09-09 23:52:34-04:00 [<not executed on terminal>]
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+* installing *source* package ‘augsynth’ ...
+** this is package ‘augsynth’ version ‘0.2.0’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+* DONE (augsynth)
+[?25h[?25h[?25h[?25h[?25h[?25h[1m[33mError[39m in `tibble()`:[22m
+[1m[22m[33m![39m Tibble columns must have compatible sizes.
+[36m•[39m Size 105: Existing data.
+[36m•[39m Size 210: Column `Yobs`.
+[36mℹ[39m Only values of size one are recycled.
+Backtrace:
+[90m     [39m▆
+[90m  1. [39m└─[1mGeoLift[22m::GeoLift(...)
+[90m  2. [39m  ├─[1mbase[22m::summary(...)
+[90m  3. [39m  └─[1maugsynth[22m:::summary.augsynth(...)
+[90m  4. [39m    └─augsynth::treated_table(augsynth)
+[90m  5. [39m      └─[1m[94mtibble::tibble([39m[22m...[1m[94m)[39m[22m
+[90m  6. [39m        └─tibble:::tibble_quos(xs, .rows, .name_repair)
+[90m  7. [39m          └─tibble:::vectbl_recycle_rows(...)
+[90m  8. [39m            └─tibble:::abort_incompatible_size(...)
+[90m  9. [39m              └─tibble:::tibble_abort(...)
+[90m 10. [39m                └─[1mrlang[22m::abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
+Execution halted
+[?25hBisecting: 2 revisions left to test after this (roughly 1 step)
+[ac5a3d670d937931cbb08d29d71ea6f6e737b843] Updated single synth vignette
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+* installing *source* package ‘augsynth’ ...
+** this is package ‘augsynth’ version ‘0.2.0’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+* DONE (augsynth)
+[?25h[?25h[?25h[?25h[?25h[?25hError in get_placebo_gaps(augsynth, att = FALSE) : 
+  Two versions of estimated impacts do not correspond.  Serious error.  Please contact package maintainers.
+Calls: <Anonymous> ... add_inference -> add_placebo_distribution -> get_placebo_gaps
+Execution halted
+[?25hBisecting: 0 revisions left to test after this (roughly 0 steps)
+[bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c] Placebo tests and extended plotting functionality  (#88)
+running  'bash' '/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/scripts/geolift_compat/bisect_candidate.sh' '/home/bjw-0/.cache/geo-causal-bench/geolift-compat/upstream/augsynth'
+* installing *source* package ‘augsynth’ ...
+** this is package ‘augsynth’ version ‘0.2.0’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+* DONE (augsynth)
+[?25h[?25h[?25h[?25h[?25h[?25hError in get_placebo_gaps(augsynth, att = FALSE) : 
+  Two versions of estimated impacts do not correspond.  Serious error.  Please contact package maintainers.
+Calls: <Anonymous> ... add_inference -> add_placebo_distribution -> get_placebo_gaps
+Execution halted
+[?25hbdc0b808103ffa7cf63ba0661f1ee2adb10eba3c is the first bad commit
+commit bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c
+Author: Nora Delaney <nfdelaney@gmail.com>
+Date:   Wed May 20 17:57:24 2026 -0400
+
+    Placebo tests and extended plotting functionality  (#88)
+    
+    * add tobacco_replication files
+    
+    Rmd file and data for replication of Abadie et al. (2010)
+    
+    * Update package files
+    
+    -updates functions in augsynth.R
+    -adds permutation.R (also contains some plotting functions)
+    -updates package documentation
+    
+    * update text in Rmd file
+    
+    Updates the github directory in tobacco replication vignette
+    
+    * default inference
+    
+    Replaces convention of inf = F with inf_type = 'none'.
+    
+    * integrate feedback
+    
+    - Separates out inference from estimation. Sets augsynth(inf = "none") by default, which should be backwards compatible.
+    - Adds plot_type as an argument for plot.augsynth (allows user to specify the "name" of the desired outputted plot).
+    - Adds the option to generate a donor table (synthetic control weights and RMSPEs for any inference type)
+    - Ensures that all existing tests execute successfully.
+    
+    * update tobacco replication vignette
+    
+    * add testing, address join warning
+    
+    * replication edits
+    
+    Updates to abadie et al 2010 replication notebook
+    
+    * update warnings
+    
+    Adds warnings to multi-outcome and multisynth models if a user attempts to pass in `inf_type` at the time of model fitting.
+    
+    * notebook updates
+    
+    Minor edits to tobacco replication notebook
+    
+    * Edit pass on full package with focus on summary method and making augsynth class methods for accessing data characteristics.
+    
+    * tobacco vignette
+    
+    - converts the tobacco replication notebook to a vignette
+    - removes cache folders and plot folder from the Abadie et al. (2010) tobacco replication notebook
+    
+    * Update .gitignore
+    
+    * clean up docs and whatnot
+    
+    * Cleaned up documentation and added a few utility functions.  Removed some of the MDES calculation stuff from the permutation package to clarify inference side.
+    
+    * patch
+    
+    - addresses number formatting in print.summary.augsynth
+    
+    * cleaning up printout.  Adding a small DGP function for testing.
+    
+    * Cleaning up documentation and adding some testing code to increase coverage.
+    
+    * made plotting options work with both summary and augsynth objects
+    
+    * Clean up tobacco replication, added a helper function for placebo distribution
+    
+    * plotting from summary
+    
+    * update tests
+    
+    * update plotting tests
+    
+    * tweaks
+    
+    * Final tweaks--made synth calls go with nonnegative weights to make donor tests make sense.
+    
+    * updated tobacco so it runs.
+    
+    * update from requested changes
+    
+    * clean up a few small bugs on arguments with SCM=FALSE.  Started to dig into tobacco example more.
+    
+    * Merged in results, tried to repair some test cases (one test is failing)
+    
+    * updates to tests
+    
+    - adds a test for update_augsynth() ensuring that non-binding update criteria (ex. RMPSE multiple of infinity) return the same donor weights as the original model.
+    - removes superfluous datasets froom the tobacco_replication.Rmd file
+    - updates a test in test-donor_control.R to resolve an error from a variable that is called but not defined (or used as part of the test, as far as I can tell)
+    
+    * Final small cleanup to package based on eli comments.
+    
+    * Cleaning up tobacco replication script and blog post on inference
+    
+    * update tests
+    
+    * reintegrate augsynth_class
+    
+    * update docs
+    
+    * cleaning up the vignettes and initial blog post
+    
+    * Added test of T0 = n warning, and made progfunc to lowercase earlier to unite checking of that setting.
+    
+    * update per pull request
+    
+    * responses to pull request
+    
+    * remove tobacco replication
+    
+    * tweaks
+    
+    * redid documentation, mild auto updates
+    
+    * refactor plotting
+    
+    - Simplify plot.augsynth() / plot.summary.augsynth() behavior around inference and plot types (should ensure backwards compatibility)
+    - Remove plot_type options:
+      * "estimate only" → use inf = FALSE to suppress CIs when using `plot_type` = "estimate" (ATT)
+      * "outcomes raw average" → outcomes plot now always includes treated, synthetic, and donor average
+    - Make cv = TRUE override other plotting options (backwards compatibility)
+    - Preserve inf as the switch controlling CI display (even when inf_type is supplied)
+    
+    - Update summary plotting:
+      * summary.augsynth plots inherit stored inference and do not recompute at plot time
+      * placebo plots require permutation-based inference for summary objects
+      * plot.augsynth() defaults to permutation inference for placebo plots unless
+        inf_type = "permutation_rstat" is explicitly requested
+    
+    - Update permutation_plot() to inherit inference type from object
+    - Fix CV plot warnings (geom_point annotations)
+    - Update (revert) vignette to reflect new plotting behavior
+    - Update plotting tests to match new API
+    
+    Notes:
+    - plot(desyn) shows slightly different confidence intervals relative to vignette from main branch; possibly due to inference changes, not plotting?
+    - Some tests (test_multisynth_covariates.R, test_outcome_models.R) currently fail due to numerical tolerance;
+      temporarily disabled with skip("temporarily disabled")
+    
+    * Improving plot tests and function
+    
+    * cleanup and hiding of MDES stuff
+    
+    * removed robust SE code
+    
+    * add test context
+    
+    * outcomes plot styling
+    
+    * fixed cv=FALSE not turning off cv plotting bug
+    
+    * added test code for cv FLAG
+    
+    * Small changes to plots
+    
+    ---------
+    
+    Co-authored-by: lmiratrix <luke@vzvz.org>
+    Co-authored-by: Eli Ben-Michael <ebenmichael@cmu.edu>
+
+ .Rbuildignore                               |    2 +
+ .gitignore                                  |   10 +-
+ DESCRIPTION                                 |    2 +-
+ NAMESPACE                                   |   21 +
+ R/augsynth.R                                | 1297 +++++++++++++++++++++------
+ R/augsynth_pre.R                            |   24 +-
+ R/calc_covariate_balance.R                  |   51 ++
+ R/donor_control.R                           |  122 +++
+ R/fit_synth.R                               |   10 +-
+ R/inference.R                               |  111 ++-
+ R/make_synth_data.R                         |  128 +++
+ R/multi_outcomes.R                          |   68 +-
+ R/multisynth_class.R                        |  181 ++--
+ R/permutation.R                             |  426 +++++++++
+ README.md                                   |    5 +
+ man/RMSPE.Rd                                |   17 +
+ man/add_inference.Rd                        |   36 +
+ man/augsynth-package.Rd                     |    4 +
+ man/augsynth.Rd                             |   15 +-
+ man/augsynth_class.Rd                       |   39 +
+ man/bootstrap_methods.Rd                    |   32 +
+ man/covariate_balance_table.Rd              |   19 +
+ man/donor_table.Rd                          |   27 +
+ man/make_V_matrix.Rd                        |   11 -
+ man/multisynth_class.Rd                     |   31 +
+ man/permutation_plot.Rd                     |   31 +
+ man/placebo_distribution.Rd                 |   17 +
+ man/plot.augsynth.Rd                        |   58 +-
+ man/plot.summary.augsynth.Rd                |   23 +-
+ man/plot_augsynth_results.Rd                |   44 +
+ man/rdirichlet_b.Rd                         |   14 -
+ man/rmultinom_b.Rd                          |   14 -
+ man/rwild_b.Rd                              |   14 -
+ man/single_augsynth.Rd                      |    4 +-
+ man/summary.augsynth.Rd                     |   35 +-
+ man/summary.augsynth_class.Rd               |   17 +
+ man/synth_class.Rd                          |   26 +
+ man/treated_table.Rd                        |   24 +
+ man/update_augsynth.Rd                      |   19 +
+ pkg.Rproj                                   |    5 +
+ tests/testthat/test-augsynth_plotting.R     |  215 +++++
+ tests/testthat/test-donor_control.R         |  116 +++
+ tests/testthat/test-permutation_inference.R |  120 +++
+ tests/testthat/test-summary.augsynth.R      |   47 +
+ tests/testthat/test_augsynth_pre.R          |   19 +
+ tests/testthat/test_format.R                |    8 +-
+ tests/testthat/test_general.R               |  119 ++-
+ tests/testthat/test_inference.R             |   15 +
+ tests/testthat/test_multisynth.R            |   45 +-
+ tests/testthat/test_multisynth_covariates.R |   41 +-
+ tests/testthat/test_outcome_models.R        |   20 +-
+ tests/testthat/test_unbalanced_multisynth.R |   22 +-
+ vignettes/singlesynth-vignette.Rmd          |    8 +-
+ 53 files changed, 3188 insertions(+), 641 deletions(-)
+ create mode 100644 R/calc_covariate_balance.R
+ create mode 100644 R/donor_control.R
+ create mode 100644 R/make_synth_data.R
+ create mode 100644 R/permutation.R
+ create mode 100644 man/RMSPE.Rd
+ create mode 100644 man/add_inference.Rd
+ create mode 100644 man/augsynth_class.Rd
+ create mode 100644 man/bootstrap_methods.Rd
+ create mode 100644 man/covariate_balance_table.Rd
+ create mode 100644 man/donor_table.Rd
+ delete mode 100644 man/make_V_matrix.Rd
+ create mode 100644 man/multisynth_class.Rd
+ create mode 100644 man/permutation_plot.Rd
+ create mode 100644 man/placebo_distribution.Rd
+ create mode 100644 man/plot_augsynth_results.Rd
+ delete mode 100644 man/rdirichlet_b.Rd
+ delete mode 100644 man/rmultinom_b.Rd
+ delete mode 100644 man/rwild_b.Rd
+ create mode 100644 man/summary.augsynth_class.Rd
+ create mode 100644 man/synth_class.Rd
+ create mode 100644 man/treated_table.Rd
+ create mode 100644 man/update_augsynth.Rd
+ create mode 100644 tests/testthat/test-augsynth_plotting.R
+ create mode 100644 tests/testthat/test-donor_control.R
+ create mode 100644 tests/testthat/test-permutation_inference.R
+ create mode 100644 tests/testthat/test-summary.augsynth.R
+ create mode 100644 tests/testthat/test_inference.R
+bisect found first bad commit
+Script done on 2026-09-09 23:53:27-04:00 [COMMAND_EXIT_CODE="0"]

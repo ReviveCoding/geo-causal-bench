@@ -1,0 +1,348 @@
+=== INVESTIGATION CLASS ===
+UPSTREAM_UNMODIFIED
+=== PACKAGE IDENTITIES ===
+$fields
+$fields$Package
+[1] "GeoLift"
+
+$fields$Version
+[1] "2.7.5"
+
+$fields$RemoteType
+[1] "github"
+
+$fields$RemoteHost
+[1] "api.github.com"
+
+$fields$RemoteRepo
+[1] "GeoLift"
+
+$fields$RemoteUsername
+[1] "facebookincubator"
+
+$fields$RemoteRef
+[1] "db34ea4299ff0e28515ebac502b78c076c93c905"
+
+$fields$RemoteSha
+[1] "db34ea4299ff0e28515ebac502b78c076c93c905"
+
+$fields$GithubSHA1
+[1] "db34ea4299ff0e28515ebac502b78c076c93c905"
+
+
+$path
+[1] "/home/bjw-0/.cache/geo-causal-bench/envs/core/lib/R/library/GeoLift"
+
+$description_sha256
+[1] "6fa814368404cddda7d11316178c7539000e79c9e14768bb10b8a9ed9cad5127"
+
+$fields
+$fields$Package
+[1] "augsynth"
+
+$fields$Version
+[1] "0.2.0"
+
+$fields$RemoteType
+[1] "github"
+
+$fields$RemoteHost
+[1] "api.github.com"
+
+$fields$RemoteRepo
+[1] "augsynth"
+
+$fields$RemoteUsername
+[1] "ebenmichael"
+
+$fields$RemoteRef
+[1] "7e70072232fe75057aa8b5d7af08c7e1aef53ae8"
+
+$fields$RemoteSha
+[1] "7e70072232fe75057aa8b5d7af08c7e1aef53ae8"
+
+$fields$GithubSHA1
+[1] "7e70072232fe75057aa8b5d7af08c7e1aef53ae8"
+
+
+$path
+[1] "/home/bjw-0/.cache/geo-causal-bench/envs/core/lib/R/library/augsynth"
+
+$description_sha256
+[1] "91f6fb8691911ac1bc7cba9c7173d17364cc31d2f778e51cddfdfc3cbae2f96c"
+
+=== SESSION INFO BEFORE FAILURE ===
+R version 4.5.3 (2026-03-11)
+Platform: x86_64-conda-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /home/bjw-0/.cache/geo-causal-bench/envs/core/lib/libopenblasp-r0.3.34.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: America/New_York
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] augsynth_0.2.0 GeoLift_2.7.5 
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6           xfun_0.60              ggplot2_4.0.3         
+ [4] GGally_2.4.0           lattice_0.23-1         numDeriv_2016.8-1.1   
+ [7] vctrs_0.7.3            tools_4.5.3            generics_0.1.4        
+[10] parallel_4.5.3         CausalImpact_1.3.0     sandwich_3.1-3        
+[13] proxy_0.4-29           tibble_3.3.1           xts_0.14.2            
+[16] pkgconfig_2.0.3        MarketMatching_1.2.1   data.table_1.18.6.1   
+[19] RColorBrewer_1.1-3     S7_0.2.2               rngtools_1.5.2        
+[22] stringmagic_1.3.0      assertthat_0.2.1       lifecycle_1.0.5       
+[25] compiler_4.5.3         farver_2.1.2           stringr_1.6.0         
+[28] progress_1.2.3         codetools_0.2-20       gsynth_1.4.0          
+[31] Formula_1.2-6          crayon_1.5.3           pillar_1.11.1         
+[34] tidyr_1.3.2            panelView_1.3.1        MASS_7.3-66           
+[37] doRNG_1.8.6.3          iterators_1.0.14       abind_1.4-8           
+[40] foreach_1.5.2          nlme_3.1-170           parallelly_1.48.0     
+[43] ggstats_0.14.0         tidyselect_1.2.1       digest_0.6.39         
+[46] mvtnorm_1.4-2          stringi_1.8.9          future_1.75.0         
+[49] dplyr_1.2.1            reshape2_1.4.5         purrr_1.2.2           
+[52] listenv_1.0.0          grid_4.5.3             cli_3.6.6             
+[55] magrittr_2.0.5         utf8_1.2.6             future.apply_1.20.2   
+[58] dreamerr_1.5.0         prettyunits_1.2.0      scales_1.4.0          
+[61] globals_0.19.1         otel_0.2.0             gridExtra_2.3.1       
+[64] Boom_0.9.16            hms_1.1.4              zoo_1.8-15            
+[67] evaluate_1.0.5         knitr_1.52             BoomSpikeSlab_1.2.7   
+[70] dtw_1.23-3             doParallel_1.0.17      fixest_0.14.2         
+[73] fect_2.4.5             rlang_1.3.0            Rcpp_1.1.2            
+[76] glue_1.8.1             directlabels_2026.8.27 R6_2.6.1              
+[79] plyr_1.8.9             bsts_0.9.11           
+=== RAW DATA ===
+dim: 4200 x 3 
+serialized_sha256: 8493f39514fa7277664ef88a15923b0e4f25c7d7f6f085a8ec386c5ee7c294bc 
+=== PROCESSED DATA ===
+dim: 4200 x 3 
+locations: 40 
+times: 105 
+duplicate_location_time: 0 
+serialized_sha256: 26ec6728a60c7cc3cbf3f5b645c77d0eed5e657d5ad9bb8bf3bbe0db503ed591 
+Tracing function "treated_table" in package "namespace:augsynth"
+[1] "treated_table"
+=== EXACT OFFICIAL TWO-LOCATION CALL ===
+=== TREATED_TABLE ENTRY SHAPES ===
+X: 40 x 90 
+y: 40 x 15 
+combined: 40 x 105 
+treated_rows: 2 
+time_length: 105 
+flattened_Yobs_length: 210 
+treated_mean_length: 105 
+Yhat_length: 105 
+raw_average_length: 105 
+
+=== ERROR CONDITION ===
+Tibble columns must have compatible sizes.
+• Size 105: Existing data.
+• Size 210: Column `Yobs`.
+ℹ Only values of size one are recycled. 
+
+=== ACTIVE CALL STACK ===
+[[1]]
+withCallingHandlers(GeoLift::GeoLift(Y_id = "Y", data = GeoTestData_Test, 
+    locations = c("chicago", "portland"), treatment_start_time = 91, 
+    treatment_end_time = 105), error = function(error) {
+    cat("\n=== ERROR CONDITION ===\n")
+    cat(conditionMessage(error), "\n")
+    cat("\n=== ACTIVE CALL STACK ===\n")
+    print(sys.calls())
+    cat("\n=== RLANG TRACE ===\n")
+    print(rlang::trace_back())
+})
+
+[[2]]
+GeoLift::GeoLift(Y_id = "Y", data = GeoTestData_Test, locations = c("chicago", 
+    "portland"), treatment_start_time = 91, treatment_end_time = 105)
+
+[[3]]
+summary(augsyn, alpha = alpha, stat_func = stat_func, type = conformal_type, 
+    ns = ns)
+
+[[4]]
+summary.augsynth(augsyn, alpha = alpha, stat_func = stat_func, 
+    type = conformal_type, ns = ns)
+
+[[5]]
+treated_table(augsynth)
+
+[[6]]
+tibble(time = as.numeric(colnames(df)), Yobs = as.numeric(treated_unit), 
+    Yhat = as.numeric(synth_unit), raw_average = as.numeric(average_unit))
+
+[[7]]
+tibble_quos(xs, .rows, .name_repair)
+
+[[8]]
+vectbl_recycle_rows(res, first_size, j, given_col_names[[j]], 
+    call)
+
+[[9]]
+abort_incompatible_size(n, name, size, "Existing data", call)
+
+[[10]]
+tibble_abort(call = call, bullets("Tibble columns must have compatible sizes:", 
+    if (!is.null(.rows)) paste0("Size ", .rows, ": ", rows_source), 
+    problems, info = "Only values of size one are recycled."))
+
+[[11]]
+abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
+
+[[12]]
+signal_abort(cnd, .file)
+
+[[13]]
+signalCondition(cnd)
+
+[[14]]
+(function (error) 
+{
+    cat("\n=== ERROR CONDITION ===\n")
+    cat(conditionMessage(error), "\n")
+    cat("\n=== ACTIVE CALL STACK ===\n")
+    print(sys.calls())
+    cat("\n=== RLANG TRACE ===\n")
+    print(rlang::trace_back())
+})(list(message = c("Tibble columns must have compatible sizes."), 
+    trace = list(call = list(withCallingHandlers(GeoLift::GeoLift(Y_id = "Y", 
+        data = GeoTestData_Test, locations = c("chicago", "portland"), 
+        treatment_start_time = 91, treatment_end_time = 105), 
+        error = function(error) {
+            cat("\n=== ERROR CONDITION ===\n")
+            cat(conditionMessage(error), "\n")
+            cat("\n=== ACTIVE CALL STACK ===\n")
+            print(sys.calls())
+            cat("\n=== RLANG TRACE ===\n")
+            print(rlang::trace_back())
+        }), GeoLift::GeoLift(Y_id = "Y", data = GeoTestData_Test, 
+        locations = c("chicago", "portland"), treatment_start_time = 91, 
+        treatment_end_time = 105), summary(augsyn, alpha = alpha, 
+        stat_func = stat_func, type = conformal_type, ns = ns), 
+        summary.augsynth(augsyn, alpha = alpha, stat_func = stat_func, 
+            type = conformal_type, ns = ns), treated_table(augsynth), 
+        tibble(time = as.numeric(colnames(df)), Yobs = as.numeric(treated_unit), 
+            Yhat = as.numeric(synth_unit), raw_average = as.numeric(average_unit)), 
+        tibble_quos(xs, .rows, .name_repair), vectbl_recycle_rows(res, 
+            first_size, j, given_col_names[[j]], call), abort_incompatible_size(n, 
+            name, size, "Existing data", call), tibble_abort(call = call, 
+            bullets("Tibble columns must have compatible sizes:", 
+                if (!is.null(.rows)) paste0("Size ", .rows, ": ", 
+                  rows_source), problems, info = "Only values of size one are recycled.")), 
+        abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)), 
+        parent = c(0L, 0L, 2L, 2L, 4L, 5L, 6L, 7L, 8L, 9L, 10L
+        ), visible = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, 
+        FALSE, FALSE, FALSE, FALSE), namespace = c("base", "GeoLift", 
+        "base", "augsynth", "augsynth", "tibble", "tibble", "tibble", 
+        "tibble", "tibble", "rlang"), scope = c("::", "::", "::", 
+        ":::", "::", "::", ":::", ":::", ":::", ":::", "::"), 
+        error_frame = c(FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, 
+        FALSE, FALSE, FALSE, FALSE, FALSE)), parent = NULL, body = c(`*` = "Size 105: Existing data.", 
+    `*` = "Size 210: Column `Yobs`.", i = "Only values of size one are recycled."
+    ), rlang = list(inherit = TRUE), call = tibble(time = as.numeric(colnames(df)), 
+        Yobs = as.numeric(treated_unit), Yhat = as.numeric(synth_unit), 
+        raw_average = as.numeric(average_unit)), use_cli_format = TRUE))
+
+
+=== RLANG TRACE ===
+     ▆
+  1. ├─base::withCallingHandlers(...)
+  2. ├─GeoLift::GeoLift(...)
+  3. │ ├─base::summary(...)
+  4. │ └─augsynth:::summary.augsynth(...)
+  5. │   └─augsynth::treated_table(augsynth)
+  6. │     └─tibble::tibble(...)
+  7. │       └─tibble:::tibble_quos(xs, .rows, .name_repair)
+  8. │         └─tibble:::vectbl_recycle_rows(...)
+  9. │           └─tibble:::abort_incompatible_size(...)
+ 10. │             └─tibble:::tibble_abort(...)
+ 11. │               └─rlang::abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
+ 12. │                 └─rlang:::signal_abort(cnd, .file)
+ 13. │                   └─base::signalCondition(cnd)
+ 14. └─global `<fn>`(`<tbbl_r__>`)
+Error in `tibble()`:
+! Tibble columns must have compatible sizes.
+• Size 105: Existing data.
+• Size 210: Column `Yobs`.
+ℹ Only values of size one are recycled.
+Backtrace:
+     ▆
+  1. ├─base::withCallingHandlers(...)
+  2. └─GeoLift::GeoLift(...)
+  3.   ├─base::summary(...)
+  4.   └─augsynth:::summary.augsynth(...)
+  5.     └─augsynth::treated_table(augsynth)
+  6.       └─tibble::tibble(...)
+  7.         └─tibble:::tibble_quos(xs, .rows, .name_repair)
+  8.           └─tibble:::vectbl_recycle_rows(...)
+  9.             └─tibble:::abort_incompatible_size(...)
+ 10.               └─tibble:::tibble_abort(...)
+ 11.                 └─rlang::abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
+
+=== COMPLETE TRACEBACK ===
+No traceback available 
+
+=== SESSION INFO AT FAILURE ===
+R version 4.5.3 (2026-03-11)
+Platform: x86_64-conda-linux-gnu
+Running under: Ubuntu 22.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /home/bjw-0/.cache/geo-causal-bench/envs/core/lib/libopenblasp-r0.3.34.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: America/New_York
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] augsynth_0.2.0 GeoLift_2.7.5 
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6           xfun_0.60              ggplot2_4.0.3         
+ [4] GGally_2.4.0           lattice_0.23-1         numDeriv_2016.8-1.1   
+ [7] vctrs_0.7.3            tools_4.5.3            generics_0.1.4        
+[10] parallel_4.5.3         CausalImpact_1.3.0     sandwich_3.1-3        
+[13] proxy_0.4-29           tibble_3.3.1           xts_0.14.2            
+[16] pkgconfig_2.0.3        MarketMatching_1.2.1   Matrix_1.7-6          
+[19] data.table_1.18.6.1    RColorBrewer_1.1-3     S7_0.2.2              
+[22] rngtools_1.5.2         stringmagic_1.3.0      assertthat_0.2.1      
+[25] lifecycle_1.0.5        compiler_4.5.3         farver_2.1.2          
+[28] stringr_1.6.0          progress_1.2.3         codetools_0.2-20      
+[31] gsynth_1.4.0           Formula_1.2-6          crayon_1.5.3          
+[34] pillar_1.11.1          tidyr_1.3.2            panelView_1.3.1       
+[37] MASS_7.3-66            doRNG_1.8.6.3          iterators_1.0.14      
+[40] abind_1.4-8            foreach_1.5.2          nlme_3.1-170          
+[43] parallelly_1.48.0      ggstats_0.14.0         tidyselect_1.2.1      
+[46] digest_0.6.39          mvtnorm_1.4-2          stringi_1.8.9         
+[49] future_1.75.0          dplyr_1.2.1            reshape2_1.4.5        
+[52] purrr_1.2.2            listenv_1.0.0          grid_4.5.3            
+[55] cli_3.6.6              magrittr_2.0.5         utf8_1.2.6            
+[58] future.apply_1.20.2    withr_3.0.3            dreamerr_1.5.0        
+[61] prettyunits_1.2.0      scales_1.4.0           globals_0.19.1        
+[64] otel_0.2.0             gridExtra_2.3.1        Boom_0.9.16           
+[67] hms_1.1.4              zoo_1.8-15             evaluate_1.0.5        
+[70] knitr_1.52             BoomSpikeSlab_1.2.7    dtw_1.23-3            
+[73] doParallel_1.0.17      fixest_0.14.2          fect_2.4.5            
+[76] rlang_1.3.0            Rcpp_1.1.2             glue_1.8.1            
+[79] directlabels_2026.8.27 osqp_1.0.0             R6_2.6.1              
+[82] plyr_1.8.9             bsts_0.9.11           

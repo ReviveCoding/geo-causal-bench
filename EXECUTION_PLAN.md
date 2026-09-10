@@ -59,6 +59,29 @@ Next legal action: `AUDIT_COMPLETE`. The protected E14 command must not be
 rerun under this protocol. Optional E21 can only create separately labeled
 future evidence and cannot revise the current decision.
 
+### Post-audit external-validation extension
+
+- [x] 2026-09-10T03:38Z Opened isolated extension `GEOLIFT-COMPAT-001` without
+  changing protocol 002, its freeze, E14, E20, or receipt chain.
+- [x] 2026-09-10T03:53Z Reproduced augsynth issue #118 under unmodified
+  GeoLift 2.7.5 plus augsynth 0.2.0, preserving the active call stack, package
+  commits, session, object dimensions, and hashes.
+- [x] 2026-09-10T04:02Z Completed authoritative git bisect. Commit
+  `bdc0b808103ffa7cf63ba0661f1ee2adb10eba3c` is the first incompatible
+  revision; its parent `65c5a6f34f4e4a8b1011182fe12309ef022d992f`
+  is the last-good upstream pin.
+- [x] 2026-09-10T04:08Z Qualified the unmodified pin on one, two, three, and
+  reversed-order treatment-location cases in two fresh R sessions. All declared
+  dimension, aggregation, ordering, and time-indexed inference invariants pass.
+- [x] 2026-09-10T04:19Z Completed the idempotent clean-room `run_all.sh`
+  closure with exit code 0; both fresh sessions, exact comparison, 16-artifact
+  hash manifest, protected-protocol verification, Ruff, shell syntax, all 42
+  pytest tests, and `git diff --check` pass.
+
+Extension state: `COMPLETE / UPSTREAM_PINNED`. It creates new post-audit
+external-validation evidence only. The protocol 002 GeoLift gate remains the
+correct historical state of the frozen study.
+
 ## Surprises & Discoveries
 
 - 2026-09-10: The repository had no root `AGENTS.md`; the required read failed
@@ -106,6 +129,17 @@ future evidence and cannot revise the current decision.
 - 2026-09-10: GPU speedup was workload dependent: 2.69x--24.84x for measured
   batches after compilation, while roughly 0.4 seconds of compilation can make
   one-off small work slower. This negative qualification is retained.
+- 2026-09-10: augsynth 0.2.0 is not a unique source identity: both the working
+  compatibility pin and incompatible head report version 0.2.0. Exact commit
+  identity is required.
+- 2026-09-10: The first compatibility bisect skipped historical commits because
+  current head no longer required LiblineaR. Installing LiblineaR 2.10-24 only
+  in extension scratch enabled a conclusive second bisect; both attempts remain
+  preserved.
+- 2026-09-10: Pinned GeoLift exposes 105-row conformal estimate/bound/p-value
+  output, but its top-level aggregate confidence-bound fields are NA in this
+  dependency constellation. Point/aggregation qualification passes, but no
+  aggregate-CI claim is allowed.
 
 ## Decision Log
 
@@ -131,6 +165,12 @@ future evidence and cannot revise the current decision.
   protocol 002. Restrict the claim to the frozen simulated decision procedure.
 - 2026-09-10 — Omit optional E21. It is not allowed to delay completion or
   rewrite the already frozen and audited evidence.
+- 2026-09-10 — Resolve GeoLift compatibility with an unmodified upstream pin at
+  the parent of the first incompatible augsynth commit. Do not create a local
+  source patch because the pin passes the required scientific invariants.
+- 2026-09-10 — Label all compatibility output `UPSTREAM_PINNED` and keep it out
+  of protocol 002's canonical evidence. The earlier `GATED` result is not
+  retroactively rewritten.
 
 ## Outcomes & Retrospective
 
@@ -151,6 +191,16 @@ miscalibrated, GeoLift remained package-gated, and external cases cannot rank
 accuracy because truth is unknown. Protocol 001 remains archived as
 `INVALID_PROTOCOL`; preserving and correcting that failure materially improved
 the audit boundary.
+
+Post-audit extension `GEOLIFT-COMPAT-001` found a qualified compatibility path:
+unmodified GeoLift commit `db34ea4299ff0e28515ebac502b78c076c93c905`
+works with unmodified augsynth commit
+`65c5a6f34f4e4a8b1011182fe12309ef022d992f`. The official two-location result
+is 4666.677831 incremental units (the documented rounded value is 4667); one-
+and three-location cases, explicit observed/synthetic aggregation, order
+invariance, 105-row inference output, and fresh-session reproducibility pass.
+This is separate external-validation evidence and does not alter any prior
+scientific decision.
 
 ## Context and Orientation
 

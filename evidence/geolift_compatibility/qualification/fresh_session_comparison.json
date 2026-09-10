@@ -1,0 +1,8 @@
+{
+  "evidence_class": "UPSTREAM_PINNED",
+  "extension_id": "GEOLIFT-COMPAT-001",
+  "status": "PASS",
+  "fresh_session_reproducible": true,
+  "first": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/evidence/geolift_compatibility/qualification/session_1.json",
+  "second": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/evidence/geolift_compatibility/qualification/session_2.json"
+}

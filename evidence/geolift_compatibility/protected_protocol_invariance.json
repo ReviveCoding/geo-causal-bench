@@ -1,0 +1,30 @@
+{
+  "audited_commit": "4e161634557ea76852f3ca70340898bb5acf8394",
+  "status": "PASS",
+  "paths": {
+    "artifacts/freeze": {
+      "audited_commit_object": "e9781dd55394b77a776ec3a953ebbe09a3276057",
+      "current_head_object": "e9781dd55394b77a776ec3a953ebbe09a3276057",
+      "head_matches_audited": true,
+      "working_tree_unmodified": true
+    },
+    "evidence/final": {
+      "audited_commit_object": "a2f80a1dcd158ec4c8ee41e25e3d73bd9b9d162a",
+      "current_head_object": "a2f80a1dcd158ec4c8ee41e25e3d73bd9b9d162a",
+      "head_matches_audited": true,
+      "working_tree_unmodified": true
+    },
+    "evidence/e20_audit.json": {
+      "audited_commit_object": "2a769424d5a3b648382390fced2025a4690b3a4e",
+      "current_head_object": "2a769424d5a3b648382390fced2025a4690b3a4e",
+      "head_matches_audited": true,
+      "working_tree_unmodified": true
+    },
+    "evidence/receipts": {
+      "audited_commit_object": "1fa51e2cecf7daba06184ee79c0964bc35f5e130",
+      "current_head_object": "1fa51e2cecf7daba06184ee79c0964bc35f5e130",
+      "head_matches_audited": true,
+      "working_tree_unmodified": true
+    }
+  }
+}
