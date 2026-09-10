@@ -51,7 +51,7 @@ jobs:
         run: uv run python -m build
       - name: Smoke-test installed wheel outside source tree
         run: |
-          uv export --locked --no-dev --no-emit-project --output-file build/runtime-requirements.txt
+          uv export --quiet --locked --no-dev --no-emit-project --output-file build/runtime-requirements.txt
           uv venv --python 3.11 .wheel-smoke
           uv pip sync --python .wheel-smoke/bin/python build/runtime-requirements.txt
           uv pip install --python .wheel-smoke/bin/python --no-deps dist/*.whl
