@@ -317,7 +317,15 @@ inputs.
 - [ ] Commit the remote publication audit, push it normally, require green CI
   on that exact final commit, and verify local/remote SHA equality.
 
-Next legal action: `CREATE_PUBLIC_REMOTE_AND_PUSH`.
+Remote CI run `34499991813` exposed a clean-clone hermeticity defect: persisted
+DuckDB views referenced the original WSL path. The local clean clone had masked
+this because the original mounted repository was still accessible. R integrity
+passed; Python tests and the evidence job failed correctly. Claim verification
+now constructs an in-memory read-only view from the clone-local immutable
+Parquet file, and a regression test proves it works with no persisted DuckDB
+database. No claim query, expected value, or scientific artifact changed.
+
+Next legal action: `REPEAT_CLEAN_CLONE_AFTER_CI_FIX`.
 
 ## Context and Orientation
 

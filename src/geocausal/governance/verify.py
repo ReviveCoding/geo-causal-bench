@@ -20,9 +20,13 @@ def _json_value(root: Path, source: str, dotted: str) -> Any:
 
 def verify_claims(root: Path) -> dict[str, Any]:
     ledger = json.loads((root / "evidence" / "claim_ledger.json").read_text())
-    database = duckdb.connect(
-        str(root / "artifacts" / "results.duckdb"), read_only=True
-    )
+    # Persisted DuckDB views record the filesystem path used when reports were
+    # built. Recreate the claim view from immutable local Parquet so verification
+    # remains read-only and works in a fresh clone at any path.
+    database = duckdb.connect(":memory:")
+    database.from_parquet(
+        str(root / "evidence" / "final" / "fact_selector_result.parquet")
+    ).create_view("final_selectors")
     results = []
     for claim in ledger["claims"]:
         if "query" in claim:
