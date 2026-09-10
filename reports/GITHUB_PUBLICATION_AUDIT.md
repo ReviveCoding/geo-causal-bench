@@ -1,14 +1,14 @@
 # GitHub Publication Audit
 
 Audit identity: `GITHUB-PUBLICATION-001`  
-Audit timestamp: `2026-09-10T16:13:44.6343037Z`
+Audit timestamp: `2026-09-10T16:19:28.5811170Z`
 
 ## Publication state
 
 - Repository: <https://github.com/ReviveCoding/geo-causal-bench>
 - Visibility: **PUBLIC**
 - Default and only branch: `main`
-- Publication/CI-fix commit: `d5157741ce83f26e4fac76027b8a2b83406b666c`
+- Publication-audit commit: `8a641b18479ef2a37d933c4c59610bcb61d344e2`
 - Local and remote `main` matched at audit generation.
 - No force push, secret bypass, Git LFS migration, Pages deployment, or
   unexpected branch occurred.
@@ -24,12 +24,12 @@ Workflow `CI` at `.github/workflows/ci.yml` uses `contents: read`, has no
 It installs the CPU environment from `uv.lock` under Python 3.11 and does not
 run CUDA, protected simulation, heavy Monte Carlo, or the external R stack.
 
-Run [34500511959](https://github.com/ReviveCoding/geo-causal-bench/actions/runs/34500511959)
-completed successfully for exact SHA `d5157741ce83f26e4fac76027b8a2b83406b666c`:
+Run [34501118043](https://github.com/ReviveCoding/geo-causal-bench/actions/runs/34501118043)
+completed successfully for exact SHA `8a641b18479ef2a37d933c4c59610bcb61d344e2`:
 
-- Evidence and claim contracts: **SUCCESS** (`102949827392`)
-- Python quality, tests, and package: **SUCCESS** (`102949827542`)
-- R syntax and compatibility-pin integrity: **SUCCESS** (`102949827638`)
+- Evidence and claim contracts: **SUCCESS** (`102951856071`)
+- Python quality, tests, and package: **SUCCESS** (`102951855499`)
+- R syntax and compatibility-pin integrity: **SUCCESS** (`102951856137`)
 
 The Python job passed Ruff, strict mypy, 53 pytest tests, 95% branch coverage,
 sdist/wheel build, and a wheel/CLI smoke test outside the source tree. The R job
@@ -66,5 +66,6 @@ Protocol 002 history was not rewritten.
   `aware-geo-freeze-c0b13ec88b725728` and
   `aware-geo-freeze-e52a8660a97ef174`.
 
-This report is introduced by a final publication-audit commit. That containing
-commit must itself pass the same remote CI workflow before closure.
+This terminal update is introduced by a metadata-only closure commit. That
+containing commit must itself pass the same remote CI workflow; the external
+result is verified after push without another file mutation.

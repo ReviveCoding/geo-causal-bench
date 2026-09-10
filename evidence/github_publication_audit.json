@@ -1,26 +1,26 @@
 {
   "audit_id": "GITHUB-PUBLICATION-001",
-  "timestamp_utc": "2026-09-10T16:13:44.6343037Z",
+  "timestamp_utc": "2026-09-10T16:19:28.5811170Z",
   "repository_url": "https://github.com/ReviveCoding/geo-causal-bench",
   "visibility": "PUBLIC",
   "default_branch": "main",
   "branches": ["main"],
-  "publication_commit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
-  "local_main_sha_at_audit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
-  "remote_main_sha_at_audit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+  "publication_commit": "8a641b18479ef2a37d933c4c59610bcb61d344e2",
+  "local_main_sha_at_audit": "8a641b18479ef2a37d933c4c59610bcb61d344e2",
+  "remote_main_sha_at_audit": "8a641b18479ef2a37d933c4c59610bcb61d344e2",
   "sha_match_at_audit": true,
   "ci": {
     "workflow": ".github/workflows/ci.yml",
     "workflow_name": "CI",
-    "run_id": 34500511959,
-    "run_url": "https://github.com/ReviveCoding/geo-causal-bench/actions/runs/34500511959",
-    "head_sha": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+    "run_id": 34501118043,
+    "run_url": "https://github.com/ReviveCoding/geo-causal-bench/actions/runs/34501118043",
+    "head_sha": "8a641b18479ef2a37d933c4c59610bcb61d344e2",
     "status": "completed",
     "conclusion": "success",
     "jobs": [
-      {"id": 102949827392, "name": "Evidence and claim contracts", "conclusion": "success"},
-      {"id": 102949827542, "name": "Python quality, tests, and package", "conclusion": "success"},
-      {"id": 102949827638, "name": "R syntax and compatibility-pin integrity", "conclusion": "success"}
+      {"id": 102951856071, "name": "Evidence and claim contracts", "conclusion": "success"},
+      {"id": 102951855499, "name": "Python quality, tests, and package", "conclusion": "success"},
+      {"id": 102951856137, "name": "R syntax and compatibility-pin integrity", "conclusion": "success"}
     ]
   },
   "published_scientific_tags": [
@@ -51,6 +51,6 @@
   "readme_badge": "PASS",
   "data_license_audit": "PASS",
   "clean_clone_ci": "PASS",
-  "containing_commit_policy": "The commit introducing this audit must pass CI before closure.",
-  "status": "PASS_PENDING_CONTAINING_COMMIT_CI"
+  "containing_commit_policy": "The metadata-only closure commit containing this terminal update must pass CI; that external result is verified after push without another file mutation.",
+  "status": "PASS"
 }

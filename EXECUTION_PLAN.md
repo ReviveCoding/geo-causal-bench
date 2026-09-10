@@ -316,8 +316,12 @@ inputs.
   only `main`; pushed the two intentional annotated scientific tags normally.
 - [x] Remote CI run `34500511959` passed all Python/package, evidence/claim, and
   R-integrity jobs on exact SHA `d5157741ce83f26e4fac76027b8a2b83406b666c`.
-- [ ] Commit this remote publication audit, push it normally, require green CI
-  on that exact final containing commit, and verify local/remote SHA equality.
+- [x] Publication-audit commit `8a641b18479ef2a37d933c4c59610bcb61d344e2`
+  passed remote CI run `34501118043` with all three jobs successful.
+- [x] Final publication audit status is `PASS`. This metadata-only terminal
+  update requires green CI on its containing closure commit; after that
+  external check and local/remote SHA equality, no further file mutation is
+  required.
 
 Remote CI run `34499991813` exposed a clean-clone hermeticity defect: persisted
 DuckDB views referenced the original WSL path. The local clean clone had masked
@@ -332,7 +336,7 @@ tests, 95% branch coverage, Ruff, strict mypy, build, isolated wheel/CLI,
 historical and post-audit verifiers, R integrity, Git integrity, and an empty
 clone worktree.
 
-Next legal action: `COMMIT_PUBLICATION_AUDIT_AND_REQUIRE_FINAL_GREEN_RUN`.
+Next legal action: `PUSH_METADATA_CLOSURE_AND_VERIFY_FINAL_GREEN_RUN`.
 
 ## Context and Orientation
 
