@@ -40,17 +40,17 @@ results, reports, claim ledger, and reproducibility audit. E21 is optional.
 - [ ] E00 environment qualification report/receipt/review (measurements exist).
 - [ ] E01 authoritative acquisition license audit, receipt, and review
   (sources/manifests exist).
-- [ ] E02--E12 development and qualification program with per-phase reviews.
-- [ ] E13 immutable scientific freeze, verification, commit, and annotated tag.
+- [x] 2026-09-10T03:48Z Completed E02--E12 through adversarial review.
+- [x] 2026-09-10T03:52Z Froze protocol `AWARE-GEO-c0b13ec88b725728`
+  (manifest SHA-256 `967a425d22b68d954405be102a6cecc57db95267027da7dd853d479731810330`).
 - [ ] E14 one-way protected confirmatory evaluation and immediate adversarial
   review.
 - [ ] E15--E19 ablation, observational, external, decision, and compute work.
 - [ ] E20 final reproduction, evidence, claim, and adversarial audit.
 - [ ] E21 optional Meridian MMM extension (may be GATED/OMITTED).
 
-Next legal action: finish adapter and GeoX qualification, convert measured E00
-and E01 outputs into immutable evidence/reviews, and run engineering gates
-before E02--E12 production work.
+Next legal action: commit and annotate E13, then execute E14 once through the
+protected process boundary without retuning.
 
 ## Surprises & Discoveries
 
@@ -80,6 +80,12 @@ before E02--E12 production work.
   reproduced their maintained examples. GeoLift 2.7.5 with augsynth 0.2.0 still
   fails its official two-market example inside `augsynth::treated_table` due a
   210-versus-105 row mismatch and remains GATED pending final evidence review.
+- 2026-09-10: Initial AWARE qualification abstained on 95.8% of clean worlds;
+  uncalibrated null rejection was 0.248--0.510. Development-only gate and
+  interval calibration fixed those gates while preserving the initial run.
+- 2026-09-10: Revised E12 chose fixed DiD in 298/300 worlds and had negligible
+  regret improvement. E10 compound-OOD coverage was only 0.577--0.643. The
+  protected test may fail and no further tuning is legal.
 
 ## Decision Log
 
@@ -97,6 +103,9 @@ before E02--E12 production work.
   independent high-throughput Python estimators. A failed maintained package is
   GATED and remains in qualification denominators; no homemade replacement may
   inherit its label.
+- 2026-09-10 — Freeze the simple ridge selector despite weak differentiation;
+  complexity gets no narrative credit and conjunctive H1/H2 plus reliability
+  gates decide the project.
 
 ## Outcomes & Retrospective
 
