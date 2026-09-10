@@ -39,7 +39,9 @@ def serializable(value: Any) -> Any:
     return value
 
 
-def config(duration: int, assignment: str, seed: int) -> geox.DesignConfig:
+def config(
+    duration: int, assignment: str, seed: int, *, candidates: int = 2048
+) -> geox.DesignConfig:
     rule = (
         geox.GeoAssignmentRule.RANDOM
         if assignment == "random"
@@ -51,7 +53,7 @@ def config(duration: int, assignment: str, seed: int) -> geox.DesignConfig:
         methodology=geox.Methodology.TBR,
         geo_assignment_rule=rule,
         design_output_count=1,
-        n_candidates=2048,
+        n_candidates=candidates,
         n_ranked_candidates=100,
         seed=seed,
         min_r2=0.01,
@@ -190,7 +192,7 @@ def main() -> None:
         "non_monotone_dates": [1],
     }
     quality_rows = []
-    cfg = config(28, "stratified", 20260913)
+    cfg = config(28, "stratified", 20260913, candidates=512)
     for name, levels in quality_levels.items():
         for severity in levels:
             changed = perturb(data, name, float(severity))
@@ -199,6 +201,31 @@ def main() -> None:
                     changed, cfg, geox.QualityCheckConfig()
                 )
                 payload = serializable(result)
+                design_available = False
+                design_failure_reason = None
+                design_metrics: dict[str, Any] = {}
+                try:
+                    design_result = geox.compare_designs(
+                        changed,
+                        [(cfg, geox.Constraints())],
+                        design_output_count=1,
+                    )
+                    metric = design_result.design_metrics.iloc[0]
+                    design_available = True
+                    design_metrics = {
+                        "r2": metric["r2"],
+                        "mde": metric["mde"],
+                        "mde_abs": metric["mde_abs"],
+                        "budget": metric["budget"],
+                        "aa_p_value": metric["p_value (AA)"],
+                        "treatment_geo_count": metric["treatment_geo_count"],
+                        "treatment_response_share": metric["treatment_conversions_pct"]
+                        / 100,
+                    }
+                except Exception as design_error:
+                    design_failure_reason = (
+                        f"{type(design_error).__name__}: {design_error}"
+                    )
                 quality_rows.append(
                     {
                         "extension_id": "OPERATIONS-STUDY-001",
@@ -211,8 +238,10 @@ def main() -> None:
                         ),
                         "excluded_geos": len(result.outlier_geos),
                         "excluded_dates": len(result.outlier_dates),
-                        "design_available": True,
-                        "status": "OFFICIAL_QUALITY_CHECK_EXECUTED",
+                        "design_available": design_available,
+                        "design_failure_reason": design_failure_reason,
+                        "status": "OFFICIAL_QUALITY_AND_DESIGN_EXECUTED",
+                        **design_metrics,
                     }
                 )
             except Exception as error:

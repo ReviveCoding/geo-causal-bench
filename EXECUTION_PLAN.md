@@ -117,9 +117,11 @@ and inspect read-only canonical schemas.
 Terminal update (2026-09-10): the plan was hashed before slice queries. The
 suite produced 1,000 selector-world analytic rows, 1,080 seasonal worlds, 96
 empirical-power cells, 454 influence rows, 12 successful official GeoX designs,
-18 official GeoX data-quality checks, pinned GeoLift market/power evidence, and
-1,500 compliance estimand rows. Full engineering closure passed Ruff, strict
-mypy, shell/R syntax, 49 pytest tests, sdist/wheel build, installed-wheel import,
+18 official GeoX data-quality checks plus 18 corresponding design attempts,
+pinned GeoLift market/power evidence, and 1,500 compliance estimand rows. Ten
+perturbed-data designs were available; eight were gated or failed with their
+full reasons preserved. Full engineering closure passed Ruff, strict
+mypy, shell/R syntax, 50 pytest tests, sdist/wheel build, installed-wheel import,
 historical read-only evidence/claim verification, and the new suite verifier.
 Protocol 002 and `GEOLIFT-COMPAT-001` Git objects remain unchanged.
 
@@ -195,7 +197,10 @@ Protocol 002 and `GEOLIFT-COMPAT-001` Git objects remain unchanged.
 - 2026-09-10: Official GeoX accepted all 18 quality-check perturbation inputs
   but emitted structured warnings/exclusions rather than hard errors for tested
   duplicates, outliers, zero-response geos, and date ordering. Validation pass
-  therefore does not imply data are operationally harmless.
+  therefore does not imply data are operationally harmless. A subsequent
+  official design attempt succeeded in 10 cells and was unavailable in eight;
+  missing values, insufficient retained history, and the R2 gate were among the
+  preserved reasons.
 
 ## Decision Log
 

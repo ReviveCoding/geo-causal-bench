@@ -27,7 +27,7 @@
         "96"
       ],
       "identity": "GEOX-20-14-random",
-      "official_design_id": "95d1e4e2-1dd6-4dad-b313-29b7fb82e217",
+      "official_design_id": "46becccd-08a7-4f9a-8a6e-b296f886d76d",
       "treatment_geos": [
         "125",
         "168",
@@ -57,7 +57,7 @@
         "96"
       ],
       "identity": "GEOX-20-14-stratified",
-      "official_design_id": "2381dbea-8035-4a2f-a81f-ee60f172c12f",
+      "official_design_id": "4d2ab04e-b093-4f4a-9675-e6d5796784b2",
       "treatment_geos": [
         "110",
         "28",
@@ -83,7 +83,7 @@
         "96"
       ],
       "identity": "GEOX-20-28-random",
-      "official_design_id": "6ea5c475-9a03-4bbb-95b5-46e04934f14a",
+      "official_design_id": "e8844f08-78ef-4187-9f3a-e3b40bf7e2fc",
       "treatment_geos": [
         "105",
         "144",
@@ -112,7 +112,7 @@
         "89"
       ],
       "identity": "GEOX-20-28-stratified",
-      "official_design_id": "4a48006a-b2ef-41bf-a6ad-b48d6922d5c6",
+      "official_design_id": "be35656f-f521-43a3-977c-040508e82165",
       "treatment_geos": [
         "10",
         "110",
@@ -153,7 +153,7 @@
         "92"
       ],
       "identity": "GEOX-40-14-random",
-      "official_design_id": "c3c0a054-ed18-42f8-96c0-d0e26963850f",
+      "official_design_id": "e9620050-e58e-4c65-b609-09b5f6fdd6b1",
       "treatment_geos": [
         "105",
         "110",
@@ -203,7 +203,7 @@
         "92"
       ],
       "identity": "GEOX-40-14-stratified",
-      "official_design_id": "294d0d74-bcf3-41d6-9c4f-2eb52ef57c62",
+      "official_design_id": "aca56faa-5dc7-44f4-b2c4-2fa70de6fc81",
       "treatment_geos": [
         "110",
         "120",
@@ -249,7 +249,7 @@
         "96"
       ],
       "identity": "GEOX-40-28-random",
-      "official_design_id": "e52fcfc9-b994-40d8-8146-f89d38d6b510",
+      "official_design_id": "a3d2325f-c3c0-4986-9a1a-9ba27472e792",
       "treatment_geos": [
         "11",
         "110",
@@ -299,7 +299,7 @@
         "92"
       ],
       "identity": "GEOX-40-28-stratified",
-      "official_design_id": "d2ed3e6f-7300-4463-b706-dd8eb4047f61",
+      "official_design_id": "9b874589-f273-41dd-8c8d-f103d0e38d42",
       "treatment_geos": [
         "10",
         "110",
@@ -373,7 +373,7 @@
         "98"
       ],
       "identity": "GEOX-80-14-random",
-      "official_design_id": "3166405c-8b0a-4741-a21c-c9c50cb4f9ae",
+      "official_design_id": "642ce24a-487e-4b57-8c31-a89a965181ca",
       "treatment_geos": [
         "110",
         "125",
@@ -464,7 +464,7 @@
         "98"
       ],
       "identity": "GEOX-80-14-stratified",
-      "official_design_id": "82ef4152-9f5c-455b-b3a1-cc5d736134fc",
+      "official_design_id": "4ff34206-76f4-4549-a32b-1eab846ad1cb",
       "treatment_geos": [
         "10",
         "11",
@@ -549,7 +549,7 @@
         "97"
       ],
       "identity": "GEOX-80-28-random",
-      "official_design_id": "6bc8666b-7342-48ce-a80b-f6156bdd75da",
+      "official_design_id": "85d903ea-23b8-4510-96df-0fb3ef9b8e89",
       "treatment_geos": [
         "103",
         "105",
@@ -641,7 +641,7 @@
         "98"
       ],
       "identity": "GEOX-80-28-stratified",
-      "official_design_id": "be57b745-7a1e-4aef-95d3-cf6b3784b21a",
+      "official_design_id": "15d68549-f486-409e-8071-d9233317f958",
       "treatment_geos": [
         "10",
         "11",
@@ -666,6 +666,6 @@
       ]
     }
   ],
-  "runtime_sec": 53.91069785298896,
+  "runtime_sec": 59.581453046004754,
   "version": "1.0.1"
 }

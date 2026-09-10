@@ -265,11 +265,21 @@ and not numerically interchangeable. No design-accuracy ranking is made.
     official_quality = pd.read_parquet(
         OPERATIONS / "geox_official_quality_stress.parquet"
     )
+    design_counts = official_quality.design_available.value_counts().to_dict()
+    design_failures = official_quality.loc[
+        ~official_quality.design_available, "design_failure_reason"
+    ]
     atomic_write_text(
         ROOT / "reports/DATA_QUALITY_STRESS_STUDY.md",
         "# Data-Quality Stress Study\n\n"
         "Official GeoX quality checks executed for all 18 perturbation cells: "
         f"{official_quality.geox_validation_result.value_counts().to_dict()}. "
+        "A separate official design execution followed each check: "
+        f"{design_counts.get(True, 0)} designs were available and "
+        f"{design_counts.get(False, 0)} were gated or failed validation/design "
+        "requirements. Thus a quality-check pass is not treated as proof that a "
+        "design can be produced. Full failure text is retained for all "
+        f"{len(design_failures)} unavailable designs. "
         "Warnings and structured metrics are retained verbatim in canonical "
         "evidence. Data-order shuffling did not itself trigger a hard error; "
         "duplicate records were aggregated with warnings, and outliers/zero-response "
