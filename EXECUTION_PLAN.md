@@ -308,13 +308,16 @@ inputs.
 - [x] CI action identities were resolved from authoritative GitHub repositories:
   checkout v7.0.1 `3d3c42e...`, setup-python v7.0.0 `5fda3b9...`, setup-uv
   v10.0.1 `20cfd1b...`, and setup-r v2 `465b7d8...`.
-- [ ] Run the exact CPU CI contract in a clean local clone, commit the
-  publication safeguards, create the public repository, push `main` and the two
-  intentional annotated scientific tags, and require green remote CI.
+- [x] The exact CPU CI contract passed from an independent clean clone at
+  `7fcfd454db9721c6ed2cb443e3d949830729b08f`: 52 tests, 95% branch coverage,
+  Ruff, strict mypy, build, installed wheel/CLI, both evidence verifiers, the
+  13-file R integrity gate, `git fsck`, and `git diff --check`.
+- [ ] Create the public repository, push `main` and the two intentional
+  annotated scientific tags, and require green remote CI.
 - [ ] Commit the remote publication audit, push it normally, require green CI
   on that exact final commit, and verify local/remote SHA equality.
 
-Next legal action: `CLEAN_CLONE_CI_BEFORE_PUBLICATION`.
+Next legal action: `CREATE_PUBLIC_REMOTE_AND_PUSH`.
 
 ## Context and Orientation
 

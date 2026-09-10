@@ -1,0 +1,338 @@
+source_head=7fcfd454db9721c6ed2cb443e3d949830729b08f
+clean_root=/tmp/geo-causal-bench-publication-clean-clones/run-njNFhI
+Cloning into '/tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo'...
+Using CPython 3.11.16
+Creating virtual environment at: .venv
+Resolved 95 packages in 10ms
+   Building geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo
+      Built geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo
+Prepared 1 package in 262ms
+Installed 57 packages in 117ms
+ + annotated-doc==0.0.5
+ + annotated-types==0.8.0
+ + build==1.6.0
+ + cloudpickle==3.1.2
+ + contourpy==1.3.3
+ + coverage==7.16.0
+ + cycler==0.12.1
+ + duckdb==1.5.5
+ + fonttools==4.64.0
+ + formulaic==1.2.2
+ + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo)
+ + hatchling==1.32.0
+ + hypothesis==6.168.0
+ + iniconfig==2.3.0
+ + interface-meta==2.0.1
+ + joblib==1.6.0
+ + kiwisolver==1.5.1
+ + librt==0.15.0
+ + markdown-it-py==4.2.0
+ + matplotlib==3.11.1
+ + mdurl==0.1.2
+ + mypy==1.20.2
+ + mypy-extensions==1.1.0
+ + narwhals==2.26.0
+ + numpy==2.4.6
+ + packaging==26.3
+ + pandas==3.0.5
+ + pandas-stubs==3.0.5.260730
+ + pathspec==1.1.1
+ + patsy==1.0.3
+ + pillow==12.3.0
+ + pluggy==1.6.0
+ + pyarrow==23.0.1
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + pygments==2.21.0
+ + pyparsing==3.3.2
+ + pyproject-hooks==1.2.0
+ + pytest==9.1.1
+ + pytest-cov==7.1.0
+ + python-dateutil==2.9.0.post0
+ + pyyaml==6.0.3
+ + rich==15.0.0
+ + ruff==0.16.6
+ + scikit-learn==1.9.0
+ + scipy==1.17.1
+ + shellingham==1.5.4
+ + six==1.17.0
+ + sortedcontainers==2.4.0
+ + statsmodels==0.15.0
+ + threadpoolctl==3.6.0
+ + tomlkit==0.15.1
+ + trove-classifiers==2026.6.1.19
+ + typer==0.27.2
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + wrapt==2.4.0
+73 files already formatted
+All checks passed!
+Success: no issues found in 32 source files
+....................................................                     [100%]
+52 passed in 5.07s
+Name                                     Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------------
+src/geocausal/__init__.py                    6      2      0      0    67%   7-8
+src/geocausal/artifacts.py                  52      4      2      0    93%   19, 72-74
+src/geocausal/aware/__init__.py              2      0      0      0   100%
+src/geocausal/aware/selector.py             55      5     12      5    85%   54, 70, 77, 85, 90
+src/geocausal/config.py                     31      1      0      0    97%   42
+src/geocausal/decision/__init__.py           2      0      0      0   100%
+src/geocausal/decision/rules.py             36      0     16      0   100%
+src/geocausal/dgp/__init__.py                3      0      0      0   100%
+src/geocausal/dgp/observational.py          51      0     16      0   100%
+src/geocausal/dgp/randomized.py            113      5     34      3    95%   59-60, 64-65, 83
+src/geocausal/diagnostics/__init__.py        2      0      0      0   100%
+src/geocausal/diagnostics/features.py       40      0      0      0   100%
+src/geocausal/estimators/__init__.py         2      0      0      0   100%
+src/geocausal/estimators/reference.py       82      2      2      0    98%   145-146
+src/geocausal/governance/__init__.py         2      0      0      0   100%
+src/geocausal/governance/verify.py          36      1      8      1    95%   31
+src/geocausal/post_audit/__init__.py         2      0      0      0   100%
+src/geocausal/post_audit/compliance.py      52      2      4      2    93%   39, 49
+src/geocausal/post_audit/influence.py       18      2      6      2    83%   20, 26
+src/geocausal/simulation/__init__.py         2      0      0      0   100%
+src/geocausal/types.py                      27      0      0      0   100%
+------------------------------------------------------------------------------------
+TOTAL                                      616     24    100     13    95%
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling>=1.27
+* Getting build dependencies for sdist...
+* Installed build dependency versions:
+  - hatchling==1.32.0
+* Building sdist...
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling>=1.27
+* Getting build dependencies for wheel...
+* Installed build dependency versions:
+  - hatchling==1.32.0
+* Building wheel...
+Successfully built geo_causal_bench-0.1.0.tar.gz and geo_causal_bench-0.1.0-py3-none-any.whl
+Using CPython 3.11.16
+Creating virtual environment at: .wheel-smoke
+Activate with: source .wheel-smoke/bin/activate
+Using Python 3.11.16 environment at: .wheel-smoke
+Resolved 38 packages in 252ms
+Installed 38 packages in 77ms
+ + annotated-doc==0.0.5
+ + annotated-types==0.8.0
+ + cloudpickle==3.1.2
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + duckdb==1.5.5
+ + fonttools==4.64.0
+ + formulaic==1.2.2
+ + interface-meta==2.0.1
+ + joblib==1.6.0
+ + kiwisolver==1.5.1
+ + markdown-it-py==4.2.0
+ + matplotlib==3.11.1
+ + mdurl==0.1.2
+ + narwhals==2.26.0
+ + numpy==2.4.6
+ + packaging==26.3
+ + pandas==3.0.5
+ + patsy==1.0.3
+ + pillow==12.3.0
+ + pyarrow==23.0.1
+ + pydantic==2.13.5
+ + pydantic-core==2.46.5
+ + pygments==2.21.0
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + pyyaml==6.0.3
+ + rich==15.0.0
+ + scikit-learn==1.9.0
+ + scipy==1.17.1
+ + shellingham==1.5.4
+ + six==1.17.0
+ + statsmodels==0.15.0
+ + threadpoolctl==3.6.0
+ + typer==0.27.2
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + wrapt==2.4.0
+Using Python 3.11.16 environment at: .wheel-smoke
+Resolved 1 package in 2ms
+Prepared 1 package in 11ms
+Installed 1 package in 3ms
+ + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo/dist/geo_causal_bench-0.1.0-py3-none-any.whl)
+installed wheel smoke: geo-causal-bench 0.1.0
+                                                                                
+ Usage: geocausal [OPTIONS] COMMAND [ARGS]...                                   
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.      │
+│ --show-completion             Show completion for the current shell, to copy │
+│                               it or customize the installation.              │
+│ --help                        Show this message and exit.                    │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────╮
+│ development       Fit AWARE only on development worlds.                      │
+│ null-calibration  Run the pre-freeze null calibration.                       │
+│ qualification     Run pre-freeze end-to-end AWARE qualification worlds.      │
+│ ood               Run estimator-only compound S13 evidence excluded from     │
+│                   AWARE fitting.                                             │
+│ final             Execute frozen E14 exactly once after verifying its        │
+│                   manifest.                                                  │
+│ protect-seeds     Create a one-time protected final seed set for binding at  │
+│                   E13.                                                       │
+│ ablations         Run the post-final E15 ablation family.                    │
+│ observational     Run the separately governed E16 staggered-panel benchmark. │
+│ pipeline          Verify receipts and report the next legal resumable        │
+│                   transition.                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+{
+  "all_pass": true,
+  "claims": {
+    "all_pass": true,
+    "claims": [
+      {
+        "actual": 1.0,
+        "claim_id": "C01",
+        "passed": true
+      },
+      {
+        "actual": -0.0021039603960396054,
+        "claim_id": "C02",
+        "passed": true
+      },
+      {
+        "actual": 0.9089026915113871,
+        "claim_id": "C03",
+        "passed": true
+      },
+      {
+        "actual": 483,
+        "claim_id": "C04",
+        "passed": true
+      },
+      {
+        "actual": 24.839449072096272,
+        "claim_id": "C05",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "all_pass": true,
+    "checks": {
+      "dataset_manifests": true,
+      "figures": true,
+      "freeze_hash": true,
+      "invalid_protocol_preserved": true,
+      "locks": true,
+      "protocol_match": true,
+      "scoring_code_hash": true,
+      "selector_hash": true,
+      "truth_identity_match": true,
+      "truth_ledger_count": true,
+      "truth_ledger_unique": true
+    },
+    "protocol_id": "AWARE-GEO-e52a8660a97ef174"
+  }
+}
+{
+  "checks": {
+    "dashboard:Compliance semantics": true,
+    "dashboard:Data quality": true,
+    "dashboard:Experiment design": true,
+    "dashboard:Historical protocol": true,
+    "dashboard:Reliability": true,
+    "figure:F21": true,
+    "figure:F22": true,
+    "figure:F23": true,
+    "figure:F24": true,
+    "figure:F25": true,
+    "figure:F26": true,
+    "figure:F27": true,
+    "figure:F28": true,
+    "figure:F29": true,
+    "figure:F30": true,
+    "figure:F31": true,
+    "figure:F32": true,
+    "figure:F33": true,
+    "figure:F34": true,
+    "figure:F35": true,
+    "figure:F36": true,
+    "figure:F37": true,
+    "figure:F38": true,
+    "figure:F39": true,
+    "figure:F40": true,
+    "figure:F41": true,
+    "geolift_object": true,
+    "geolift_pin": true,
+    "geolift_worktree": true,
+    "hash:evidence/compliance_semantics/development_attempt_v1/fact_compliance_result.parquet": true,
+    "hash:evidence/compliance_semantics/development_attempt_v1/mini_freeze.json": true,
+    "hash:evidence/compliance_semantics/development_attempt_v1/qualification.json": true,
+    "hash:evidence/compliance_semantics/development_attempt_v2/fact_compliance_result.parquet": true,
+    "hash:evidence/compliance_semantics/development_attempt_v2/mini_freeze.json": true,
+    "hash:evidence/compliance_semantics/development_attempt_v2/qualification.json": true,
+    "hash:evidence/compliance_semantics/fact_compliance_result.parquet": true,
+    "hash:evidence/compliance_semantics/mini_freeze.json": true,
+    "hash:evidence/compliance_semantics/qualification.json": true,
+    "hash:evidence/operations/fact_data_quality_stress.parquet": true,
+    "hash:evidence/operations/fact_design_frontier.parquet": true,
+    "hash:evidence/operations/fact_empirical_power.parquet": true,
+    "hash:evidence/operations/fact_influence.parquet": true,
+    "hash:evidence/operations/fact_rolling_backtest.parquet": true,
+    "hash:evidence/operations/fact_seasonal_study.parquet": true,
+    "hash:evidence/operations/fact_tool_design_comparison.parquet": true,
+    "hash:evidence/operations/geolift_official_design_frontier.parquet": true,
+    "hash:evidence/operations/geolift_official_operations.json": true,
+    "hash:evidence/operations/geolift_official_power.parquet": true,
+    "hash:evidence/operations/geox_common_panel_design.parquet": true,
+    "hash:evidence/operations/geox_official_design_frontier.parquet": true,
+    "hash:evidence/operations/geox_official_quality_stress.parquet": true,
+    "hash:evidence/operations/geox_operations.json": true,
+    "hash:evidence/operations/gpu_execution.json": true,
+    "hash:evidence/operations/rolling_backtests.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_conditional_coverage.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_failure_attribution.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_risk_calibration.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_slice_result.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_tail_risk.parquet": true,
+    "hash:evidence/post_audit_analytics/fact_threshold_frontier.parquet": true,
+    "hash:evidence/post_audit_analytics/risk_calibration_summary.json": true,
+    "hash:evidence/post_audit_analytics/slice_summary.parquet": true,
+    "manifest_identity:COMPLIANCE-SEMANTICS-001": true,
+    "manifest_identity:OPERATIONS-STUDY-001": true,
+    "manifest_identity:POST-AUDIT-ANALYTICS-001": true,
+    "protected_object:artifacts/freeze": true,
+    "protected_object:evidence/e20_audit.json": true,
+    "protected_object:evidence/final": true,
+    "protected_object:evidence/invalidated": true,
+    "protected_object:evidence/receipts": true,
+    "protected_worktree:artifacts/freeze": true,
+    "protected_worktree:evidence/e20_audit.json": true,
+    "protected_worktree:evidence/final": true,
+    "protected_worktree:evidence/invalidated": true,
+    "protected_worktree:evidence/receipts": true,
+    "table_nonempty:evidence/compliance_semantics/fact_compliance_result.parquet": true,
+    "table_nonempty:evidence/operations/fact_data_quality_stress.parquet": true,
+    "table_nonempty:evidence/operations/fact_design_frontier.parquet": true,
+    "table_nonempty:evidence/operations/fact_empirical_power.parquet": true,
+    "table_nonempty:evidence/operations/fact_influence.parquet": true,
+    "table_nonempty:evidence/operations/fact_rolling_backtest.parquet": true,
+    "table_nonempty:evidence/operations/fact_seasonal_study.parquet": true,
+    "table_nonempty:evidence/operations/fact_tool_design_comparison.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/fact_failure_attribution.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/fact_risk_calibration.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/fact_slice_result.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/fact_tail_risk.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/fact_threshold_frontier.parquet": true,
+    "table_nonempty:evidence/post_audit_analytics/slice_summary.parquet": true,
+    "truth_not_in_observed_contract": true,
+    "zero_compliance_dose_unidentified": true,
+    "zero_compliance_itt_truth": true
+  },
+  "status": "PASS",
+  "suite_id": "POST-AUDIT-SUITE-001"
+}
+13 R files parsed; compatibility pins verified
+CLEAN_CLONE_CI=PASS

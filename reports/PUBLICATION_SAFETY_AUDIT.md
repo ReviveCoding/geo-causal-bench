@@ -27,5 +27,9 @@ are retained as provenance. Mutable README/reproduction instructions and active
 helper scripts use portable repository and cache discovery, avoiding additional
 local-identity disclosure.
 
-Status: **PASS**, subject to a final scan of the committed publication tree
-before push and a post-push GitHub inspection.
+The final pre-push scan of clean-clone-qualified commit `7fcfd454` also passed.
+The clean-clone transcript records 52 tests, 95% branch coverage, package and
+wheel construction, CLI import, evidence verification, R integrity, Git
+integrity, and an empty clone worktree.
+
+Status: **PASS**, subject only to the post-push GitHub inspection.

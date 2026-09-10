@@ -5,7 +5,7 @@
     "package_source_trees_tracked": [],
     "tracked_raw_or_staged_rows": []
   },
-  "head": "77db4176869a5f0de1dde48d85a47309b5aa9238",
+  "head": "7fcfd454db9721c6ed2cb443e3d949830729b08f",
   "history_scope": "ALL_REACHABLE_OBJECTS",
   "largest_git_object": {
     "bytes": 438843,
@@ -16,15 +16,43 @@
     "under_github_100mb_limit": true
   },
   "literal_prefix_mentions": {
+    "AKIA": [
+      "scripts/publication_audit.py"
+    ],
+    "ASIA": [
+      "scripts/publication_audit.py"
+    ],
+    "Bearer": [
+      "scripts/publication_audit.py"
+    ],
+    "api_key_assignment": [
+      "scripts/publication_audit.py"
+    ],
+    "ghp_": [
+      "scripts/publication_audit.py"
+    ],
+    "github_pat_": [
+      "scripts/publication_audit.py"
+    ],
+    "password_assignment": [
+      "scripts/publication_audit.py"
+    ],
+    "secret_key_assignment": [
+      "scripts/publication_audit.py"
+    ],
     "sk-": [
       "evidence/compliance_semantics/fact_compliance_result.parquet",
+      "evidence/publication_safety_audit.json",
       "reports/POST_AUDIT_ANALYTICS_PLAN.md",
-      "scripts/post_audit_suite.py"
+      "scripts/post_audit_suite.py",
+      "scripts/publication_audit.py"
+    ],
+    "token_assignment": [
+      "scripts/publication_audit.py"
     ]
   },
   "privacy_path_inventory": {
     "linux_home_path": [
-      ".codex-wsl-env.sh",
       "_preflight/RUN_CONTEXT.md",
       "_preflight/wsl-scratch-path.txt",
       "evidence/e20_quality_gate.log",
@@ -35,13 +63,14 @@
       "evidence/geolift_compatibility/reproduction_run.log",
       "evidence/geox_capabilities.json",
       "evidence/geox_qualification.json",
-      "scripts/acquire_public.py",
       "scripts/geolift_compat/bisect_candidate.sh",
       "scripts/geolift_compat/collect_metadata.py"
     ],
-    "windows_user_path": [],
+    "windows_user_path": [
+      "EXECUTION_PLAN.md",
+      "_preflight/RUN_CONTEXT.md"
+    ],
     "wsl_mount_path": [
-      ".codex-wsl-env.sh",
       "EXECUTION_PLAN.md",
       "_preflight/RUN_CONTEXT.md",
       "_preflight/wsl-repo-path.txt",
@@ -54,16 +83,15 @@
       "evidence/geolift_compatibility/qualification/fresh_session_comparison.json",
       "evidence/geolift_compatibility/reproduction_run.log",
       "reports/GEOLIFT_COMPATIBILITY_INVESTIGATION.md",
-      "reports/REPRODUCTION_GUIDE.md",
       "scripts/geolift_compat/bisect_candidate.sh"
     ]
   },
-  "reachable_blob_count": 425,
-  "reachable_object_count": 614,
+  "reachable_blob_count": 443,
+  "reachable_object_count": 649,
   "secret_findings": [],
   "secret_scanner": "stdlib high-confidence multi-pattern history scan",
   "secret_status": "PASS",
   "status": "PASS",
   "suspicious_tracked_names": [],
-  "timestamp_utc": "2026-09-10T15:37:41.660199+00:00"
+  "timestamp_utc": "2026-09-10T16:02:47.319929+00:00"
 }
