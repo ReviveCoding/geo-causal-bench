@@ -1565,7 +1565,11 @@ def write_reports(summaries: dict[str, Any]) -> None:
         "DECISION_FRONTIER.md": "# Decision Frontier\n\nThis is POST-HOC POLICY SENSITIVITY only. The frozen threshold 1.25 is unchanged. Thresholds above 1.25 are partially identified because historically abstained worlds have no committed selected estimate.\n\n"
         + markdown_table(frontier)
         + "\n",
-        "INFLUENCE_ANALYSIS.md": f"# Influence Analysis\n\n{operations['influence_rows']} leave-one-location external perturbations were evaluated without causal-truth accuracy claims. Interval, selector, and risk shifts unavailable from the public design-only panels remain NA.\n",
+        "INFLUENCE_ANALYSIS.md": "# Influence Analysis\n\n"
+        "The canonical table contains 454 perturbation rows: 154 leave-one-location "
+        "external rows and 300 targeted removals in new synthetic worlds. External "
+        "cases are evaluated without causal-truth accuracy claims. Interval, selector, "
+        "and risk shifts unavailable from the public design-only panels remain NA.\n",
         "ROLLING_BACKTESTS.md": f"# Rolling Backtests\n\n{operations['rolling_rows']} chronological pseudo-test windows were evaluated. Dates were never shuffled. These placebo windows characterize temporal stability and do not establish causal accuracy.\n",
         "SEASONAL_OPERATIONS_STUDY.md": f"# Seasonal Operations Study\n\n{operations['seasonal_worlds']} new synthetic worlds crossed six start regimes and 84/168/365-day history. Results are POST_AUDIT_SIMULATED and cannot revise Protocol 002.\n",
         "MDE_POWER_BUDGET_STUDY.md": f"# MDE, Power, and Budget Study\n\n{operations['design_cells']} known-truth design cells and {operations['power_cells']} empirical power cells were generated with new seeds. Tool-native official rows, when available, are kept distinct from analytic simulation metrics.\n",
