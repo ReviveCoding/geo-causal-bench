@@ -1,0 +1,36 @@
+# Python/build
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+
+# High-volume and protected data. Manifests and compact canonical summaries are
+# force-added explicitly when scientifically appropriate.
+data/raw/**
+data/staged/**
+data/curated/**
+data/protected/**
+data/external/**
+artifacts/cache/**
+*.duckdb.wal
+
+# Keep directory sentinels.
+!data/raw/.gitkeep
+!data/staged/.gitkeep
+!data/curated/.gitkeep
+!data/protected/.gitkeep
+!data/external/.gitkeep
+
+# Local environments and editor files
+.env
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

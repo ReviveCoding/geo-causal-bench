@@ -1,0 +1,34 @@
+{
+  "authoritative_origin": "https://raw.githubusercontent.com/google/meridian-geox/0a1dd0f730ab8170e4e46646f3bf69400d57d021/meridian_geox/data/example_design_data_single_cell.csv",
+  "bytes": 396945,
+  "license": "Apache-2.0",
+  "package_or_commit": "0a1dd0f730ab8170e4e46646f3bf69400d57d021",
+  "redistribution_status": "permitted_with_attribution",
+  "retrieval_timestamp_utc": "2026-09-10T01:01:09.458512+00:00",
+  "row_count": 10374,
+  "schema": [
+    {
+      "dtype": "str",
+      "name": "date"
+    },
+    {
+      "dtype": "int64",
+      "name": "location"
+    },
+    {
+      "dtype": "float64",
+      "name": "conversions"
+    },
+    {
+      "dtype": "float64",
+      "name": "spend"
+    }
+  ],
+  "schema_hash": "a570114f7001f98894635495527d9998de3841df9ac206816c1154e7a15ed152",
+  "scientific_role": "official_example",
+  "sha256": "5179751df30154fa888bbee50601ae7f85c3b32a34f9a058df0d74927d6babf9",
+  "source_id": "D4_DESIGN_SINGLE",
+  "source_name": "GeoX_design_single_cell",
+  "staged_sha256": null,
+  "version": "0a1dd0f730ab8170e4e46646f3bf69400d57d021"
+}

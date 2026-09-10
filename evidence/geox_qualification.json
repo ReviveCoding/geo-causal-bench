@@ -1,0 +1,1816 @@
+{
+  "analysis_result": {
+    "analysis_config": {
+      "alpha": 0.1,
+      "analysis_end_date": "2020-04-30 00:00:00",
+      "analysis_start_date": "2020-04-01 00:00:00",
+      "design": {
+        "constraints": {
+          "budget_constraint": {
+            "cell_1": {
+              "budget": 500000.0,
+              "budget_pct": null
+            }
+          },
+          "excluded_dates": "set()",
+          "excluded_geos": "{'105'}",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '146', '19', '171', '175', '136', '35', '18', '95', '38', '64', '195', '103', '80', '133', '52', '126', '89', '184', '157', '3', '155', '163', '141', '181', '39', '145', '174', '84', '164', '180', '72', '135', '46', '41', '11', '49', '96', '74', '69', '190', '142', '71', '31', '168', '33', '125', '97', '45', '149', '183', '119', '138', '15', '22', '26', '77', '177', '57', '192', '83', '173', '42', '161', '98', '169', '128', '152', '159', '23', '90', '139', '93', '63', '8', '88', '10', '66', '20', '59', '131', '188', '92', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 5,
+          "experiment_duration": "datetime.timedelta(days=30)",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7085.916891404486,
+            "counterfactual_conversions": null,
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.013140472583472729,
+            "p_value": 0.39385437965393066,
+            "treatment_geos": "{'61', '111', '73', '172', '28', '144', '27', '44', '5', '198', '193', '118', '122', '108', '75', '110', '127', '115', '36', '189', '55', '196', '25', '166', '197', '151', '68'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "{'105'}",
+        "geo_stratum_labels": "Array([1, 2, 2, 0, 1, 2, 0, 2, 3, 2, 3, 3, 2, 3, 2, 0, 3, 0, 3, 2, 1, 0,\n       3, 0, 1, 2, 3, 2, 0, 0, 0, 0, 2, 0, 3, 2, 3, 2, 0, 3, 3, 3, 2, 0,\n       3, 2, 2, 2, 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, 1, 2, 3, 0, 2, 2, 2, 2,\n       2, 0, 2, 2, 0, 3, 0, 1, 0, 2, 0, 1, 2, 3, 2, 0, 0, 0, 0, 2, 0, 2,\n       2, 3, 2, 0, 2, 2, 2, 0, 0, 3, 2, 2, 2, 0, 2, 0, 2, 2, 2, 2, 2, 2,\n       1, 2, 2], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "excluded_dates": "set()",
+      "min_placebo_count_error": 10,
+      "min_placebo_count_warning": 100,
+      "min_placebo_r2": 0.6,
+      "n_placebo_candidates": 100000,
+      "n_top_placebos": 500,
+      "pretest_end_date": null,
+      "test_type": "<TestType.TWO_SIDED: 2>"
+    },
+    "excluded_dates": "set()",
+    "excluded_geos": "{'105'}",
+    "quality_check_result": {
+      "outlier_dates": "set()",
+      "outlier_geos": "set()",
+      "quality_check_config": {
+        "exclude_geos_no_response": true,
+        "exclude_outlier_dates": true
+      },
+      "quality_metrics": {
+        "columns": [
+          "metric",
+          "value",
+          "message",
+          "threshold"
+        ],
+        "head": [],
+        "rows": 0
+      }
+    },
+    "results": {
+      "cell_1": {
+        "counterfactual_conversions": {
+          "columns": [
+            "observed",
+            "counterfactual",
+            "lower_bound",
+            "upper_bound"
+          ],
+          "head": [
+            {
+              "counterfactual": 18204.228515625,
+              "lower_bound": NaN,
+              "observed": 18175.294921875,
+              "upper_bound": NaN
+            },
+            {
+              "counterfactual": 18360.63671875,
+              "lower_bound": NaN,
+              "observed": 18324.69140625,
+              "upper_bound": NaN
+            },
+            {
+              "counterfactual": 18328.70703125,
+              "lower_bound": NaN,
+              "observed": 18276.2578125,
+              "upper_bound": NaN
+            },
+            {
+              "counterfactual": 18141.380859375,
+              "lower_bound": NaN,
+              "observed": 18068.259765625,
+              "upper_bound": NaN
+            },
+            {
+              "counterfactual": 18054.203125,
+              "lower_bound": NaN,
+              "observed": 17956.5078125,
+              "upper_bound": NaN
+            }
+          ],
+          "rows": 121
+        },
+        "cumulative_icpd": {
+          "columns": [
+            "icpd",
+            "lower_bound",
+            "upper_bound"
+          ],
+          "head": [
+            {
+              "icpd": 2.4697372913360596,
+              "lower_bound": 1.9530149698257446,
+              "upper_bound": 2.761046886444092
+            },
+            {
+              "icpd": 2.4212698936462402,
+              "lower_bound": 1.9660792350769043,
+              "upper_bound": 2.668909788131714
+            },
+            {
+              "icpd": 2.409627914428711,
+              "lower_bound": 1.943052053451538,
+              "upper_bound": 2.6237130165100098
+            },
+            {
+              "icpd": 2.357367753982544,
+              "lower_bound": 1.9499907493591309,
+              "upper_bound": 2.5176334381103516
+            },
+            {
+              "icpd": 2.2990312576293945,
+              "lower_bound": 1.8991162776947021,
+              "upper_bound": 2.441951036453247
+            }
+          ],
+          "rows": 30
+        },
+        "cumulative_lift": {
+          "columns": [
+            "lift",
+            "lower_bound",
+            "upper_bound"
+          ],
+          "head": [
+            {
+              "lift": 1150.121826171875,
+              "lower_bound": 909.4915161132812,
+              "upper_bound": 1285.780517578125
+            },
+            {
+              "lift": 2228.70947265625,
+              "lower_bound": 1809.719482421875,
+              "upper_bound": 2456.65478515625
+            },
+            {
+              "lift": 3317.15380859375,
+              "lower_bound": 2674.85400390625,
+              "upper_bound": 3611.868896484375
+            },
+            {
+              "lift": 4318.22021484375,
+              "lower_bound": 3571.988037109375,
+              "upper_bound": 4611.79443359375
+            },
+            {
+              "lift": 5278.8623046875,
+              "lower_bound": 4360.60791015625,
+              "upper_bound": 5607.02392578125
+            }
+          ],
+          "rows": 30
+        },
+        "descriptive_metrics": {
+          "estimated_bau_spend": 53874.50390625
+        },
+        "icpd": {
+          "lower_bound": 2.208209991455078,
+          "p_value": 0.0019960079807788134,
+          "point_estimate": 2.29929780960083,
+          "standard_deviation": 0.05244085192680359,
+          "upper_bound": 2.3609554767608643
+        },
+        "lift": {
+          "lower_bound": 30309.728515625,
+          "p_value": 0.0019960079807788134,
+          "point_estimate": 31559.994140625,
+          "standard_deviation": 719.79931640625,
+          "upper_bound": 32406.30078125
+        },
+        "percent_lift": {
+          "lower_bound": 0.055618882179260254,
+          "p_value": 0.0019960079807788134,
+          "point_estimate": 0.05804085731506348,
+          "standard_deviation": 0.0013969863066449761,
+          "upper_bound": 0.0596923828125
+        },
+        "pointwise_difference": {
+          "columns": [
+            "difference",
+            "lower_bound",
+            "upper_bound"
+          ],
+          "head": [
+            {
+              "difference": -28.93359375,
+              "lower_bound": NaN,
+              "upper_bound": NaN
+            },
+            {
+              "difference": -35.9453125,
+              "lower_bound": NaN,
+              "upper_bound": NaN
+            },
+            {
+              "difference": -52.44921875,
+              "lower_bound": NaN,
+              "upper_bound": NaN
+            },
+            {
+              "difference": -73.12109375,
+              "lower_bound": NaN,
+              "upper_bound": NaN
+            },
+            {
+              "difference": -97.6953125,
+              "lower_bound": NaN,
+              "upper_bound": NaN
+            }
+          ],
+          "rows": 121
+        }
+      }
+    }
+  },
+  "analysis_runtime_sec": 20.591055041993968,
+  "design_artifact_source": "/home/bjw-0/.cache/geo-causal-bench/envs/core/lib/python3.11/site-packages/meridian_geox/data/example_design_stratified_sampling_holdback.json",
+  "design_comparison": {
+    "design_metrics": {
+      "columns": [
+        "design_id",
+        "cell",
+        "design_methodology",
+        "r2",
+        "mde",
+        "mde_abs",
+        "p_value (AA)",
+        "budget",
+        "design_implied_cpic",
+        "treatment_conversions_pct",
+        "treatment_geo_count"
+      ],
+      "head": [
+        {
+          "budget": 7521.873922805535,
+          "cell": "cell_1",
+          "design_id": "199d85be-0fac-4e1a-b41a-868cde6ce1a9",
+          "design_implied_cpic": 1.0,
+          "design_methodology": "STRATIFIED_SAMPLING-TBR",
+          "mde": 0.013667793944478035,
+          "mde_abs": 7521.873922805535,
+          "p_value (AA)": 0.18291187286376953,
+          "r2": 0.9064376950263977,
+          "treatment_conversions_pct": 30.143827084334944,
+          "treatment_geo_count": 31
+        },
+        {
+          "budget": 7521.9534838681575,
+          "cell": "cell_1",
+          "design_id": "9b990f81-58df-4542-bd34-3491df25435d",
+          "design_implied_cpic": 1.0,
+          "design_methodology": "STRATIFIED_SAMPLING-TBR",
+          "mde": 0.01372268982231617,
+          "mde_abs": 7521.9534838681575,
+          "p_value (AA)": 0.38316941261291504,
+          "r2": 0.9247994422912598,
+          "treatment_conversions_pct": 30.023558096986676,
+          "treatment_geo_count": 31
+        },
+        {
+          "budget": 7521.926661177771,
+          "cell": "cell_1",
+          "design_id": "5769e06c-fd28-42c3-bd1d-d0c1804218f1",
+          "design_implied_cpic": 1.0,
+          "design_methodology": "STRATIFIED_SAMPLING-TBR",
+          "mde": 0.013730033300817013,
+          "mde_abs": 7521.926661177771,
+          "p_value (AA)": 0.16408252716064453,
+          "r2": 0.9029579162597656,
+          "treatment_conversions_pct": 30.007393057755817,
+          "treatment_geo_count": 31
+        },
+        {
+          "budget": 7521.926367109525,
+          "cell": "cell_1",
+          "design_id": "aedff9b5-20cd-4be9-8de2-8679e3d2c943",
+          "design_implied_cpic": 1.0,
+          "design_methodology": "STRATIFIED_SAMPLING-TBR",
+          "mde": 0.01375086884945631,
+          "mde_abs": 7521.926367109525,
+          "p_value (AA)": 0.3384373188018799,
+          "r2": 0.8931833505630493,
+          "treatment_conversions_pct": 29.961924177818446,
+          "treatment_geo_count": 31
+        },
+        {
+          "budget": 7521.943238794571,
+          "cell": "cell_1",
+          "design_id": "bb7d6b9c-8468-4bf0-8951-66370b588fb5",
+          "design_implied_cpic": 1.0,
+          "design_methodology": "STRATIFIED_SAMPLING-TBR",
+          "mde": 0.01381552405655384,
+          "mde_abs": 7521.943238794571,
+          "p_value (AA)": 0.465407133102417,
+          "r2": 0.9073895215988159,
+          "treatment_conversions_pct": 29.821772397616968,
+          "treatment_geo_count": 31
+        }
+      ],
+      "rows": 10
+    },
+    "designs": {
+      "199d85be-0fac-4e1a-b41a-868cde6ce1a9": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '146', '19', '171', '44', '175', '35', '18', '95', '38', '64', '195', '103', '115', '52', '55', '126', '89', '111', '184', '105', '157', '118', '3', '155', '141', '181', '39', '174', '84', '164', '180', '135', '46', '41', '25', '197', '49', '74', '61', '69', '190', '142', '71', '27', '198', '193', '33', '125', '97', '45', '149', '119', '127', '77', '177', '196', '166', '57', '151', '83', '161', '98', '172', '28', '169', '144', '152', '5', '159', '23', '90', '139', '63', '8', '10', '20', '59', '131', '36', '92', '68', '51'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.873922805535,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18536.326171875,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18487.185546875
+                },
+                {
+                  "counterfactual": 18658.841796875,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18734.4375
+                },
+                {
+                  "counterfactual": 18639.607421875,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18655.0625
+                },
+                {
+                  "counterfactual": 18429.990234375,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18450.060546875
+                },
+                {
+                  "counterfactual": 18339.560546875,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18331.6875
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.013667793944478035,
+            "p_value": 0.18291187286376953,
+            "treatment_geos": "{'81', '73', '128', '31', '136', '168', '122', '163', '183', '108', '93', '88', '66', '145', '75', '138', '15', '80', '110', '22', '72', '133', '26', '188', '189', '11', '96', '192', '123', '173', '42'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "5769e06c-fd28-42c3-bd1d-d0c1804218f1": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '73', '146', '19', '44', '136', '35', '95', '38', '64', '195', '80', '110', '133', '52', '55', '126', '184', '105', '157', '155', '163', '181', '145', '174', '164', '180', '72', '135', '189', '46', '41', '11', '197', '74', '61', '69', '190', '142', '71', '27', '168', '198', '33', '125', '97', '45', '149', '183', '119', '108', '138', '15', '22', '127', '77', '177', '196', '166', '151', '83', '173', '98', '172', '28', '144', '128', '159', '23', '90', '139', '93', '63', '8', '88', '66', '59', '131', '36', '92', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.926661177771,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18426.990234375,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18480.5625
+                },
+                {
+                  "counterfactual": 18607.533203125,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18614.1875
+                },
+                {
+                  "counterfactual": 18523.625,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18673.25
+                },
+                {
+                  "counterfactual": 18340.78125,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18389.0625
+                },
+                {
+                  "counterfactual": 18219.53125,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18328.5
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.013730033300817013,
+            "p_value": 0.16408252716064453,
+            "treatment_geos": "{'89', '161', '111', '169', '171', '31', '175', '152', '5', '18', '193', '118', '122', '3', '141', '10', '39', '20', '75', '84', '103', '26', '115', '188', '25', '57', '49', '96', '68', '192', '42'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "70b2ef09-aeab-4937-83da-7d45865fd381": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '73', '146', '19', '171', '44', '175', '136', '35', '95', '38', '64', '195', '110', '133', '52', '55', '126', '89', '111', '184', '105', '157', '118', '122', '3', '141', '181', '39', '145', '174', '84', '164', '180', '46', '41', '197', '74', '69', '190', '142', '71', '27', '31', '198', '193', '33', '125', '45', '149', '119', '108', '138', '15', '22', '127', '26', '77', '177', '196', '166', '151', '83', '42', '161', '172', '169', '128', '152', '159', '139', '93', '63', '10', '66', '20', '59', '131', '188', '36', '92', '68'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.9332289565355,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18414.873046875,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18439.25
+                },
+                {
+                  "counterfactual": 18571.328125,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18600.5625
+                },
+                {
+                  "counterfactual": 18538.490234375,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18553.9375
+                },
+                {
+                  "counterfactual": 18325.7578125,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18368.0625
+                },
+                {
+                  "counterfactual": 18257.48046875,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18203.25
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.013819925487041473,
+            "p_value": 0.8406015634536743,
+            "treatment_geos": "{'61', '98', '28', '144', '5', '168', '18', '97', '155', '163', '23', '90', '183', '8', '88', '75', '103', '80', '72', '115', '135', '189', '11', '25', '57', '49', '96', '192', '51', '123', '173'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "9b990f81-58df-4542-bd34-3491df25435d": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '73', '19', '171', '44', '35', '18', '38', '64', '75', '103', '110', '133', '115', '52', '55', '111', '184', '105', '157', '122', '141', '39', '145', '174', '84', '164', '180', '72', '135', '189', '46', '41', '25', '197', '49', '96', '74', '190', '142', '71', '27', '31', '168', '198', '193', '125', '97', '183', '119', '108', '15', '127', '26', '77', '177', '196', '166', '57', '192', '83', '42', '161', '98', '172', '28', '128', '152', '159', '23', '90', '139', '93', '63', '8', '88', '10', '66', '59', '131', '36', '92'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.9534838681575,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18438.12890625,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18542.625
+                },
+                {
+                  "counterfactual": 18631.00390625,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18605.248046875
+                },
+                {
+                  "counterfactual": 18619.9609375,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18508.6875
+                },
+                {
+                  "counterfactual": 18417.501953125,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18313.5
+                },
+                {
+                  "counterfactual": 18319.29296875,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18225.435546875
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01372268982231617,
+            "p_value": 0.38316941261291504,
+            "treatment_geos": "{'89', '61', '69', '146', '169', '144', '175', '136', '5', '118', '33', '3', '95', '45', '149', '155', '163', '195', '181', '20', '138', '80', '22', '188', '11', '151', '68', '51', '123', '173', '126'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "a30bd6ad-ba07-4876-9183-aaacc0857530": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '73', '146', '19', '171', '175', '136', '35', '18', '38', '64', '195', '75', '103', '110', '133', '115', '52', '55', '126', '89', '184', '118', '122', '3', '163', '141', '181', '39', '84', '164', '135', '189', '41', '11', '25', '49', '61', '69', '190', '142', '71', '27', '168', '198', '125', '97', '45', '149', '108', '138', '22', '127', '26', '77', '196', '57', '42', '161', '98', '172', '28', '144', '128', '152', '5', '159', '23', '139', '93', '63', '8', '88', '10', '66', '20', '188', '36', '92', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7764.545645111473,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18438.63671875,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18575.4375
+                },
+                {
+                  "counterfactual": 18613.33203125,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18711.375
+                },
+                {
+                  "counterfactual": 18579.50390625,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18663.75
+                },
+                {
+                  "counterfactual": 18396.51171875,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18390.75
+                },
+                {
+                  "counterfactual": 18310.439453125,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18258.9375
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.014272530563175678,
+            "p_value": 0.30582499504089355,
+            "treatment_geos": "{'111', '169', '31', '44', '105', '193', '157', '33', '95', '155', '90', '183', '119', '145', '59', '174', '15', '80', '180', '131', '72', '46', '177', '166', '197', '151', '68', '96', '192', '74', '83', '173'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "aedff9b5-20cd-4be9-8de2-8679e3d2c943": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'81', '73', '146', '19', '171', '44', '175', '136', '35', '18', '95', '38', '64', '75', '80', '110', '133', '115', '52', '55', '126', '89', '111', '105', '157', '118', '122', '3', '155', '181', '39', '145', '84', '180', '72', '135', '189', '41', '11', '49', '96', '74', '61', '69', '190', '142', '71', '27', '31', '168', '198', '193', '33', '125', '97', '45', '119', '138', '127', '177', '196', '57', '151', '83', '173', '42', '161', '98', '172', '28', '5', '159', '23', '90', '139', '93', '88', '66', '59', '131', '188', '36', '92'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.926367109525,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18393.81640625,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18526.75
+                },
+                {
+                  "counterfactual": 18579.763671875,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18624.623046875
+                },
+                {
+                  "counterfactual": 18541.251953125,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18590.125
+                },
+                {
+                  "counterfactual": 18348.947265625,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18351.310546875
+                },
+                {
+                  "counterfactual": 18248.5,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18258.560546875
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01375086884945631,
+            "p_value": 0.3384373188018799,
+            "treatment_geos": "{'120', '169', '184', '144', '128', '152', '149', '163', '183', '108', '63', '8', '195', '141', '10', '20', '174', '103', '15', '164', '22', '26', '77', '46', '25', '166', '197', '68', '192', '51', '123'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "bb7d6b9c-8468-4bf0-8951-66370b588fb5": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'81', '73', '44', '175', '136', '35', '95', '38', '64', '195', '75', '103', '133', '55', '126', '89', '111', '184', '105', '157', '118', '122', '3', '141', '181', '39', '145', '174', '84', '164', '180', '72', '135', '46', '25', '49', '74', '61', '69', '190', '27', '31', '168', '193', '33', '125', '97', '45', '183', '119', '108', '138', '15', '127', '26', '77', '177', '196', '166', '57', '151', '192', '83', '98', '172', '28', '169', '152', '5', '159', '23', '139', '93', '63', '8', '88', '10', '20', '59', '36', '92', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7521.943238794571,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18440.908203125,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18590.3125
+                },
+                {
+                  "counterfactual": 18620.83984375,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18753.125
+                },
+                {
+                  "counterfactual": 18594.419921875,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18683.3125
+                },
+                {
+                  "counterfactual": 18373.4375,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18447.6875
+                },
+                {
+                  "counterfactual": 18281.935546875,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18308.375
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01381552405655384,
+            "p_value": 0.465407133102417,
+            "treatment_geos": "{'120', '161', '146', '142', '71', '19', '144', '171', '128', '198', '18', '149', '155', '163', '90', '66', '80', '110', '22', '131', '115', '188', '52', '189', '41', '11', '197', '96', '68', '173', '42'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "bcee47d9-afe1-4446-a84e-9a685d463523": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '81', '73', '146', '19', '44', '175', '35', '18', '95', '38', '195', '103', '80', '133', '52', '55', '126', '89', '111', '105', '157', '118', '122', '155', '163', '141', '181', '39', '145', '174', '84', '164', '180', '72', '135', '41', '11', '25', '197', '49', '96', '61', '190', '142', '71', '27', '168', '198', '193', '33', '125', '149', '183', '119', '108', '138', '15', '22', '127', '177', '196', '57', '151', '161', '172', '169', '128', '5', '23', '139', '93', '63', '8', '88', '10', '66', '188', '92', '68', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7764.513360719662,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18502.556640625,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18478.25
+                },
+                {
+                  "counterfactual": 18641.27734375,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18667.9375
+                },
+                {
+                  "counterfactual": 18590.751953125,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18667.1875
+                },
+                {
+                  "counterfactual": 18381.75390625,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18492.0625
+                },
+                {
+                  "counterfactual": 18273.912109375,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18429.375
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01423555240035057,
+            "p_value": 0.44551801681518555,
+            "treatment_geos": "{'69', '98', '28', '184', '144', '31', '171', '136', '152', '3', '64', '159', '97', '45', '90', '20', '59', '75', '110', '131', '26', '115', '77', '36', '189', '46', '166', '192', '74', '83', '173', '42'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "bd1f5d9c-7773-4bf9-a717-19344dd4073b": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'120', '146', '19', '44', '175', '35', '18', '95', '38', '64', '195', '75', '103', '80', '110', '115', '52', '55', '126', '111', '105', '157', '118', '122', '3', '155', '163', '141', '181', '39', '145', '174', '84', '164', '180', '72', '135', '197', '49', '96', '74', '61', '69', '190', '142', '27', '31', '168', '198', '193', '125', '45', '149', '119', '108', '138', '22', '127', '26', '166', '57', '151', '192', '83', '173', '161', '172', '28', '169', '128', '152', '159', '90', '139', '88', '10', '66', '20', '59', '131', '92', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7764.618845743826,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18422.404296875,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18477.125
+                },
+                {
+                  "counterfactual": 18598.52734375,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18606.0625
+                },
+                {
+                  "counterfactual": 18567.576171875,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18552.6875
+                },
+                {
+                  "counterfactual": 18358.53515625,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18342.3125
+                },
+                {
+                  "counterfactual": 18273.484375,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18210.0625
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01432793028652668,
+            "p_value": 0.1499577760696411,
+            "treatment_geos": "{'89', '81', '98', '73', '71', '184', '144', '171', '136', '5', '33', '97', '23', '183', '93', '63', '8', '15', '133', '77', '188', '36', '189', '46', '41', '11', '177', '196', '25', '68', '51', '42'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      },
+      "cf2ac4fd-0667-458d-aafc-b7fb2c253fbc": {
+        "constraints": {
+          "budget_constraint": {},
+          "excluded_dates": "set()",
+          "excluded_geos": "set()",
+          "included_control_geos": "set()",
+          "max_conversions_percent": 0.3
+        },
+        "control_geos": "{'81', '73', '146', '171', '175', '136', '18', '95', '38', '64', '195', '103', '110', '133', '115', '55', '126', '184', '105', '118', '122', '3', '155', '163', '39', '145', '174', '84', '164', '180', '72', '135', '189', '46', '41', '11', '25', '197', '49', '96', '74', '61', '69', '190', '142', '71', '27', '31', '193', '33', '125', '45', '183', '119', '138', '22', '127', '26', '177', '57', '151', '173', '42', '98', '172', '28', '169', '144', '128', '152', '159', '23', '90', '66', '20', '59', '131', '188', '92', '68', '51', '123'}",
+        "data": {
+          "columns": [
+            "date",
+            "location",
+            "conversions",
+            "spend"
+          ],
+          "head": [
+            {
+              "conversions": 1217.186754,
+              "date": "2020-01-01 00:00:00",
+              "location": "10",
+              "spend": 13.961282
+            },
+            {
+              "conversions": 478.7548505,
+              "date": "2020-01-01 00:00:00",
+              "location": "103",
+              "spend": 5.360182842
+            },
+            {
+              "conversions": 1077.686355,
+              "date": "2020-01-01 00:00:00",
+              "location": "105",
+              "spend": 11.0703539
+            },
+            {
+              "conversions": 347.5165323,
+              "date": "2020-01-01 00:00:00",
+              "location": "108",
+              "spend": 4.956830216
+            },
+            {
+              "conversions": 914.8362022,
+              "date": "2020-01-01 00:00:00",
+              "location": "11",
+              "spend": 10.87281349
+            }
+          ],
+          "rows": 10374
+        },
+        "design_config": {
+          "alpha": 0.1,
+          "cell_count": 1,
+          "cost_per_incremental_conversion": {
+            "cell_1": 1.0
+          },
+          "design_output_count": 10,
+          "experiment_duration": "30 days 00:00:00",
+          "experiment_types": {
+            "cell_1": "<ExperimentType.HOLDBACK: 1>"
+          },
+          "geo_assignment_rule": "<GeoAssignmentRule.STRATIFIED_SAMPLING: 2>",
+          "k_means_iterations": 10,
+          "max_candidate_generation_retries": 10,
+          "methodology": "<Methodology.TBR: 1>",
+          "min_r2": 0.8,
+          "n_candidates": 100000,
+          "n_ranked_candidates": 100,
+          "num_strata": 4,
+          "power": 0.8,
+          "seed": 42,
+          "slope_tolerance": 0.2,
+          "test_type": "<TestType.TWO_SIDED: 2>"
+        },
+        "designs": {
+          "cell_1": {
+            "budget": 7764.573317743605,
+            "counterfactual_conversions": {
+              "columns": [
+                "index",
+                "observed",
+                "counterfactual"
+              ],
+              "head": [
+                {
+                  "counterfactual": 18519.9765625,
+                  "index": "2020-01-01 00:00:00",
+                  "observed": 18407.0625
+                },
+                {
+                  "counterfactual": 18666.87109375,
+                  "index": "2020-01-02 00:00:00",
+                  "observed": 18577.5
+                },
+                {
+                  "counterfactual": 18623.431640625,
+                  "index": "2020-01-03 00:00:00",
+                  "observed": 18559.4375
+                },
+                {
+                  "counterfactual": 18425.466796875,
+                  "index": "2020-01-04 00:00:00",
+                  "observed": 18356.875
+                },
+                {
+                  "counterfactual": 18335.923828125,
+                  "index": "2020-01-05 00:00:00",
+                  "observed": 18249.5625
+                }
+              ],
+              "rows": 91
+            },
+            "design_implied_cpic": 1.0,
+            "minimum_detectable_effect": 0.01425111386924982,
+            "p_value": 0.3610250949859619,
+            "treatment_geos": "{'89', '120', '161', '111', '19', '44', '5', '168', '198', '35', '157', '97', '149', '139', '108', '63', '93', '8', '88', '141', '10', '181', '75', '15', '80', '52', '77', '36', '196', '166', '192', '83'}"
+          }
+        },
+        "excluded_dates": "set()",
+        "excluded_geos": "set()",
+        "geo_stratum_labels": "Array([3, 1, 2, 0, 1, 3, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1, 0, 1, 0, 3,\n       0, 1, 0, 3, 1, 1, 1, 0, 2, 0, 0, 0, 2, 1, 0, 1, 1, 2, 1, 1, 1, 0,\n       0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 0, 1, 1, 1,\n       1, 0, 2, 1, 1, 0, 1, 0, 3, 0, 1, 0, 3, 1, 1, 0, 2, 2, 0, 0, 0, 2,\n       1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1,\n       1, 3, 1, 1], dtype=int32)",
+        "quality_check_result": {
+          "outlier_dates": "set()",
+          "outlier_geos": "set()",
+          "quality_check_config": {
+            "exclude_geos_no_response": true,
+            "exclude_outlier_dates": true
+          },
+          "quality_metrics": {
+            "columns": [
+              "metric",
+              "value",
+              "message",
+              "threshold"
+            ],
+            "head": [],
+            "rows": 0
+          }
+        }
+      }
+    }
+  },
+  "design_comparison_runtime_sec": 22.681671361002373,
+  "official_design_artifact_retained": true,
+  "package": "meridian-geox",
+  "status": "PASS",
+  "version": "1.0.1"
+}

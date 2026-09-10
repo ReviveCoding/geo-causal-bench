@@ -1,0 +1,18 @@
+{
+  "backend": "gpu",
+  "compile_and_first_sec": 0.2063134829804767,
+  "cuda_visible_devices": "0",
+  "devices": [
+    "cuda:0"
+  ],
+  "gpu_device": "cuda:0",
+  "jax_version": "0.10.2",
+  "jaxlib_version": "0.10.2",
+  "matrix_size": 6144,
+  "nvidia_smi_after": "NVIDIA GeForce RTX 4090 Laptop GPU, 610.62, 16376, 3515, 20",
+  "result": -6.6582731960807e-05,
+  "steady_state_sec": 0.029806186008499935,
+  "xgboost_boosted_rounds": 8,
+  "xgboost_cuda_train_sec": 0.25532826597918756,
+  "xgboost_version": "3.2.0"
+}

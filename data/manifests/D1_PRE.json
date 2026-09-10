@@ -1,0 +1,30 @@
+{
+  "authoritative_origin": "https://raw.githubusercontent.com/facebookincubator/GeoLift/db34ea4299ff0e28515ebac502b78c076c93c905/data/GeoLift_PreTest.rda",
+  "bytes": 8325,
+  "license": "MIT",
+  "package_or_commit": "db34ea4299ff0e28515ebac502b78c076c93c905",
+  "redistribution_status": "permitted_with_attribution",
+  "retrieval_timestamp_utc": "2026-09-10T01:01:09.193042+00:00",
+  "row_count": 3600,
+  "schema": [
+    {
+      "dtype": "str",
+      "name": "location"
+    },
+    {
+      "dtype": "int64",
+      "name": "Y"
+    },
+    {
+      "dtype": "str",
+      "name": "date"
+    }
+  ],
+  "schema_hash": "604026696179245017f21d75241f1fc8c123e038da9b535687c9cf762523b471",
+  "scientific_role": "anchor_and_external_case",
+  "sha256": "1e43d8c98bbf89362394f60cd89783307e92815cfe4217c9647dec95c48f835f",
+  "source_id": "D1_PRE",
+  "source_name": "GeoLift_PreTest",
+  "staged_sha256": "84f0da99a9ea7d683f2c6da4bb166929bcfb29ab6daee34bb29e0cc569d30773",
+  "version": "db34ea4299ff0e28515ebac502b78c076c93c905"
+}

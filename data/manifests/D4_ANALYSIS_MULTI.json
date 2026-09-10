@@ -1,0 +1,38 @@
+{
+  "authoritative_origin": "https://raw.githubusercontent.com/google/meridian-geox/0a1dd0f730ab8170e4e46646f3bf69400d57d021/meridian_geox/data/example_analysis_data_multi_cell_go_dark_heavy_up.csv",
+  "bytes": 572578,
+  "license": "Apache-2.0",
+  "package_or_commit": "0a1dd0f730ab8170e4e46646f3bf69400d57d021",
+  "redistribution_status": "permitted_with_attribution",
+  "retrieval_timestamp_utc": "2026-09-10T01:01:09.660459+00:00",
+  "row_count": 13794,
+  "schema": [
+    {
+      "dtype": "str",
+      "name": "date"
+    },
+    {
+      "dtype": "int64",
+      "name": "location"
+    },
+    {
+      "dtype": "float64",
+      "name": "conversions"
+    },
+    {
+      "dtype": "float64",
+      "name": "spend_cell_1"
+    },
+    {
+      "dtype": "float64",
+      "name": "spend_cell_2"
+    }
+  ],
+  "schema_hash": "160764120e6d4ea6c6046704482fcc23db79a08c3b8e9ad04d93ac3bd9999c04",
+  "scientific_role": "optional_official_example",
+  "sha256": "cc2e7d6d79de6250716626405c0b8faa67c6d7d266f880a9550b2ecd424edb3c",
+  "source_id": "D4_ANALYSIS_MULTI",
+  "source_name": "GeoX_analysis_multi_cell",
+  "staged_sha256": null,
+  "version": "0a1dd0f730ab8170e4e46646f3bf69400d57d021"
+}

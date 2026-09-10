@@ -1,0 +1,19 @@
+protocol_stage: development
+seed: 20260909
+n_geos: 40
+pre_days: 168
+test_days: 28
+cooldown_days: 7
+treatment_share: 0.30
+alpha: 0.05
+target_power: 0.80
+kpi: conversions
+experiment_type: heavy_up
+assignment: stratified
+worlds:
+  smoke: 16
+  pilot: 50
+  development: 200
+  qualification: 300
+  null_calibration: 1000
+  final: 500

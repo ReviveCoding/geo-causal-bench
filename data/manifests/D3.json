@@ -1,0 +1,42 @@
+{
+  "authoritative_origin": "https://raw.githubusercontent.com/bcallaway11/did/74b88eb07f1faa644df1271055a0f77848f6550c/data/mpdta.rda",
+  "bytes": 28345,
+  "license": "GPL-3",
+  "package_or_commit": "74b88eb07f1faa644df1271055a0f77848f6550c",
+  "redistribution_status": "source_package_terms_apply",
+  "retrieval_timestamp_utc": "2026-09-10T01:01:09.385350+00:00",
+  "row_count": 2500,
+  "schema": [
+    {
+      "dtype": "int64",
+      "name": "year"
+    },
+    {
+      "dtype": "int64",
+      "name": "countyreal"
+    },
+    {
+      "dtype": "float64",
+      "name": "lpop"
+    },
+    {
+      "dtype": "float64",
+      "name": "lemp"
+    },
+    {
+      "dtype": "int64",
+      "name": "first.treat"
+    },
+    {
+      "dtype": "int64",
+      "name": "treat"
+    }
+  ],
+  "schema_hash": "104012ca12aa3220a24e82e7681e1012a3aacdba6bdc9299c7502308a88eea95",
+  "scientific_role": "known_answer_and_external_case",
+  "sha256": "0be3bc5eaaedaa50e047deaf45ad0e193e7210df1644103c63a6c1baa75965d4",
+  "source_id": "D3",
+  "source_name": "Callaway_SantAnna_mpdta",
+  "staged_sha256": "2283bea1221a152420f98dfa20f633c5d054ea51d881115c8cd702a97bcd3167",
+  "version": "74b88eb07f1faa644df1271055a0f77848f6550c"
+}

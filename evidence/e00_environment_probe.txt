@@ -1,0 +1,17 @@
+distro=Ubuntu 22.04.5 LTS
+kernel=6.6.114.1-microsoft-standard-WSL2
+arch=x86_64
+python=Python 3.11.16
+r=R version 4.5.3 (2026-03-11) -- "Reassured Reassurer"
+rscript=Rscript (R) version 4.5.3 (2026-03-11)
+git=git version 2.34.1
+uv=uv 0.12.12 (x86_64-unknown-linux-gnu)
+cpu_logical=32
+mem_total_kib=16238584
+disk_free_kib=47653572
+nvidia_smi=/usr/lib/wsl/lib/nvidia-smi
+NVIDIA GeForce RTX 4090 Laptop GPU, 610.62, 16376 MiB, 13857 MiB, 23 %
+module_jax=True
+module_jaxlib=True
+module_xgboost=True
+module_meridian_geox=True

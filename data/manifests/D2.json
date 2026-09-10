@@ -1,0 +1,34 @@
+{
+  "authoritative_origin": "https://raw.githubusercontent.com/synth-inference/synthdid/70c1ce3eac58e28c30b67435ca377bb48baa9b8a/data/california_prop99.csv",
+  "bytes": 32687,
+  "license": "MIT",
+  "package_or_commit": "70c1ce3eac58e28c30b67435ca377bb48baa9b8a",
+  "redistribution_status": "permitted_with_attribution",
+  "retrieval_timestamp_utc": "2026-09-10T01:01:09.325221+00:00",
+  "row_count": 1209,
+  "schema": [
+    {
+      "dtype": "str",
+      "name": "State"
+    },
+    {
+      "dtype": "int64",
+      "name": "Year"
+    },
+    {
+      "dtype": "float64",
+      "name": "PacksPerCapita"
+    },
+    {
+      "dtype": "int64",
+      "name": "treated"
+    }
+  ],
+  "schema_hash": "01fe64f77dcefaa753c7110dd6d8e47d93b7b1a1d68280af760ab4ad2deee51f",
+  "scientific_role": "known_answer_and_external_case",
+  "sha256": "550d24c2f743507d097692d181bdbbf36c6168a39a0b6fc831cc89d98082f7de",
+  "source_id": "D2",
+  "source_name": "California_Proposition_99",
+  "staged_sha256": null,
+  "version": "70c1ce3eac58e28c30b67435ca377bb48baa9b8a"
+}

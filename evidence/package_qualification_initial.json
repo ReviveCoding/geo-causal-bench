@@ -1,0 +1,74 @@
+{
+  "r_version": "4.5.3",
+  "package_versions": {
+    "did": "2.5.1",
+    "fixest": "0.14.2",
+    "CausalImpact": "1.3.0",
+    "synthdid": "0.0.9",
+    "augsynth": "0.2.0",
+    "GeoLift": "2.7.5"
+  },
+  "results": [
+    {
+      "method_id": "synthdid_prop99",
+      "expected": -15.604,
+      "observed": -15.6038,
+      "tolerance": 0.02,
+      "status": "PASS",
+      "failure_category": null,
+      "failure_reason": null,
+      "runtime_sec": 0.2815
+    },
+    {
+      "method_id": "did_mpdta_dynamic_att",
+      "expected": -0.0772,
+      "observed": -0.0772,
+      "tolerance": 0.01,
+      "status": "PASS",
+      "failure_category": null,
+      "failure_reason": null,
+      "runtime_sec": 0.1244
+    },
+    {
+      "method_id": "sunab_mpdta_dynamic_mean",
+      "expected": -0.022,
+      "observed": null,
+      "tolerance": 0.08,
+      "status": "GATED",
+      "failure_category": "PACKAGE_INCOMPATIBILITY",
+      "failure_reason": "in fixest::feols(lemp ~ fixest::sunab(first.treat, y...: \nEvaluation of the right-hand-side of the formula raises an error: \n  'sunab' is not an exported object from 'namespace:fixest'",
+      "runtime_sec": 0.0492
+    },
+    {
+      "method_id": "augsynth_kansas_scm",
+      "expected": -0.0294,
+      "observed": null,
+      "tolerance": 0.005,
+      "status": "GATED",
+      "failure_category": "PACKAGE_INCOMPATIBILITY",
+      "failure_reason": "missing value where TRUE/FALSE needed",
+      "runtime_sec": 0.1022
+    },
+    {
+      "method_id": "causalimpact_official_toy",
+      "expected": 10,
+      "observed": 10.51,
+      "tolerance": 3,
+      "status": "PASS",
+      "failure_category": null,
+      "failure_reason": null,
+      "runtime_sec": 0.5096
+    },
+    {
+      "method_id": "geolift_official_example",
+      "expected": 4667,
+      "observed": null,
+      "tolerance": 10,
+      "status": "GATED",
+      "failure_category": "PACKAGE_INCOMPATIBILITY",
+      "failure_reason": "Tibble columns must have compatible sizes.\n• Size 105: Existing data.\n• Size 210: Column `Yobs`.\nℹ Only values of size one are recycled.",
+      "runtime_sec": 16.8947
+    }
+  ],
+  "all_pass": false
+}

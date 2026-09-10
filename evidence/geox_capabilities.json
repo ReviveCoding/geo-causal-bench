@@ -1,0 +1,281 @@
+{
+  "module_file": "/home/bjw-0/.cache/geo-causal-bench/envs/core/lib/python3.11/site-packages/meridian_geox/__init__.py",
+  "module_version": "1.0.1",
+  "package": "meridian-geox",
+  "public_api": [
+    {
+      "fields": [
+        "design",
+        "analysis_start_date",
+        "analysis_end_date",
+        "pretest_end_date",
+        "excluded_dates",
+        "alpha",
+        "test_type",
+        "n_placebo_candidates",
+        "n_top_placebos",
+        "min_placebo_r2",
+        "min_placebo_count_warning",
+        "min_placebo_count_error"
+      ],
+      "name": "AnalysisConfig",
+      "signature": "(design: meridian_geox.api.Design, analysis_start_date: typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')], analysis_end_date: typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')], pretest_end_date: Optional[Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]] = None, excluded_dates: typing.Annotated[set[typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, alpha: Optional[float] = None, test_type: Optional[meridian_geox.api.TestType] = None, n_placebo_candidates: int = 100000, n_top_placebos: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 500, min_placebo_r2: float = 0.6, min_placebo_count_warning: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Ge(ge=0)])] = 100, min_placebo_count_error: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Ge(ge=0)])] = 10) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "lift",
+        "percent_lift",
+        "cumulative_lift",
+        "counterfactual_conversions",
+        "pointwise_difference",
+        "icpd",
+        "cumulative_icpd",
+        "descriptive_metrics"
+      ],
+      "name": "AnalysisMetrics",
+      "signature": "(lift: meridian_geox.api.Estimate, percent_lift: meridian_geox.api.Estimate, cumulative_lift: typing.Annotated[pandas.DataFrame, BeforeValidator(func=<function _validate_dataframe at 0x7dc8d61c58a0>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_dataframe at 0x7dc8d61c5940>, return_type=<class 'dict'>, when_used='json')] = <factory>, counterfactual_conversions: pandas.DataFrame = <factory>, pointwise_difference: pandas.DataFrame = <factory>, icpd: Optional[meridian_geox.api.Estimate] = None, cumulative_icpd: Optional[Annotated[pandas.DataFrame, BeforeValidator(func=<function _validate_dataframe at 0x7dc8d61c58a0>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_dataframe at 0x7dc8d61c5940>, return_type=<class 'dict'>, when_used='json')]] = None, descriptive_metrics: Optional[meridian_geox.api.DescriptiveMetrics] = None) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "results",
+        "analysis_config",
+        "excluded_geos",
+        "excluded_dates",
+        "quality_check_result"
+      ],
+      "name": "AnalysisResult",
+      "signature": "(results: dict[str, meridian_geox.api.AnalysisMetrics], analysis_config: meridian_geox.api.AnalysisConfig, excluded_geos: typing.Annotated[set[str], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, excluded_dates: typing.Annotated[set[typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, quality_check_result: Optional[meridian_geox.api.QualityCheckResult] = None) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "budget",
+        "budget_pct"
+      ],
+      "name": "Budget",
+      "signature": "(budget: Optional[float] = None, budget_pct: Optional[float] = None) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "included_control_geos",
+        "excluded_geos",
+        "excluded_dates",
+        "budget_constraint",
+        "max_conversions_percent"
+      ],
+      "name": "Constraints",
+      "signature": "(included_control_geos: typing.Annotated[set[str], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, excluded_geos: typing.Annotated[set[str], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, excluded_dates: typing.Annotated[set[typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, budget_constraint: Union[meridian_geox.api.Budget, dict[str, meridian_geox.api.Budget], NoneType] = None, max_conversions_percent: Optional[float] = 0.3) -> None",
+      "type": "type"
+    },
+    {
+      "name": "DataSchema",
+      "signature": "(*args, **kwargs) -> pandera.typing.common.DataFrameBase[typing.Self]",
+      "type": "MetaModel"
+    },
+    {
+      "fields": [
+        "designs",
+        "control_geos",
+        "excluded_geos",
+        "excluded_dates",
+        "design_config",
+        "constraints",
+        "quality_check_result",
+        "geo_stratum_labels",
+        "data"
+      ],
+      "name": "Design",
+      "signature": "(designs: dict[str, meridian_geox.api.PerCellDesign], control_geos: typing.Annotated[set[str], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')], excluded_geos: typing.Annotated[set[str], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')], excluded_dates: typing.Annotated[set[typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]], PlainSerializer(func=<function _serialize_set at 0x7dc8e2bfd080>, return_type=<class 'list'>, when_used='json')] = <factory>, design_config: Optional[meridian_geox.api.DesignConfig] = None, constraints: Optional[meridian_geox.api.Constraints] = None, quality_check_result: Optional[meridian_geox.api.QualityCheckResult] = None, geo_stratum_labels: Optional[Annotated[jax.jaxlib._jax.Array, BeforeValidator(func=<function _validate_jnp_array at 0x7dc8d6eb7920>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_jnp_array at 0x7dc8d61c4400>, return_type=<class 'list'>, when_used='json')]] = None, data: Optional[Annotated[pandas.DataFrame, BeforeValidator(func=<function _validate_dataframe at 0x7dc8d61c58a0>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_dataframe at 0x7dc8d61c5940>, return_type=<class 'dict'>, when_used='json')]] = None) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "experiment_duration",
+        "experiment_types",
+        "methodology",
+        "geo_assignment_rule",
+        "cell_count",
+        "alpha",
+        "power",
+        "test_type",
+        "design_output_count",
+        "cost_per_incremental_conversion",
+        "n_candidates",
+        "n_ranked_candidates",
+        "max_candidate_generation_retries",
+        "seed",
+        "slope_tolerance",
+        "min_r2",
+        "num_strata",
+        "k_means_iterations"
+      ],
+      "name": "DesignConfig",
+      "signature": "(experiment_duration: typing.Annotated[datetime.timedelta, BeforeValidator(func=<function _validate_duration at 0x7dc8d61c5440>, json_schema_input_type=PydanticUndefined), FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=datetime.timedelta(0))])], experiment_types: Union[meridian_geox.api.ExperimentType, dict[str, meridian_geox.api.ExperimentType]] = <ExperimentType.HOLDBACK: 1>, methodology: meridian_geox.api.Methodology = <Methodology.TBR: 1>, geo_assignment_rule: meridian_geox.api.GeoAssignmentRule = <GeoAssignmentRule.STRATIFIED_SAMPLING: 2>, cell_count: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 1, alpha: float = 0.1, power: float = 0.8, test_type: meridian_geox.api.TestType = <TestType.TWO_SIDED: 2>, design_output_count: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 10, cost_per_incremental_conversion: Union[float, dict[str, float]] = 1.0, n_candidates: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 100000, n_ranked_candidates: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 100, max_candidate_generation_retries: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 10, seed: int = 42, slope_tolerance: float = 0.2, min_r2: float = 0.8, num_strata: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 4, k_means_iterations: typing.Annotated[int, FieldInfo(annotation=NoneType, required=True, metadata=[Gt(gt=0)])] = 10) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "designs",
+        "design_metrics"
+      ],
+      "name": "DesignSet",
+      "signature": "(designs: dict[str, meridian_geox.api.Design], design_metrics: typing.Annotated[pandas.DataFrame, BeforeValidator(func=<function _validate_dataframe at 0x7dc8d61c58a0>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_dataframe at 0x7dc8d61c5940>, return_type=<class 'dict'>, when_used='json')]) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "point_estimate",
+        "lower_bound",
+        "upper_bound",
+        "standard_deviation",
+        "p_value"
+      ],
+      "name": "Estimate",
+      "signature": "(point_estimate: float, lower_bound: float, upper_bound: float, standard_deviation: float, p_value: float) -> None",
+      "type": "type"
+    },
+    {
+      "enum_values": {
+        "GO_DARK": 2,
+        "HEAVY_UP": 3,
+        "HOLDBACK": 1
+      },
+      "name": "ExperimentType",
+      "signature": "(value, names=None, *, module=None, qualname=None, type=None, start=1, boundary=None)",
+      "type": "EnumType"
+    },
+    {
+      "enum_values": {
+        "RANDOM": 1,
+        "STRATIFIED_SAMPLING": 2
+      },
+      "name": "GeoAssignmentRule",
+      "signature": "(value, names=None, *, module=None, qualname=None, type=None, start=1, boundary=None)",
+      "type": "EnumType"
+    },
+    {
+      "enum_values": {
+        "CONTROL": 1,
+        "EXCLUDED": 3,
+        "TREATMENT": 2
+      },
+      "name": "GeoGroup",
+      "signature": "(value, names=None, *, module=None, qualname=None, type=None, start=1, boundary=None)",
+      "type": "EnumType"
+    },
+    {
+      "enum_values": {
+        "SDID": 2,
+        "TBR": 1
+      },
+      "name": "Methodology",
+      "signature": "(value, names=None, *, module=None, qualname=None, type=None, start=1, boundary=None)",
+      "type": "EnumType"
+    },
+    {
+      "fields": [
+        "exclude_geos_no_response",
+        "exclude_outlier_dates"
+      ],
+      "name": "QualityCheckConfig",
+      "signature": "(exclude_geos_no_response: bool = True, exclude_outlier_dates: bool = True) -> None",
+      "type": "type"
+    },
+    {
+      "fields": [
+        "quality_check_config",
+        "quality_metrics",
+        "outlier_geos",
+        "outlier_dates"
+      ],
+      "name": "QualityCheckResult",
+      "signature": "(quality_check_config: meridian_geox.api.QualityCheckConfig, quality_metrics: typing.Annotated[pandas.DataFrame, BeforeValidator(func=<function _validate_dataframe at 0x7dc8d61c58a0>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_dataframe at 0x7dc8d61c5940>, return_type=<class 'dict'>, when_used='json')], outlier_geos: set[str] = <factory>, outlier_dates: set[typing.Annotated[pandas.Timestamp, BeforeValidator(func=<function _validate_timestamp at 0x7dc8e2bfcf40>, json_schema_input_type=PydanticUndefined), PlainSerializer(func=<function _serialize_timestamp at 0x7dc8e2bfcfe0>, return_type=<class 'str'>, when_used='json')]] = <factory>) -> None",
+      "type": "type"
+    },
+    {
+      "enum_values": {
+        "ONE_SIDED": 1,
+        "TWO_SIDED": 2
+      },
+      "name": "TestType",
+      "signature": "(value, names=None, *, module=None, qualname=None, type=None, start=1, boundary=None)",
+      "type": "EnumType"
+    },
+    {
+      "name": "analysis",
+      "type": "module"
+    },
+    {
+      "name": "analyze",
+      "signature": "(data: pandas.DataFrame, analysis_config: meridian_geox.api.AnalysisConfig, data_quality_check_config: meridian_geox.api.QualityCheckConfig = QualityCheckConfig(exclude_geos_no_response=True, exclude_outlier_dates=True)) -> meridian_geox.api.AnalysisResult",
+      "type": "function"
+    },
+    {
+      "name": "api",
+      "type": "module"
+    },
+    {
+      "name": "check_analysis_data_quality",
+      "signature": "(data: pandas.DataFrame, analysis_config: meridian_geox.api.AnalysisConfig, quality_check_config: meridian_geox.api.QualityCheckConfig) -> meridian_geox.api.QualityCheckResult",
+      "type": "function"
+    },
+    {
+      "name": "check_design_data_quality",
+      "signature": "(data: pandas.DataFrame, design_config: meridian_geox.api.DesignConfig, quality_check_config: meridian_geox.api.QualityCheckConfig) -> meridian_geox.api.QualityCheckResult",
+      "type": "function"
+    },
+    {
+      "name": "compare_designs",
+      "signature": "(data: pandas.DataFrame, design_requirements: list[tuple[meridian_geox.api.DesignConfig, meridian_geox.api.Constraints]], design_output_count: int = 10) -> meridian_geox.api.DesignSet",
+      "type": "function"
+    },
+    {
+      "name": "concat_design_reports",
+      "signature": "(design_sets: list[meridian_geox.api.DesignSet], design_output_count: int = 10) -> meridian_geox.api.DesignSet",
+      "type": "function"
+    },
+    {
+      "name": "data_quality",
+      "type": "module"
+    },
+    {
+      "name": "design",
+      "type": "module"
+    },
+    {
+      "name": "generate_candidates",
+      "type": "module"
+    },
+    {
+      "name": "methodology",
+      "type": "module"
+    },
+    {
+      "name": "plot_analysis",
+      "signature": "(analysis_result: meridian_geox.api.AnalysisResult)",
+      "type": "function"
+    },
+    {
+      "name": "plot_design",
+      "signature": "(design_to_plot: meridian_geox.api.Design)",
+      "type": "function"
+    },
+    {
+      "name": "run_design",
+      "signature": "(data: pandas.DataFrame, design_config: meridian_geox.api.DesignConfig, constraints: meridian_geox.api.Constraints, data_quality_check_config: meridian_geox.api.QualityCheckConfig = QualityCheckConfig(exclude_geos_no_response=True, exclude_outlier_dates=True), design_scorer: Optional[Callable[..., Any]] = None) -> meridian_geox.api.DesignSet",
+      "type": "function"
+    },
+    {
+      "name": "util",
+      "type": "module"
+    },
+    {
+      "name": "validation",
+      "type": "module"
+    }
+  ],
+  "version": "1.0.1"
+}

@@ -1,0 +1,10 @@
+causal_abs_error: 1.0
+miscoverage: 0.5
+false_positive: 1.0
+catastrophic_sign_error: 1.5
+method_failure: 2.0
+decision_regret: 1.0
+abstention: 0.35
+false_launch_cost: 3.0
+false_stop_cost: 1.5
+hold_cost: 0.4
