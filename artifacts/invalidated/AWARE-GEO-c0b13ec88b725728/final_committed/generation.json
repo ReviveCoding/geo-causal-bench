@@ -1,0 +1,6 @@
+{
+  "observed_root": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/data/protected/final/observed",
+  "protocol_id": "AWARE-GEO-c0b13ec88b725728",
+  "truth_root": "/mnt/c/Users/bjw-0/Downloads/geo-causal-bench/data/protected/final/truth",
+  "worlds": 500
+}

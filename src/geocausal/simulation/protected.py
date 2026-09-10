@@ -98,6 +98,10 @@ def prepare_protected_worlds(
         "worlds": len(seeds),
         "observed_root": str(observed_root),
         "truth_root": str(truth_root),
+        "world_index": [
+            {"world_id": item["world_id"], "scenario_id": item["scenario_id"]}
+            for item in seeds
+        ],
     }
     atomic_write_json(
         root / "artifacts" / "final_committed" / "generation.json", marker
@@ -132,8 +136,8 @@ def evaluate_without_truth(
     selector = AwareSelector.restore(selector_artifact)
     fixed_method = str(selector_artifact["strongest_fixed"])
     items = json.loads(
-        (root / "data" / "protected" / "final_world_seeds.json").read_text()
-    )["worlds"]
+        (root / "artifacts" / "final_committed" / "generation.json").read_text()
+    )["world_index"]
     observed_root = root / "data" / "protected" / "final" / "observed"
     estimator_rows: list[dict[str, Any]] = []
     selector_rows: list[dict[str, Any]] = []
@@ -158,6 +162,9 @@ def evaluate_without_truth(
             None if selection.abstained else estimates[selection.selected_method or ""]
         )
         fixed = estimates[fixed_method]
+        materiality = max(
+            float(np.nansum(world.outcomes[:, : world.pre_days]) * 0.005), 1.0
+        )
         committed = {
             "protocol_id": protocol_id,
             "world_id": world.world_id,
@@ -169,6 +176,7 @@ def evaluate_without_truth(
             "selected_estimate": None if selected is None else asdict(selected),
             "fixed_method": fixed_method,
             "fixed_estimate": asdict(fixed),
+            "materiality": materiality,
         }
         committed["commitment_hash"] = canonical_hash(committed)
         selector_rows.append(committed)
@@ -197,6 +205,12 @@ def score_committed_once(
     scored_rows: list[dict[str, Any]] = []
     ledger: list[dict[str, str]] = []
     truth_by_world: dict[str, float] = {}
+    frozen_identities = {
+        item["world_id"]: item["identity_hash"]
+        for item in json.loads(
+            (root / "evidence" / "freeze" / "final_world_identities.json").read_text()
+        )["world_identities"]
+    }
     for raw_row in selectors.to_dict(orient="records"):
         row: dict[str, Any] = {str(key): value for key, value in raw_row.items()}
         world_id = str(row["world_id"])
@@ -206,9 +220,7 @@ def score_committed_once(
         ledger.append(
             {
                 "world_id": world_id,
-                "world_identity_hash": canonical_hash(
-                    {"protocol_id": protocol_id, "world_id": world_id}
-                ),
+                "world_identity_hash": frozen_identities[world_id],
                 "first_access_timestamp": utc_now(),
                 "accessing_stage": "E14_CANONICAL_SCORING",
                 "protocol_id": protocol_id,
@@ -217,7 +229,7 @@ def score_committed_once(
         )
         selected = _estimate_from(row["selected_estimate"])
         fixed = _estimate_from(row["fixed_estimate"])
-        materiality = max(abs(true_effect) * 0.5, 1.0)
+        materiality = float(row["materiality"])
         aware_decision = decide(selected, true_effect, materiality=materiality)
         fixed_decision = decide(fixed, true_effect, materiality=materiality)
         scored_rows.append(

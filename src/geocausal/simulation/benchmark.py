@@ -317,7 +317,11 @@ def run_ood_estimator_benchmark(
         )
         .reset_index()
     )
-    return {"worlds": worlds, "selector_training_access": False, "summary": summary.to_dict(orient="records")}
+    return {
+        "worlds": worlds,
+        "selector_training_access": False,
+        "summary": summary.to_dict(orient="records"),
+    }
 
 
 def _bootstrap_ci(values: np.ndarray, seed: int) -> tuple[float, float]:

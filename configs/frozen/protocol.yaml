@@ -1,4 +1,4 @@
-protocol_name: AWARE-GEO-CONFIRMATORY-001
+protocol_name: AWARE-GEO-CONFIRMATORY-002
 primary_selector: P1_AWARE_SELECT
 primary_comparator: independent_did
 h1:
@@ -21,6 +21,10 @@ business_costs:
   false_stop_base: 1.5
   hold: 0.4
   redesign: 0.35
+decision_materiality:
+  source: pre_treatment_total
+  fraction: 0.005
+  truth_access: prohibited
 final_scenario_mixture:
   clean_weight: 3
   each_stress_weight: 1

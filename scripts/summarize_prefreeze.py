@@ -8,9 +8,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-
 root = Path(__file__).resolve().parents[1]
-development = pd.read_parquet(root / "evidence/development/fact_estimator_result.parquet")
+development = pd.read_parquet(
+    root / "evidence/development/fact_estimator_result.parquet"
+)
 null = pd.read_parquet(root / "evidence/qualification/fact_null_result.parquet")
 ood = pd.read_parquet(root / "evidence/qualification/fact_ood_estimator_result.parquet")
 qualification = json.loads(
@@ -37,7 +38,9 @@ payload = {
     "E07_clean": method_summary(development.loc[development.scenario_id == "S00"]),
     "E08_null": method_summary(null),
     "E09_single_stress": method_summary(
-        development.loc[development.scenario_id.isin([f"S{i:02d}" for i in range(1, 13)])]
+        development.loc[
+            development.scenario_id.isin([f"S{i:02d}" for i in range(1, 13)])
+        ]
     ),
     "E10_compound_ood": method_summary(ood),
     "E11_development_rows": len(development),

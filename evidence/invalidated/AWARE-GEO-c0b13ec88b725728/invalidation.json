@@ -1,0 +1,13 @@
+{
+  "failure_category": "PROTOCOL_INVALIDATION",
+  "invalidated_claim_families": [
+    "H2",
+    "business_decision_regret",
+    "false_launch",
+    "false_stop",
+    "promotion_eligibility"
+  ],
+  "protocol_id": "AWARE-GEO-c0b13ec88b725728",
+  "reason": "Decision materiality was derived from hidden true effect during scoring.",
+  "status": "INVALID"
+}

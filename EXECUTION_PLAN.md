@@ -43,14 +43,17 @@ results, reports, claim ledger, and reproducibility audit. E21 is optional.
 - [x] 2026-09-10T03:48Z Completed E02--E12 through adversarial review.
 - [x] 2026-09-10T03:52Z Froze protocol `AWARE-GEO-c0b13ec88b725728`
   (manifest SHA-256 `967a425d22b68d954405be102a6cecc57db95267027da7dd853d479731810330`).
+- [x] 2026-09-10T04:00Z Invalidated that protocol immediately after E14 when
+  adversarial review found truth-derived business materiality; archived all
+  outputs and corrected the truth-blind commitment boundary.
 - [ ] E14 one-way protected confirmatory evaluation and immediate adversarial
   review.
 - [ ] E15--E19 ablation, observational, external, decision, and compute work.
 - [ ] E20 final reproduction, evidence, claim, and adversarial audit.
 - [ ] E21 optional Meridian MMM extension (may be GATED/OMITTED).
 
-Next legal action: commit and annotate E13, then execute E14 once through the
-protected process boundary without retuning.
+Next legal action: commit the protocol-invalidating correction, create fresh
+protected identities, issue protocol 002 freeze/tag, and execute its E14 once.
 
 ## Surprises & Discoveries
 
@@ -86,6 +89,10 @@ protected process boundary without retuning.
 - 2026-09-10: Revised E12 chose fixed DiD in 298/300 worlds and had negligible
   regret improvement. E10 compound-OOD coverage was only 0.577--0.643. The
   protected test may fail and no further tuning is legal.
+- 2026-09-10: Immediate E14 review found that protocol 001 computed the action
+  threshold from hidden truth in scoring. Its apparent promotion is invalid.
+  Protocol 002 commits a pre-treatment-total materiality threshold before truth
+  access and uses the frozen world identity hash in the access ledger.
 
 ## Decision Log
 

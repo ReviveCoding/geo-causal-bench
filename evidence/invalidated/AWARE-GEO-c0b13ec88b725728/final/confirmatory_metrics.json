@@ -1,0 +1,36 @@
+{
+  "abstention_rate": 0.022,
+  "aware_mean_regret": 0.4611,
+  "clean_abstention_rate": 0.010416666666666666,
+  "critical_gates": {
+    "clean_abstention": true,
+    "coverage": true,
+    "null_type_i": true,
+    "truth_ledger_complete": true
+  },
+  "false_launch_rate": 0.01,
+  "false_stop_rate": 0.022,
+  "fixed_mean_regret": 0.46220000000000006,
+  "h1": {
+    "aware_clean_rmse": 8573.390271088016,
+    "fixed_clean_rmse": 8573.390271088016,
+    "margin": 1.05,
+    "pass": true,
+    "ratio": 1.0
+  },
+  "h2": {
+    "ci_high": -0.0004950495049504955,
+    "ci_low": -0.001980198019801982,
+    "mean_paired_regret_difference": -0.0012376237623762387,
+    "pass": true
+  },
+  "promotion_eligible": true,
+  "protocol_id": "AWARE-GEO-c0b13ec88b725728",
+  "selection_aware_coverage": 0.9038854805725971,
+  "selection_aware_null_type_i": 0.0743801652892562,
+  "selection_frequency": {
+    "independent_did": 489
+  },
+  "strongest_fixed": "independent_did",
+  "worlds": 500
+}
