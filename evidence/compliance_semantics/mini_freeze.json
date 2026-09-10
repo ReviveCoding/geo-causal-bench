@@ -1,0 +1,33 @@
+{
+  "claim_rules": [
+    "synthetic_only",
+    "cace_only_under_recorded_assumptions",
+    "semantic_not_numerical_inequality"
+  ],
+  "created_before_holdout_scoring": "2026-09-10T07:06:24.565141+00:00",
+  "dgp_id": "DGP_A_v2_COMPLIANCE",
+  "estimands": {
+    "assignment_itt": "E[Y(Z=1,D(1))-Y(Z=0,D(0))] total among assigned units",
+    "cace": "average total incremental outcome among compliers under random assignment, exclusion, monotonicity, and no interference",
+    "dose_response": "incremental outcome per delivered unit-day"
+  },
+  "extension_id": "COMPLIANCE-SEMANTICS-001",
+  "heterogeneous_alternation": true,
+  "holdout_seed_hash": "3c4bface1f6d3e48c2fd6bd2352c5b45158ec32ecc71ff0d2ebf3cd70514b248",
+  "holdout_worlds": 500,
+  "metrics": [
+    "bias",
+    "rmse",
+    "coverage",
+    "compliance_stratified_error"
+  ],
+  "qualification_worlds": 200,
+  "regimes": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "semantics_revision": 3
+}

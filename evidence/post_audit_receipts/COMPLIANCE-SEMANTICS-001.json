@@ -1,0 +1,11 @@
+{
+  "extension_id": "COMPLIANCE-SEMANTICS-001",
+  "status": "PASS",
+  "evidence_class": ["POST_AUDIT_SIMULATED"],
+  "inputs": ["DGP_A_v2_COMPLIANCE semantics revision 3", "500 frozen new-seed holdout worlds"],
+  "code_identity": "fce32650b34d198d2247787cc86ae529f1e94532+f23e397d8198f03bc591cae47e2a030e232af8f532d5fd92c2a07c34fbc37eb8",
+  "artifacts": ["evidence/compliance_semantics/mini_freeze.json", "evidence/compliance_semantics/manifest.json", "reports/COMPLIANCE_SEMANTICS.md"],
+  "warnings": ["CACE limited to synthetic worlds with explicit IV assumptions", "zero-dose response estimator is unidentified"],
+  "negative_findings": ["Two extension-development attempts required correction and remain archived"],
+  "next_legal_action": "AUDIT_ONLY"
+}

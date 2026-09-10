@@ -1,0 +1,22 @@
+{
+  "extension_id": "OPERATIONS-STUDY-001",
+  "files": {
+    "evidence/operations/fact_data_quality_stress.parquet": "425b91bd07daacbabcc3219ee41e9b02b977bb87508970f5852025b00232920c",
+    "evidence/operations/fact_design_frontier.parquet": "5ac46b2c9e5f07a9af522128ef2bbae56c65b4905f99c02c5576ffdac7695877",
+    "evidence/operations/fact_empirical_power.parquet": "e863818004c1fdf949909cd0847d205116d718aa90e880d3d2b78fdb4a6c5805",
+    "evidence/operations/fact_influence.parquet": "54840d287e0482c49cd454d629de9df30d87568d901c3e8f9eda93f2670629cf",
+    "evidence/operations/fact_rolling_backtest.parquet": "3d61913e326f931e55a79d9a80655aa3192ef937aa5212f2c3dd05cb7da2e97b",
+    "evidence/operations/fact_seasonal_study.parquet": "ae7563ab2541d664c2282c80094065835844627953548f570942295482c7d673",
+    "evidence/operations/fact_tool_design_comparison.parquet": "550b7ae72c4646ecf6f85aebdf13589fe8e370815520e4b7aa519ab8fb77a6dd",
+    "evidence/operations/geolift_official_design_frontier.parquet": "617333f7f09cc9d6225082a663f84b962fa94268f9a7480da568fb8bf30bd207",
+    "evidence/operations/geolift_official_operations.json": "5c0583b2a81b287fb790be8ee4cf49458c00e4467fc83ca4c71f663ab3487063",
+    "evidence/operations/geolift_official_power.parquet": "e20061da7d228c9216480d921bf03b4f6ae6741710847298c8bf68553ce4b9e5",
+    "evidence/operations/geox_common_panel_design.parquet": "cf60d2c275b37446fc7806715ae73fa67ad47d9df5e60adf14a1714aefac5438",
+    "evidence/operations/geox_official_design_frontier.parquet": "0c26ab5ddbfd9a2deaa08b26e29e835560d177f7c64a9bd3308dd8d1fc11b39d",
+    "evidence/operations/geox_official_quality_stress.parquet": "c5923171a5d14c3f5ed2f34e5769fece7f603f13fe722623179b1977e793bd5e",
+    "evidence/operations/geox_operations.json": "800773e8d91db44e5cb2e4e53a6ce1f0f2bab972f8881040d635d1ca5c858cce",
+    "evidence/operations/gpu_execution.json": "f4160573348eb50fd9bf88b175d3d7d3102cdaf6b9ccdf62279165deb803c3ac",
+    "evidence/operations/rolling_backtests.parquet": "3d61913e326f931e55a79d9a80655aa3192ef937aa5212f2c3dd05cb7da2e97b"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+  "extension_suite": "POST-AUDIT-SUITE-001",
+  "policy": "Preserve extension failures; none affect protected protocol history.",
+  "attempts": [
+    {"stage": "risk_calibration", "finding": "Infinite risk for no-eligible-method abstentions caused SVD failure.", "resolution": "Exclude infinite scores only from slope/correlation; retain them as worst rank.", "status": "RESOLVED"},
+    {"stage": "risk_calibration", "finding": "Object-typed covered_truth produced invalid bitwise complement and negative preliminary AURC.", "resolution": "Explicit Boolean cast; regenerated all derived results.", "status": "RESOLVED"},
+    {"stage": "failure_attribution", "finding": "Abstentions have undefined point error.", "resolution": "Exclude only undefined rows from the absolute-error target.", "status": "RESOLVED"},
+    {"stage": "reporting", "finding": "Optional tabulate dependency absent.", "resolution": "Deterministic internal Markdown renderer.", "status": "RESOLVED"},
+    {"stage": "geox_design", "finding": "GeoX rejects min_r2 values 0 and below despite generic between-zero-and-one validation text.", "resolution": "Use valid 0.01 in the new operations adapter.", "status": "RESOLVED_WITH_API_NOTE"},
+    {"stage": "geox_provenance", "finding": "Generic recursive serialization of Design caused RecursionError after successful designs.", "resolution": "Capture official design IDs, treatment/control sets, and metric rows explicitly.", "status": "RESOLVED"},
+    {"stage": "geox_common_panel", "finding": "GeoX requires float64 conversions while GeoLift CSV stores integer counts.", "resolution": "Lossless explicit float64 conversion.", "status": "RESOLVED"},
+    {"stage": "influence", "finding": "S13 missingness caused donor-weight SVD failure and mixed unit identifiers failed Arrow conversion.", "resolution": "Use the benchmark's pre-period median handling and canonical string identifiers.", "status": "RESOLVED"},
+    {"stage": "compliance_semantics", "finding": "First extension attempt encoded zero delivered dose as zero structural dose-response truth.", "resolution": "Archived attempt v1; later revisions define structural per-dose truth and mark zero-dose estimation unidentified.", "status": "RESOLVED_BEFORE_TERMINAL_AUDIT"},
+    {"stage": "compliance_semantics", "finding": "Revision 2 allowed heterogeneous propensity below one in the nominal 100% regime.", "resolution": "Archived attempt v2; revision 3 reserves exact zero/full endpoints and applies heterogeneity only to partial-compliance regimes.", "status": "RESOLVED_BEFORE_TERMINAL_AUDIT"}
+  ]
+}

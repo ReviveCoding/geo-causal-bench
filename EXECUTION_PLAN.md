@@ -82,6 +82,47 @@ Extension state: `COMPLETE / UPSTREAM_PINNED`. It creates new post-audit
 external-validation evidence only. The protocol 002 GeoLift gate remains the
 correct historical state of the frozen study.
 
+### Final Post-Audit Industry Analytics Suite
+
+Suite identity: `POST-AUDIT-SUITE-001`. This section governs new extension
+evidence only. Protocol 002, protocol 001's invalidated archive, and
+`GEOLIFT-COMPAT-001` are immutable inputs.
+
+- [x] `POST-AUDIT-ANALYTICS-001` — `PASS`; scientific identity
+  `POST-AUDIT-ANALYTICS-001-PLAN-v1`; inputs are audited Protocol 002 canonical
+  tables; planned artifacts are separately rooted under
+  `evidence/post_audit_analytics`; warnings and negative findings must be
+  retained; 110 slices and 37 registered interaction rows were produced. Next
+  legal action: audit only.
+- [x] `OPERATIONS-STUDY-001` — `PASS_WITH_GATED_CELLS`; new seeds, public
+  panels, official GeoX 1.0.1, and the exact pinned GeoLift overlay produced
+  rolling, seasonal, design, empirical-power, data-quality, influence, and
+  cross-tool evidence. Twelve 42/56-day GeoX cells were correctly gated for
+  inadequate history. Next legal action: audit only.
+- [x] `COMPLIANCE-SEMANTICS-001` — `PASS`; `DGP_A_v2_COMPLIANCE` semantics
+  revision 3 and its own mini-freeze govern 500 new holdout worlds. Two flawed
+  extension-development attempts are preserved. Next legal action: audit only.
+- [x] `POST-AUDIT-SUITE-001` — `PASS`; all child manifests, 21 figures,
+  dashboard, claims, exact tool pins, truth isolation, and protected Git objects
+  pass. Next legal action: `PORTFOLIO_SCOPE_CLOSED`.
+
+2026-09-10 — Pre-analysis status: starting HEAD
+`fce32650b34d198d2247787cc86ae529f1e94532` and clean tree verified. E20 and
+GeoLift compatibility reviews were inspected. The slice registry, analysis
+plan, minimum sample rule, bootstrap/FDR rules, catastrophic-loss definition,
+and policy-sensitivity grid were fixed before querying outcome-dependent slice
+results. No protected path was modified. Next legal action: validate the plan
+and inspect read-only canonical schemas.
+
+Terminal update (2026-09-10): the plan was hashed before slice queries. The
+suite produced 1,000 selector-world analytic rows, 1,080 seasonal worlds, 96
+empirical-power cells, 454 influence rows, 12 successful official GeoX designs,
+18 official GeoX data-quality checks, pinned GeoLift market/power evidence, and
+1,500 compliance estimand rows. Full engineering closure passed Ruff, strict
+mypy, shell/R syntax, 49 pytest tests, sdist/wheel build, installed-wheel import,
+historical read-only evidence/claim verification, and the new suite verifier.
+Protocol 002 and `GEOLIFT-COMPAT-001` Git objects remain unchanged.
+
 ## Surprises & Discoveries
 
 - 2026-09-10: The repository had no root `AGENTS.md`; the required read failed
@@ -140,6 +181,21 @@ correct historical state of the frozen study.
   output, but its top-level aggregate confidence-bound fields are NA in this
   dependency constellation. Point/aggregation qualification passes, but no
   aggregate-CI claim is allowed.
+- 2026-09-10: Post-audit predicted risk barely ranked realized procedure loss
+  (Spearman 0.024; catastrophic-loss AUROC 0.362). Pre-RMSE had lower selective
+  risk AURC than AWARE risk in this completed sample; the intended human-review
+  ranking interpretation is not supported.
+- 2026-09-10: AWARE and fixed DiD had nearly identical decision-regret tails;
+  fixed DiD's CVaR95 was slightly lower. The historical mean-regret promotion
+  does not imply tail-risk superiority.
+- 2026-09-10: The new compliance extension required two preserved development
+  corrections: first to define structural dose response at zero delivery, then
+  to make nominal zero/full compliance exact while reserving heterogeneity for
+  partial regimes.
+- 2026-09-10: Official GeoX accepted all 18 quality-check perturbation inputs
+  but emitted structured warnings/exclusions rather than hard errors for tested
+  duplicates, outliers, zero-response geos, and date ordering. Validation pass
+  therefore does not imply data are operationally harmless.
 
 ## Decision Log
 
@@ -171,6 +227,17 @@ correct historical state of the frozen study.
 - 2026-09-10 — Label all compatibility output `UPSTREAM_PINNED` and keep it out
   of protocol 002's canonical evidence. The earlier `GATED` result is not
   retroactively rewritten.
+- 2026-09-10 — Keep post-audit F21--F41 outside Protocol 002's figure gate. The
+  historical verifier now checks existence of F01--F20 instead of requiring the
+  figure directory to contain exactly 20 files; this changes no frozen artifact
+  or historical claim.
+- 2026-09-10 — Retain the frozen risk threshold 1.25. Threshold rows above it
+  are labeled partially identified because original abstentions lack committed
+  selected estimates; no post-hoc optimum is promoted.
+- 2026-09-10 — Treat GeoX R2 and GeoLift scaled-L2 imbalance, MDE/effect
+  thresholds, power, and investment as tool-native quantities. Only treatment
+  set overlap and response-share differences receive direct same-panel
+  comparisons.
 
 ## Outcomes & Retrospective
 
@@ -201,6 +268,18 @@ and three-location cases, explicit observed/synthetic aggregation, order
 invariance, 105-row inference output, and fresh-session reproducibility pass.
 This is separate external-validation evidence and does not alter any prior
 scientific decision.
+
+`POST-AUDIT-SUITE-001` reached PASS with important negative findings. It
+confirmed historical S04/S13 coverage of 0.567/0.467, found weak risk
+calibration, and found no AWARE CVaR95 advantage over fixed DiD. New operational
+evidence showed seasonal coverage rising from 0.725 with 84 days to 0.869 with
+365 days, while a known-truth analytic power study produced 0.049 Type-I and
+0.810 rejection at 1.0 MDE. Official GeoX produced 12 valid design cells and
+gated 12 longer-duration cells; the pinned GeoLift overlay produced market and
+power results on the same public panel. Compliance semantics revision 3 passed
+its separate 500-world holdout with zero-dose estimation correctly marked
+unidentified. These results are exploratory, simulated, external, or measured
+post-audit evidence and do not revise `PROMOTE_AWARE`.
 
 ## Context and Orientation
 

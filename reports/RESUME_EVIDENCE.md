@@ -43,3 +43,15 @@ scenario-specific coverage can fail, and there is no prospective deployment.
 
 Prohibited claims: production deployment, proprietary data, real revenue,
 distributed GPU, universal causal validity, or an invented improvement percent.
+
+## Post-Audit Industry Analytics Extensions
+
+- Google Ads Insights & Measurement: built post-audit geo-experiment slicing,
+  conditional coverage, tail-risk, MDE/power, seasonality, data-quality, and
+  GeoX/GeoLift design-behavior evidence with immutable protocol governance.
+- Google GCS Applied ML / Business Data Science: evaluated risk calibration,
+  selective prediction, decision frontiers, grouped failure attribution, and a
+  truth-isolated compliance DGP for stakeholder-facing measurement decisions.
+
+These are post-audit simulated, derived, and external results—not production
+validation or new Protocol 002 confirmation.

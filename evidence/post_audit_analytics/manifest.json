@@ -1,0 +1,14 @@
+{
+  "extension_id": "POST-AUDIT-ANALYTICS-001",
+  "files": {
+    "evidence/post_audit_analytics/fact_conditional_coverage.parquet": "de4d1fc42c646ddacb9062080db8ebb0060510472bac27073088fc0be97dd57e",
+    "evidence/post_audit_analytics/fact_failure_attribution.parquet": "52159e0aabe41321100f500c9dafd007cc248fbb7a28b1494c5a835f9833e10b",
+    "evidence/post_audit_analytics/fact_risk_calibration.parquet": "5ddcb5c6c46ece0ca2ba4be263821ce8be3a144141c4c8d31ac6a08dfa183f63",
+    "evidence/post_audit_analytics/fact_slice_result.parquet": "2edc6052992c35122291563eead9e3b1d8e6cba5b7928821a73061a28f6b024c",
+    "evidence/post_audit_analytics/fact_tail_risk.parquet": "9a107102ce3f9db6acb90311d77129578e170d21d48287aff8f72bb00721d1d9",
+    "evidence/post_audit_analytics/fact_threshold_frontier.parquet": "042dc385658487254631d65ef1cf8a5c1e2cb8289eb8f6e9da244794cd4c46d4",
+    "evidence/post_audit_analytics/risk_calibration_summary.json": "3d8fade213e0d768e983de51d97b1272016c1b4eb512ffad0c7fe2eaace0ac39",
+    "evidence/post_audit_analytics/slice_summary.parquet": "690d11c76c406c3b0f52519180a448911a32b07a1ad5a6cb0e52e16791ad2265"
+  },
+  "status": "PASS"
+}

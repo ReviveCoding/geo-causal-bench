@@ -1,0 +1,52 @@
+registry_id: POST-AUDIT-ANALYTICS-001-SLICES-v1
+frozen_before_outcome_slice_queries: true
+evidence_class: POST_AUDIT_EXPLORATORY
+minimum_slice_n: 25
+low_precision_n_below: 30
+quantile_rule: pooled_empirical_quantiles_computed_without_outcome_columns
+missing_feature_rule: report_not_available_never_impute_from_outcomes
+slices:
+  pre_r2:
+    source: pre_r2
+    bins:
+      - {id: lt_0, lower: null, upper: 0.0, upper_inclusive: false}
+      - {id: 0_to_lt_0_5, lower: 0.0, upper: 0.5, upper_inclusive: false}
+      - {id: 0_5_to_lt_0_8, lower: 0.5, upper: 0.8, upper_inclusive: false}
+      - {id: ge_0_8, lower: 0.8, upper: null, lower_inclusive: true}
+  pre_rmse: {source: pre_rmse, bins: empirical_quartiles}
+  acf_score: {source: acf_score, bins: empirical_quartiles}
+  trend_gap: {source: trend_gap, bins: empirical_quartiles}
+  donor_hhi: {source: donor_hhi, bins: empirical_quartiles}
+  effective_donors:
+    source: effective_donors
+    bins:
+      - {id: le_5, lower: null, upper: 5.0, upper_inclusive: true}
+      - {id: 6_to_10, lower: 5.0, upper: 10.0, lower_inclusive: false, upper_inclusive: true}
+      - {id: gt_10, lower: 10.0, upper: null, lower_inclusive: false}
+  geo_leverage:
+    source: geo_leverage
+    bins: [empirical_quartiles, top_decile]
+  baseline_volume:
+    source: baseline_volume
+    bins: [empirical_terciles, top_decile]
+  missingness:
+    source: missingness
+    bins:
+      - {id: zero, lower: 0.0, upper: 0.0, lower_inclusive: true, upper_inclusive: true}
+      - {id: gt_0_to_1pct, lower: 0.0, upper: 0.01, lower_inclusive: false, upper_inclusive: true}
+      - {id: gt_1_to_3pct, lower: 0.01, upper: 0.03, lower_inclusive: false, upper_inclusive: true}
+      - {id: gt_3pct, lower: 0.03, upper: null, lower_inclusive: false}
+  predicted_risk: {source: predicted_risk, bins: empirical_deciles}
+  scenario: {source: scenario_id, bins: [S00, S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13]}
+  effect_relative_to_mde:
+    scope: new_operations_worlds_with_valid_design_mde_only
+    bins: [null, lt_0_5_mde, 0_5_to_lt_1_mde, 1_to_lt_1_5_mde, ge_1_5_mde]
+interactions:
+  - [structural_break, pre_r2]
+  - [structural_break, predicted_risk]
+  - [compound_ood, predicted_risk]
+  - [high_acf, baseline_volume]
+  - [donor_hhi, geo_leverage]
+  - [missingness, baseline_volume]
+  - [high_trend_gap, pre_r2]
+  - [high_predicted_risk, effect_relative_to_mde]

@@ -1,0 +1,15 @@
+{
+  "aurc": {
+    "aware_predicted_risk": 0.90788098690361,
+    "deterministic_random": 0.9661903373534783,
+    "pre_r2_inverse": 0.8960981097359848,
+    "pre_rmse": 0.8564529698838222
+  },
+  "calibration_intercept": 1.0652305631638124,
+  "calibration_slope": -0.15677104031427005,
+  "catastrophic_auroc": 0.36209553158705704,
+  "catastrophic_event_rate": 0.022,
+  "finite_risk_rows": 483,
+  "infinite_risk_rows": 17,
+  "spearman_predicted_vs_realized": 0.02394140391286669
+}

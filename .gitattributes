@@ -11,5 +11,6 @@
 
 # Preserve raw upstream/R terminal output byte-for-byte without whitespace fixes.
 evidence/geolift_compatibility/**/*.log -diff
+reports/POST_AUDIT_ANALYTICS_PLAN.md whitespace=-trailing-space
 
 *.ps1 text eol=crlf

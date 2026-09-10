@@ -1,0 +1,11 @@
+{
+  "extension_id": "POST-AUDIT-ANALYTICS-001",
+  "status": "PASS",
+  "evidence_class": ["POST_AUDIT_DERIVED", "POST_AUDIT_EXPLORATORY"],
+  "inputs": ["AWARE-GEO-e52a8660a97ef174 canonical final tables"],
+  "code_identity": "fce32650b34d198d2247787cc86ae529f1e94532+d9bdb2056cb23a11630d379eb864a27ef6b1dd7688b981f8a552579685019ad3",
+  "artifacts": ["evidence/post_audit_analytics/manifest.json", "reports/POST_AUDIT_ANALYTICS.md"],
+  "warnings": ["Exploratory only", "17 infinite risk values represent no eligible method", "historical MDE unavailable"],
+  "negative_findings": ["Risk ranking was weak", "S04/S13 undercoverage persists", "AWARE CVaR95 did not beat fixed DiD"],
+  "next_legal_action": "AUDIT_ONLY"
+}

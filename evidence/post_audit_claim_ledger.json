@@ -1,0 +1,26 @@
+[
+  {
+    "claim_id": "PA01",
+    "evidence_class": "POST_AUDIT_DERIVED",
+    "prohibited_stronger_claim": "Protocol 002 proved a causal subgroup mechanism.",
+    "source_table": "evidence/post_audit_analytics/fact_slice_result.parquet",
+    "statement": "Post-audit slicing retains severe S04 and S13 undercoverage.",
+    "status": "VERIFIED"
+  },
+  {
+    "claim_id": "PA02",
+    "evidence_class": "POST_AUDIT_EXPLORATORY",
+    "prohibited_stronger_claim": "Production risk calibration is established.",
+    "source_table": "evidence/post_audit_analytics/fact_risk_calibration.parquet",
+    "statement": "The frozen predicted-risk score weakly ranked realized failure post audit.",
+    "status": "VERIFIED"
+  },
+  {
+    "claim_id": "PA03",
+    "evidence_class": "POST_AUDIT_SIMULATED",
+    "prohibited_stronger_claim": "Historical S10 was corrected retroactively.",
+    "source_table": "evidence/compliance_semantics/fact_compliance_result.parquet",
+    "statement": "A separate compliance DGP distinguishes assignment ITT, delivered-dose response, and CACE.",
+    "status": "VERIFIED"
+  }
+]

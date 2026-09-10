@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "POST_AUDIT_ONLY_NO_RETROACTIVE_CONFIRMATION",
+  "extension_statuses": {
+    "COMPLIANCE-SEMANTICS-001": "PASS",
+    "OPERATIONS-STUDY-001": "PASS",
+    "POST-AUDIT-ANALYTICS-001": "PASS"
+  },
+  "figure_count": 21,
+  "protected_objects": {
+    "artifacts/freeze": {
+      "baseline_object": "e9781dd55394b77a776ec3a953ebbe09a3276057",
+      "head_object": "e9781dd55394b77a776ec3a953ebbe09a3276057",
+      "unchanged": true
+    },
+    "evidence/e20_audit.json": {
+      "baseline_object": "2a769424d5a3b648382390fced2025a4690b3a4e",
+      "head_object": "2a769424d5a3b648382390fced2025a4690b3a4e",
+      "unchanged": true
+    },
+    "evidence/final": {
+      "baseline_object": "a2f80a1dcd158ec4c8ee41e25e3d73bd9b9d162a",
+      "head_object": "a2f80a1dcd158ec4c8ee41e25e3d73bd9b9d162a",
+      "unchanged": true
+    },
+    "evidence/geolift_compatibility": {
+      "baseline_object": "69a24885dce989ce403fc355546761d76e09291f",
+      "head_object": "69a24885dce989ce403fc355546761d76e09291f",
+      "unchanged": true
+    },
+    "evidence/invalidated": {
+      "baseline_object": "705a7f7fd26b9cff04048c1c7f23a195228070e3",
+      "head_object": "705a7f7fd26b9cff04048c1c7f23a195228070e3",
+      "unchanged": true
+    },
+    "evidence/receipts": {
+      "baseline_object": "1fa51e2cecf7daba06184ee79c0964bc35f5e130",
+      "head_object": "1fa51e2cecf7daba06184ee79c0964bc35f5e130",
+      "unchanged": true
+    }
+  },
+  "status": "PASS",
+  "suite_id": "POST-AUDIT-SUITE-001",
+  "timestamp": "2026-09-10T07:06:56.406814+00:00",
+  "tool_summary": {
+    "geolift_market_rows": 80,
+    "geolift_power_rows": 8,
+    "geox_duration_gates": 12,
+    "geox_success": 12,
+    "mean_design_jaccard": 0.03643939393939394
+  }
+}

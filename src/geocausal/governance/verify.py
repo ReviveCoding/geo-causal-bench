@@ -84,7 +84,12 @@ def verify_evidence(root: Path) -> dict[str, Any]:
             sha256_file(root / path) == digest
             for path, digest in freeze["dataset_manifests"].items()
         ),
-        "figures": len(list((root / "reports" / "figures").glob("F*.png"))) == 20,
+        # Protocol 002 owns F01--F20. Separately labeled post-audit figures may
+        # coexist without invalidating the historical figure gate.
+        "figures": all(
+            (root / "reports" / "figures" / f"F{number:02d}.png").is_file()
+            for number in range(1, 21)
+        ),
         "invalid_protocol_preserved": (
             root / "evidence/invalidated/AWARE-GEO-c0b13ec88b725728/invalidation.json"
         ).exists(),

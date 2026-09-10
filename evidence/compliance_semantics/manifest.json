@@ -1,0 +1,15 @@
+{
+  "extension_id": "COMPLIANCE-SEMANTICS-001",
+  "files": {
+    "evidence/compliance_semantics/development_attempt_v1/fact_compliance_result.parquet": "0db95f325c4492b6ebdc86b2f84498a950d557607b5ddc1097d38865082653cc",
+    "evidence/compliance_semantics/development_attempt_v1/mini_freeze.json": "d4623074dd4213e91e39e813c4233801b2d23d55a5a0ec0e6bca1cb8b4fc9f71",
+    "evidence/compliance_semantics/development_attempt_v1/qualification.json": "051bea9c9a95b8bfaddbcc045fb021ec2ba474a84977e2f6939e124bf98fe1b0",
+    "evidence/compliance_semantics/development_attempt_v2/fact_compliance_result.parquet": "860bb9177f9a6e4fb244055de65b2ade6bab3d8edc792f4d6089c3b6ce42e502",
+    "evidence/compliance_semantics/development_attempt_v2/mini_freeze.json": "c9a9c43e7fa398fb0b9ae61fc076e81723f0010a71d1abb4bc1aaf3829fc616a",
+    "evidence/compliance_semantics/development_attempt_v2/qualification.json": "051bea9c9a95b8bfaddbcc045fb021ec2ba474a84977e2f6939e124bf98fe1b0",
+    "evidence/compliance_semantics/fact_compliance_result.parquet": "5ce597796f215833ff002f085a38429ea074b8f77b011d7bb70f7403441389d8",
+    "evidence/compliance_semantics/mini_freeze.json": "ecdca2bd5d5ca83103f23a12925473309d3563707ee323c1dcd5e964aca42842",
+    "evidence/compliance_semantics/qualification.json": "051bea9c9a95b8bfaddbcc045fb021ec2ba474a84977e2f6939e124bf98fe1b0"
+  },
+  "status": "PASS"
+}

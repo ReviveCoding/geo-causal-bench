@@ -1,0 +1,51 @@
+{
+  "extension_statuses": {
+    "COMPLIANCE-SEMANTICS-001": "PASS",
+    "OPERATIONS-STUDY-001": "PASS_WITH_GATED_TOOL_CELLS",
+    "POST-AUDIT-ANALYTICS-001": "PASS"
+  },
+  "figures": 19,
+  "historical_protocol_decision": "PROMOTE_AWARE_UNCHANGED",
+  "plan_hashes": {
+    "POST_AUDIT_ANALYTICS_PLAN.md": "7dbba26c96ec31a5d3e9862785ca2f2ac5819bc65cebbf716f0412d0d6aa18ec",
+    "analysis_plan.yaml": "9aae02d2ed093bb11431dc637a0c50c532e39b2ccf59bc2c6ae0f8b973d4cfa5",
+    "slice_registry.yaml": "bb89680cbab22224387c15d0ff7f2df44c4af764b798157e6c159cf53cc5f5f3"
+  },
+  "runtime_sec": 39.19251816099859,
+  "status": "PASS",
+  "suite_id": "POST-AUDIT-SUITE-001",
+  "summaries": {
+    "analytics": {
+      "aurc": {
+        "aware_predicted_risk": 0.90788098690361,
+        "deterministic_random": 0.9661903373534783,
+        "pre_r2_inverse": 0.8960981097359848,
+        "pre_rmse": 0.8564529698838222
+      },
+      "calibration_intercept": 1.0652305631638124,
+      "calibration_slope": -0.15677104031427005,
+      "catastrophic_auroc": 0.36209553158705704,
+      "catastrophic_event_rate": 0.022,
+      "finite_risk_rows": 483,
+      "infinite_risk_rows": 17,
+      "interactions": 37,
+      "rows": 1000,
+      "slices": 110,
+      "spearman_predicted_vs_realized": 0.02394140391286669
+    },
+    "compliance": {
+      "holdout_worlds": 500,
+      "mini_freeze_hash": "ecdca2bd5d5ca83103f23a12925473309d3563707ee323c1dcd5e964aca42842",
+      "qualification_worlds": 200,
+      "result_rows": 1500
+    },
+    "operations": {
+      "design_cells": 24,
+      "influence_rows": 454,
+      "power_cells": 96,
+      "quality_cells": 18,
+      "rolling_rows": 15,
+      "seasonal_worlds": 1080
+    }
+  }
+}

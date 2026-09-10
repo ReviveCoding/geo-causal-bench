@@ -1,0 +1,11 @@
+{
+  "extension_id": "OPERATIONS-STUDY-001",
+  "status": "PASS_WITH_GATED_CELLS",
+  "evidence_class": ["POST_AUDIT_SIMULATED", "POST_AUDIT_EXTERNAL", "MEASURED"],
+  "inputs": ["new seeds", "D1 GeoLift pretest", "D4 GeoX design panel"],
+  "code_identity": "fce32650b34d198d2247787cc86ae529f1e94532+899d04ef671bf27e8328b549a278a76cad654a9d97500a4c5cff4719855420d1+d7d750fbc4d911a4257af7694aee742d2294ba5dcd64a6c0bea5fb6864a92018",
+  "artifacts": ["evidence/operations/manifest.json", "reports/MDE_POWER_BUDGET_STUDY.md", "reports/GEOX_GEOLIFT_DESIGN_STUDY.md"],
+  "warnings": ["GeoX holdback budget warning retained", "tool-native metrics are not a common scale"],
+  "negative_findings": ["42/56-day GeoX cells gated by history", "low cross-tool treatment-set overlap", "shorter seasonal history undercovered"],
+  "next_legal_action": "AUDIT_ONLY"
+}

@@ -52,3 +52,11 @@ Most importantly, protocol 001 was invalidated: truth-derived materiality leaked
 into the action. A new identity, new worlds, and a pre-treatment committed
 threshold were required. This demonstrates why causal governance is part of the
 scientific method, not paperwork after modeling.
+
+## Post-Audit Industry Analytics Extensions
+
+Explain why aggregate coverage can hide S04/S13 conditional failure; why weak
+risk calibration limits human-review ranking; why threshold sweeps are policy
+sensitivity rather than retuning; why GeoX R2 and GeoLift imbalance are not a
+common scale; and why assignment ITT, dose response, and CACE are semantic
+estimands whose equality in some full-compliance worlds is not an error.

@@ -1,0 +1,23 @@
+{
+  "backend": "gpu",
+  "batch_worlds": 1024,
+  "claim_boundary": "GPU_KERNEL_QUALIFICATION_NOT_WHOLE_PIPELINE_SPEEDUP",
+  "compliance_kernel": {
+    "checksum": 37947.53125,
+    "first_sec": 1.6896423019934446,
+    "steady_sec": 0.00035168000613339245,
+    "worlds_per_sec": 2911737.8928035963
+  },
+  "devices": [
+    "cuda:0"
+  ],
+  "evidence_class": "MEASURED",
+  "extension_id": "OPERATIONS-STUDY-001/COMPLIANCE-SEMANTICS-001",
+  "nvidia_smi": "NVIDIA GeForce RTX 4090 Laptop GPU, 16376 MiB, 248 MiB, 610.62",
+  "seasonal_kernel": {
+    "checksum": 416096.3125,
+    "first_sec": 0.4820541299995966,
+    "steady_sec": 0.0017672800167929381,
+    "worlds_per_sec": 579421.4783564636
+  }
+}

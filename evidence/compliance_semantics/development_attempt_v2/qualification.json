@@ -1,0 +1,7 @@
+{
+  "extension_id": "COMPLIANCE-SEMANTICS-001",
+  "median_itt_absolute_error": 765.4008115961553,
+  "status": "PASS",
+  "truth_isolation": "PASS",
+  "worlds": 200
+}

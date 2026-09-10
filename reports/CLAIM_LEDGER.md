@@ -12,3 +12,8 @@
 | C08 | GeoX official example lift is 31,559.99 | EXTERNAL | AWARE-GEO-e52a8660a97ef174 | `fact_external_case.parquet D4` | VERIFIED | no known truth | estimator accuracy |
 | C09 | GeoLift is gated by 210/105 incompatibility | EXTERNAL | AWARE-GEO-e52a8660a97ef174 | `package_qualification.json` | VERIFIED | package incompatibility | scientific invalidity of GeoLift |
 | C10 | protocol 001 is invalid | DERIVED | AWARE-GEO-c0b13ec88b725728 | `evidence/invalidated/.../invalidation.json` | VERIFIED | truth-derived threshold | reuse of its favorable results |
+
+## Post-Audit Extension Claims
+
+Post-audit claim rows are stored in `evidence/post_audit_claim_ledger.json`.
+They are explicitly non-confirmatory and cannot revise Protocol 002.
