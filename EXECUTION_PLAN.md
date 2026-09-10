@@ -325,7 +325,12 @@ now constructs an in-memory read-only view from the clone-local immutable
 Parquet file, and a regression test proves it works with no persisted DuckDB
 database. No claim query, expected value, or scientific artifact changed.
 
-Next legal action: `REPEAT_CLEAN_CLONE_AFTER_CI_FIX`.
+The complete clean-clone contract then passed at fix commit `fa4c815d`: 53
+tests, 95% branch coverage, Ruff, strict mypy, build, isolated wheel/CLI,
+historical and post-audit verifiers, R integrity, Git integrity, and an empty
+clone worktree.
+
+Next legal action: `PUSH_CI_FIX_AND_REQUIRE_GREEN_RUN`.
 
 ## Context and Orientation
 

@@ -1,13 +1,13 @@
-source_head=7fcfd454db9721c6ed2cb443e3d949830729b08f
-clean_root=/tmp/geo-causal-bench-publication-clean-clones/run-njNFhI
-Cloning into '/tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo'...
+source_head=fa4c815d7137d8f55c1f5cd4c95071af47e7e436
+clean_root=/tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu
+Cloning into '/tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu/repo'...
 Using CPython 3.11.16
 Creating virtual environment at: .venv
-Resolved 95 packages in 10ms
-   Building geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo
-      Built geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo
-Prepared 1 package in 262ms
-Installed 57 packages in 117ms
+Resolved 95 packages in 9ms
+   Building geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu/repo
+      Built geo-causal-bench @ file:///tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu/repo
+Prepared 1 package in 584ms
+Installed 57 packages in 170ms
  + annotated-doc==0.0.5
  + annotated-types==0.8.0
  + build==1.6.0
@@ -18,7 +18,7 @@ Installed 57 packages in 117ms
  + duckdb==1.5.5
  + fonttools==4.64.0
  + formulaic==1.2.2
- + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo)
+ + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu/repo)
  + hatchling==1.32.0
  + hypothesis==6.168.0
  + iniconfig==2.3.0
@@ -68,8 +68,8 @@ Installed 57 packages in 117ms
 73 files already formatted
 All checks passed!
 Success: no issues found in 32 source files
-....................................................                     [100%]
-52 passed in 5.07s
+.....................................................                    [100%]
+53 passed in 4.80s
 Name                                     Stmts   Miss Branch BrPart  Cover   Missing
 ------------------------------------------------------------------------------------
 src/geocausal/__init__.py                    6      2      0      0    67%   7-8
@@ -87,14 +87,14 @@ src/geocausal/diagnostics/features.py       40      0      0      0   100%
 src/geocausal/estimators/__init__.py         2      0      0      0   100%
 src/geocausal/estimators/reference.py       82      2      2      0    98%   145-146
 src/geocausal/governance/__init__.py         2      0      0      0   100%
-src/geocausal/governance/verify.py          36      1      8      1    95%   31
+src/geocausal/governance/verify.py          37      1      8      1    96%   35
 src/geocausal/post_audit/__init__.py         2      0      0      0   100%
 src/geocausal/post_audit/compliance.py      52      2      4      2    93%   39, 49
 src/geocausal/post_audit/influence.py       18      2      6      2    83%   20, 26
 src/geocausal/simulation/__init__.py         2      0      0      0   100%
 src/geocausal/types.py                      27      0      0      0   100%
 ------------------------------------------------------------------------------------
-TOTAL                                      616     24    100     13    95%
+TOTAL                                      617     24    100     13    95%
 * Creating isolated environment: venv+pip...
 * Installing packages in isolated environment:
   - hatchling>=1.27
@@ -115,8 +115,8 @@ Using CPython 3.11.16
 Creating virtual environment at: .wheel-smoke
 Activate with: source .wheel-smoke/bin/activate
 Using Python 3.11.16 environment at: .wheel-smoke
-Resolved 38 packages in 252ms
-Installed 38 packages in 77ms
+Resolved 38 packages in 11ms
+Installed 38 packages in 87ms
  + annotated-doc==0.0.5
  + annotated-types==0.8.0
  + cloudpickle==3.1.2
@@ -157,9 +157,9 @@ Installed 38 packages in 77ms
  + wrapt==2.4.0
 Using Python 3.11.16 environment at: .wheel-smoke
 Resolved 1 package in 2ms
-Prepared 1 package in 11ms
+Prepared 1 package in 9ms
 Installed 1 package in 3ms
- + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-njNFhI/repo/dist/geo_causal_bench-0.1.0-py3-none-any.whl)
+ + geo-causal-bench==0.1.0 (from file:///tmp/geo-causal-bench-publication-clean-clones/run-CTrTbu/repo/dist/geo_causal_bench-0.1.0-py3-none-any.whl)
 installed wheel smoke: geo-causal-bench 0.1.0
                                                                                 
  Usage: geocausal [OPTIONS] COMMAND [ARGS]...                                   
