@@ -127,10 +127,10 @@ def main() -> None:
     ]
     largest_sha, largest_size, largest_paths = max(blobs, key=lambda item: item[1])
     privacy: dict[str, list[str]] = {}
-    for label, needle in {
-        "windows_user_path": rb"C:\\Users\\bjw-0",
-        "wsl_mount_path": rb"/mnt/c/Users/bjw-0",
-        "linux_home_path": rb"/home/bjw-0",
+    for label, pattern in {
+        "windows_user_path": rb"[A-Za-z]:\\Users\\[^\\/\s]+",
+        "wsl_mount_path": rb"/mnt/[a-z]/Users/[^/\s]+",
+        "linux_home_path": rb"/home/[^/\s]+",
     }.items():
         privacy[label] = sorted(
             {
@@ -139,8 +139,11 @@ def main() -> None:
                 if metadata[sha][0] == "blob"
                 for path in objects[sha]
                 if sha in current
-                and needle
-                in subprocess.check_output(["git", "cat-file", "blob", sha], cwd=ROOT)
+                and path != SELF
+                and re.search(
+                    pattern,
+                    subprocess.check_output(["git", "cat-file", "blob", sha], cwd=ROOT),
+                )
             }
         )
 

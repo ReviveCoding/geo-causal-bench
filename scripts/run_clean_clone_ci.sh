@@ -3,7 +3,7 @@ set -euo pipefail
 
 source_root="$(git rev-parse --show-toplevel)"
 source "$source_root/.codex-wsl-env.sh"
-clean_parent="$GEOCAUSAL_SCRATCH/publication-clean-clones"
+clean_parent="/tmp/geo-causal-bench-publication-clean-clones"
 mkdir -p "$clean_parent"
 clean_root="$(mktemp -d "$clean_parent/run-XXXXXX")"
 clone_root="$clean_root/repo"
