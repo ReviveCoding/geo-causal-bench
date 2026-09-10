@@ -1,0 +1,56 @@
+{
+  "audit_id": "GITHUB-PUBLICATION-001",
+  "timestamp_utc": "2026-09-10T16:13:44.6343037Z",
+  "repository_url": "https://github.com/ReviveCoding/geo-causal-bench",
+  "visibility": "PUBLIC",
+  "default_branch": "main",
+  "branches": ["main"],
+  "publication_commit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+  "local_main_sha_at_audit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+  "remote_main_sha_at_audit": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+  "sha_match_at_audit": true,
+  "ci": {
+    "workflow": ".github/workflows/ci.yml",
+    "workflow_name": "CI",
+    "run_id": 34500511959,
+    "run_url": "https://github.com/ReviveCoding/geo-causal-bench/actions/runs/34500511959",
+    "head_sha": "d5157741ce83f26e4fac76027b8a2b83406b666c",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {"id": 102949827392, "name": "Evidence and claim contracts", "conclusion": "success"},
+      {"id": 102949827542, "name": "Python quality, tests, and package", "conclusion": "success"},
+      {"id": 102949827638, "name": "R syntax and compatibility-pin integrity", "conclusion": "success"}
+    ]
+  },
+  "published_scientific_tags": [
+    "aware-geo-freeze-c0b13ec88b725728",
+    "aware-geo-freeze-e52a8660a97ef174"
+  ],
+  "security_audit": {
+    "status": "PASS",
+    "scope": "CURRENT_TREE_AND_ALL_REACHABLE_GIT_OBJECTS",
+    "secret_findings": 0,
+    "secret_bypass": false,
+    "force_push": false
+  },
+  "largest_git_object": {
+    "sha": "fedaaf41b6d5e00e8ea71bc5205ea8b5f2b60548",
+    "path": "evidence/qualification/initial/fact_null_result.parquet",
+    "bytes": 438843,
+    "under_github_100mb_limit": true
+  },
+  "protected_object_invariance": {
+    "artifacts/freeze": "e9781dd55394b77a776ec3a953ebbe09a3276057",
+    "evidence/final": "a2f80a1dcd158ec4c8ee41e25e3d73bd9b9d162a",
+    "evidence/e20_audit.json": "2a769424d5a3b648382390fced2025a4690b3a4e",
+    "geolift_compatibility": "69a24885dce989ce403fc355546761d76e09291f",
+    "post_audit_suite_audit": "0ba561c138bcd5b4b2ca1f445bd0f18d8cb685e3",
+    "unchanged": true
+  },
+  "readme_badge": "PASS",
+  "data_license_audit": "PASS",
+  "clean_clone_ci": "PASS",
+  "containing_commit_policy": "The commit introducing this audit must pass CI before closure.",
+  "status": "PASS_PENDING_CONTAINING_COMMIT_CI"
+}

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -27,3 +28,15 @@ def test_readme_badge_targets_ci_workflow() -> None:
         "https://github.com/ReviveCoding/geo-causal-bench/actions/workflows/ci.yml"
     )
     assert expected in readme
+
+
+def test_publication_audit_contract() -> None:
+    audit = json.loads(
+        (ROOT / "evidence/github_publication_audit.json").read_text(encoding="utf-8")
+    )
+    assert audit["repository_url"] == "https://github.com/ReviveCoding/geo-causal-bench"
+    assert audit["visibility"] == "PUBLIC"
+    assert audit["default_branch"] == "main"
+    assert audit["ci"]["conclusion"] == "success"
+    assert audit["security_audit"]["status"] == "PASS"
+    assert audit["protected_object_invariance"]["unchanged"] is True

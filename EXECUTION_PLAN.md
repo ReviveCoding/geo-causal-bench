@@ -312,10 +312,12 @@ inputs.
   `7fcfd454db9721c6ed2cb443e3d949830729b08f`: 52 tests, 95% branch coverage,
   Ruff, strict mypy, build, installed wheel/CLI, both evidence verifiers, the
   13-file R integrity gate, `git fsck`, and `git diff --check`.
-- [ ] Create the public repository, push `main` and the two intentional
-  annotated scientific tags, and require green remote CI.
-- [ ] Commit the remote publication audit, push it normally, require green CI
-  on that exact final commit, and verify local/remote SHA equality.
+- [x] Created <https://github.com/ReviveCoding/geo-causal-bench> as PUBLIC with
+  only `main`; pushed the two intentional annotated scientific tags normally.
+- [x] Remote CI run `34500511959` passed all Python/package, evidence/claim, and
+  R-integrity jobs on exact SHA `d5157741ce83f26e4fac76027b8a2b83406b666c`.
+- [ ] Commit this remote publication audit, push it normally, require green CI
+  on that exact final containing commit, and verify local/remote SHA equality.
 
 Remote CI run `34499991813` exposed a clean-clone hermeticity defect: persisted
 DuckDB views referenced the original WSL path. The local clean clone had masked
@@ -330,7 +332,7 @@ tests, 95% branch coverage, Ruff, strict mypy, build, isolated wheel/CLI,
 historical and post-audit verifiers, R integrity, Git integrity, and an empty
 clone worktree.
 
-Next legal action: `PUSH_CI_FIX_AND_REQUIRE_GREEN_RUN`.
+Next legal action: `COMMIT_PUBLICATION_AUDIT_AND_REQUIRE_FINAL_GREEN_RUN`.
 
 ## Context and Orientation
 
