@@ -8,7 +8,7 @@ from typing import Annotated
 
 import typer
 
-from geocausal.artifacts import canonical_hash
+from geocausal.artifacts import canonical_hash, sha256_file
 from geocausal.config import ExperimentConfig
 from geocausal.simulation.ablations import run_ablations
 from geocausal.simulation.benchmark import (
@@ -30,6 +30,50 @@ app = typer.Typer(no_args_is_help=True)
 
 def _root() -> Path:
     return Path.cwd().resolve()
+
+
+def _receipt_summary(root: Path) -> dict[str, object]:
+    """Verify the durable receipt chain and identify the next legal transition."""
+    receipt_root = root / "evidence" / "receipts"
+    statuses: dict[str, str] = {}
+    previous_hash = "ROOT"
+    next_transition = "E00"
+    for index in range(21):
+        phase = f"E{index:02d}"
+        path = receipt_root / f"{phase}.json"
+        if not path.exists():
+            return {
+                "receipt_chain_valid": True,
+                "phases": statuses,
+                "next": phase,
+            }
+        receipt = json.loads(path.read_text(encoding="utf-8"))
+        if receipt.get("phase") != phase:
+            raise ValueError(f"Receipt phase mismatch in {path}")
+        recorded_previous = receipt.get("input_hashes", {}).get(
+            "previous_receipt_or_root"
+        )
+        if recorded_previous != previous_hash:
+            raise ValueError(f"Receipt chain mismatch at {phase}")
+        for relative_path, expected_hash in receipt.get("artifacts", {}).items():
+            artifact = root / relative_path
+            if not artifact.exists() or sha256_file(artifact) != expected_hash:
+                raise ValueError(f"Artifact verification failed at {phase}: {artifact}")
+        statuses[phase] = str(receipt.get("status", "UNKNOWN"))
+        previous_hash = sha256_file(path)
+        next_transition = str(receipt.get("next_legal_transition", "UNKNOWN"))
+
+    optional = receipt_root / "E21.json"
+    if optional.exists():
+        receipt = json.loads(optional.read_text(encoding="utf-8"))
+        if receipt.get("input_hashes", {}).get("E20") != previous_hash:
+            raise ValueError("Receipt chain mismatch at E21")
+        statuses["E21"] = str(receipt.get("status", "UNKNOWN"))
+    return {
+        "receipt_chain_valid": True,
+        "phases": statuses,
+        "next": next_transition,
+    }
 
 
 @app.command()
@@ -141,13 +185,15 @@ def pipeline(
         bool, typer.Option("--resume", help="Reuse verified receipts.")
     ] = False,
 ) -> None:
-    """Resume pre-freeze stages; protected E14 remains an explicit command."""
+    """Verify receipts and report the next legal resumable transition."""
     root = _root()
-    state = {
+    state: dict[str, object] = {
         "resume": resume,
         "root": str(root),
-        "next": "Use phase-specific commands; E14 requires a verified freeze.",
     }
+    state.update(_receipt_summary(root))
+    if state["next"] == "AUDIT_COMPLETE":
+        state["message"] = "E00-E20 are complete; protected E14 will not rerun."
     typer.echo(json.dumps(state, indent=2))
 
 

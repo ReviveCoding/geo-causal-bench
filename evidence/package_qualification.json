@@ -17,7 +17,7 @@
       "status": "PASS",
       "failure_category": null,
       "failure_reason": null,
-      "runtime_sec": 0.2608
+      "runtime_sec": 0.2654
     },
     {
       "method_id": "did_mpdta_dynamic_att",
@@ -27,7 +27,7 @@
       "status": "PASS",
       "failure_category": null,
       "failure_reason": null,
-      "runtime_sec": 0.0707
+      "runtime_sec": 0.0855
     },
     {
       "method_id": "sunab_official_base_stagg_att",
@@ -37,7 +37,7 @@
       "status": "PASS",
       "failure_category": null,
       "failure_reason": null,
-      "runtime_sec": 0.1842
+      "runtime_sec": 0.1649
     },
     {
       "method_id": "augsynth_kansas_scm",
@@ -47,7 +47,7 @@
       "status": "PASS",
       "failure_category": null,
       "failure_reason": null,
-      "runtime_sec": 17.2367
+      "runtime_sec": 19.7273
     },
     {
       "method_id": "causalimpact_official_toy",
@@ -57,7 +57,7 @@
       "status": "PASS",
       "failure_category": null,
       "failure_reason": null,
-      "runtime_sec": 0.4567
+      "runtime_sec": 0.3765
     },
     {
       "method_id": "geolift_official_example",
@@ -67,7 +67,7 @@
       "status": "GATED",
       "failure_category": "PACKAGE_INCOMPATIBILITY",
       "failure_reason": "Tibble columns must have compatible sizes.\n• Size 105: Existing data.\n• Size 210: Column `Yobs`.\nℹ Only values of size one are recycled.",
-      "runtime_sec": 18.6989
+      "runtime_sec": 14.3335
     }
   ],
   "all_pass": false

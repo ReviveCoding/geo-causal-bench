@@ -1,0 +1,101 @@
+55 files already formatted
+All checks passed!
+Success: no issues found in 29 source files
+......................................                                   [100%]
+38 passed in 6.40s
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+src/geocausal/__init__.py                   6      2      0      0    67%   7-8
+src/geocausal/artifacts.py                 52      4      2      0    93%   19, 72-74
+src/geocausal/aware/__init__.py             2      0      0      0   100%
+src/geocausal/aware/selector.py            55      5     12      5    85%   54, 70, 77, 85, 90
+src/geocausal/config.py                    31      1      0      0    97%   42
+src/geocausal/decision/__init__.py          2      0      0      0   100%
+src/geocausal/decision/rules.py            36      0     16      0   100%
+src/geocausal/dgp/__init__.py               3      0      0      0   100%
+src/geocausal/dgp/observational.py         51      0     16      0   100%
+src/geocausal/dgp/randomized.py           113      5     34      3    95%   59-60, 64-65, 83
+src/geocausal/diagnostics/__init__.py       2      0      0      0   100%
+src/geocausal/diagnostics/features.py      40      0      0      0   100%
+src/geocausal/estimators/__init__.py        2      0      0      0   100%
+src/geocausal/estimators/reference.py      82      2      2      0    98%   145-146
+src/geocausal/governance/__init__.py        2      0      0      0   100%
+src/geocausal/governance/verify.py         36      1      8      1    95%   31
+src/geocausal/simulation/__init__.py        2      0      0      0   100%
+src/geocausal/types.py                     27      0      0      0   100%
+-----------------------------------------------------------------------------------
+TOTAL                                     544     20     90      9    95%
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling>=1.27
+* Getting build dependencies for sdist...
+* Installed build dependency versions:
+  - hatchling==1.32.0
+* Building sdist...
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - hatchling>=1.27
+* Getting build dependencies for wheel...
+* Installed build dependency versions:
+  - hatchling==1.32.0
+* Building wheel...
+Successfully built geo_causal_bench-0.1.0.tar.gz and geo_causal_bench-0.1.0-py3-none-any.whl
+Processing ./dist/geo_causal_bench-0.1.0-py3-none-any.whl
+Installing collected packages: geo-causal-bench
+  Attempting uninstall: geo-causal-bench
+    Found existing installation: geo-causal-bench 0.1.0
+    Not uninstalling geo-causal-bench at /home/bjw-0/.cache/geo-causal-bench/envs/core/lib/python3.11/site-packages, outside environment /home/bjw-0/.cache/geo-causal-bench/wheel-smoke
+    Can't uninstall 'geo-causal-bench'. No files were found to uninstall.
+Successfully installed geo-causal-bench-0.1.0
+0.1.0 Typer
+{
+  "all_pass": true,
+  "claims": {
+    "all_pass": true,
+    "claims": [
+      {
+        "actual": 1.0,
+        "claim_id": "C01",
+        "passed": true
+      },
+      {
+        "actual": -0.0021039603960396054,
+        "claim_id": "C02",
+        "passed": true
+      },
+      {
+        "actual": 0.9089026915113871,
+        "claim_id": "C03",
+        "passed": true
+      },
+      {
+        "actual": 483,
+        "claim_id": "C04",
+        "passed": true
+      },
+      {
+        "actual": 24.839449072096272,
+        "claim_id": "C05",
+        "passed": true
+      }
+    ]
+  },
+  "evidence": {
+    "all_pass": true,
+    "checks": {
+      "dataset_manifests": true,
+      "figures": true,
+      "freeze_hash": true,
+      "invalid_protocol_preserved": true,
+      "locks": true,
+      "protocol_match": true,
+      "scoring_code_hash": true,
+      "selector_hash": true,
+      "truth_identity_match": true,
+      "truth_ledger_count": true,
+      "truth_ledger_unique": true
+    },
+    "protocol_id": "AWARE-GEO-e52a8660a97ef174"
+  }
+}
