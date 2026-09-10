@@ -3,7 +3,7 @@
 From WSL Ubuntu 22.04:
 
 ```bash
-cd /mnt/c/Users/bjw-0/Downloads/geo-causal-bench
+cd <repo-root>
 source .codex-wsl-env.sh
 python -m geocausal.cli pipeline --resume
 ruff format --check src tests scripts
@@ -11,7 +11,7 @@ ruff check src tests scripts
 mypy src
 pytest -q
 python -m build
-python scripts/verify_evidence.py
+python scripts/verify_evidence.py --read-only
 ```
 
 `E14` refuses to run when canonical final evidence exists. To reproduce final

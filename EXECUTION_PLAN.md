@@ -286,6 +286,36 @@ its separate 500-world holdout with zero-dose estimation correctly marked
 unidentified. These results are exploratory, simulated, external, or measured
 post-audit evidence and do not revise `PROMOTE_AWARE`.
 
+### Final GitHub publication and CI closure
+
+Publication identity: `GITHUB-PUBLICATION-001`. This stage changes only
+publication, portability, CI, and publication-audit surfaces. Protocol 002,
+`GEOLIFT-COMPAT-001`, and `POST-AUDIT-SUITE-001` remain immutable scientific
+inputs.
+
+- [x] Starting `main` was clean at
+  `77db4176869a5f0de1dde48d85a47309b5aa9238`; protected Protocol 002 and
+  GeoLift compatibility Git objects matched their audited identities.
+- [x] GitHub CLI 2.95.0 is authenticated as `ReviveCoding`; the target
+  repository did not exist at the pre-creation check.
+- [x] The initial all-reachable-object safety scan found no high-confidence
+  secret and no sensitive credential filename. Largest reachable blob was
+  438,843 bytes, far below GitHub's 100 MB enforcement threshold.
+- [x] Tracked row-level raw/staged/curated/external data and downloaded package
+  source trees are absent. Source manifests retain MIT, GPL-3, and Apache-2.0
+  provenance. The existing project MIT declaration now has a matching license
+  file; third-party terms remain separate.
+- [x] CI action identities were resolved from authoritative GitHub repositories:
+  checkout v7.0.1 `3d3c42e...`, setup-python v7.0.0 `5fda3b9...`, setup-uv
+  v10.0.1 `20cfd1b...`, and setup-r v2 `465b7d8...`.
+- [ ] Run the exact CPU CI contract in a clean local clone, commit the
+  publication safeguards, create the public repository, push `main` and the two
+  intentional annotated scientific tags, and require green remote CI.
+- [ ] Commit the remote publication audit, push it normally, require green CI
+  on that exact final commit, and verify local/remote SHA equality.
+
+Next legal action: `CLEAN_CLONE_CI_BEFORE_PUBLICATION`.
+
 ## Context and Orientation
 
 The canonical Windows repository is

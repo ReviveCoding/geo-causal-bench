@@ -1,0 +1,101 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python quality, tests, and package
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out complete audit history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+      - name: Set up uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.12"
+          enable-cache: true
+      - name: Install locked CPU dependencies
+        run: uv sync --locked --python 3.11 --extra dev
+      - name: Format, lint, and type check
+        run: |
+          uv run ruff format --check src tests scripts
+          uv run ruff check src tests scripts
+          uv run mypy src
+      - name: Test with branch coverage
+        env:
+          PYTHONHASHSEED: "0"
+          OMP_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
+        run: |
+          uv run coverage erase
+          uv run coverage run --branch -m pytest -q
+          uv run coverage report --fail-under=80 --show-missing
+      - name: Build distributions
+        run: uv run python -m build
+      - name: Smoke-test installed wheel outside source tree
+        run: |
+          uv export --locked --no-dev --no-emit-project --output-file build/runtime-requirements.txt
+          uv venv --python 3.11 .wheel-smoke
+          uv pip sync --python .wheel-smoke/bin/python build/runtime-requirements.txt
+          uv pip install --python .wheel-smoke/bin/python --no-deps dist/*.whl
+          smoke_dir="$(mktemp -d)"
+          cd "$smoke_dir"
+          "$GITHUB_WORKSPACE/.wheel-smoke/bin/python" "$GITHUB_WORKSPACE/scripts/wheel_smoke.py"
+          "$GITHUB_WORKSPACE/.wheel-smoke/bin/geocausal" --help
+
+  evidence:
+    name: Evidence and claim contracts
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out complete audit history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.11"
+      - name: Set up uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "0.12.12"
+          enable-cache: true
+      - name: Install locked CPU dependencies
+        run: uv sync --locked --python 3.11 --extra dev
+      - name: Verify immutable and post-audit evidence read-only
+        run: |
+          uv run python scripts/verify_evidence.py --read-only
+          uv run python scripts/verify_post_audit_suite.py
+
+  r-integrity:
+    name: R syntax and compatibility-pin integrity
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out complete audit history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Set up R
+        uses: r-lib/actions/setup-r@465b7d8e732ca3921382b1674c59bada9cbf3399 # v2
+        with:
+          r-version: "4.5.3"
+          use-public-rspm: false
+      - name: Parse R scripts and verify exact upstream pins
+        run: Rscript scripts/verify_r_integrity.R
