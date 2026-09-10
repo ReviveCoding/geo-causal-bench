@@ -1,0 +1,70 @@
+{
+  "allowed_next_transition": "E14_CANONICAL_EVALUATION_ONCE",
+  "claim_ledger_schema_version": 1,
+  "configs": {
+    "configs/frozen/experiment.yaml": "1b67f795986f096bb3755d5792d787c224b4f31b6889fc7c6b89559d8ba978b3",
+    "configs/frozen/protocol.yaml": "fdcc20adede2bc78587bd9bac2d5728f3724fa748ad9bff86b0e7ecd67b5ad63",
+    "configs/gates/development.yaml": "3b2b23988979f500c6025e2b36b6a011f41e8b7d7d780b6e1e794ec33c22d928",
+    "configs/selectors/loss.yaml": "15e7b11a3db030c0ed61d4b864354a3855911b577d59144628d049556b9ff808"
+  },
+  "dataset_manifests": {
+    "data/manifests/D1_PRE.json": "3e862e52e415ad5361dd105007957108c652bbe71e4d0da46032ab1f5f446ccd",
+    "data/manifests/D1_TEST.json": "8663143ecf2692e43b243c567c0d760874e6024d26e5f33aafaf5b54754c2e40",
+    "data/manifests/D2.json": "b2a5f85efc6b558dd120821ec8d10080631dc6ef96aedf23ec3a519e77e3b612",
+    "data/manifests/D3.json": "6de6ebb46f39a866a0ea8a783362a7c76f1a7ded0e93f1b613e39ba9ff116a99",
+    "data/manifests/D4_ANALYSIS_MULTI.json": "ca604ebf67f8b71f65ab526522fbcc752b32a156e05c8610b03e86ce359377b4",
+    "data/manifests/D4_ANALYSIS_SINGLE.json": "bf103e262ec4239bde78ab08c4188b75016df5f5e838c7fa9c36971448fc7930",
+    "data/manifests/D4_DESIGN_MULTI.json": "3ae06692e624211087f5afb1fe312fb97a3e9198f11517e924d09016faf6bef7",
+    "data/manifests/D4_DESIGN_SINGLE.json": "68076617d7aed11b2311fd79d6c029e65433015e4c74fd6fa54365d309321f6b"
+  },
+  "dgp_hashes": {
+    "src/geocausal/dgp/observational.py": "7364f038dc839f69c8ed636b947c0bc83816cb1cf260e7726fa856a0311815fb",
+    "src/geocausal/dgp/randomized.py": "c365bab914bd27c24f235cea9ee3d9b50e38355e8efd57f773c72edb0443b7ed"
+  },
+  "diagnostic_feature_schema": [
+    "pre_r2",
+    "pre_rmse",
+    "trend_gap",
+    "acf_score",
+    "placebo_bias",
+    "placebo_fpr",
+    "placebo_coverage",
+    "donor_hhi",
+    "effective_donors",
+    "missingness",
+    "geo_leverage",
+    "method_is_tbr",
+    "method_is_did",
+    "method_is_ridge_sc",
+    "method_is_simplex_sc"
+  ],
+  "final_seed_set_canonical_hash": "b4614cd9b7e9057c9e16f6c9ff80ff0d5ba45b410b11f869467125c499174cbe",
+  "final_world_count": 500,
+  "final_world_identity_manifest_hash": "57cad9901d4489b1a5d8ac5aadfedcfd4d7ca3bae07b856fb88e922544614c84",
+  "freeze_created_utc": "2026-09-10T02:12:58.372158+00:00",
+  "geox_package": "meridian-geox",
+  "geox_source_commit": "0a1dd0f730ab8170e4e46646f3bf69400d57d021",
+  "geox_version": "1.0.1",
+  "hypotheses_and_multiplicity": "configs/frozen/protocol.yaml",
+  "locks": {
+    "renv.lock": "58f679aa37453b8bdb5444894569fcab86ef3a707c9eacfcb5d3819a2449c24d",
+    "uv.lock": "28669fd725c77de6f6ab0637064a6d7ebcf9559cc266ca2d4fdb5ef1ffcb4fea"
+  },
+  "package_versions": {
+    "CausalImpact": "1.3.0",
+    "GeoLift": "2.7.5",
+    "augsynth": "0.2.0",
+    "did": "2.5.1",
+    "fixest": "0.14.2",
+    "synthdid": "0.0.9"
+  },
+  "protected_seed_file_sha256": "14d539235121ed4928d2fdddc49f52ea7a1ff21a879a6b8057f16e5296a97d27",
+  "protocol_id": "AWARE-GEO-e52a8660a97ef174",
+  "r_version": "4.5.3",
+  "report_schema_version": 1,
+  "scoring_code_hash": "a2d6b38694e2346538b4ff7cb09ad4bb13f0f08f4cc33ae6d26f6f7ddcd0e956",
+  "selector_artifact": "artifacts/aware/selector_development.json",
+  "selector_hash": "b2d93d9fea774d9ca4639ba87e62032dbe83c88395b24a826c51c58b64f178c1",
+  "source_commit": "002944c9945f9be49433b0fb9dd8e2fa0a97bd68",
+  "source_tree_hash": "4cf3dd199939d804a4aaeabb2e277fdc6d8e1493"
+}
