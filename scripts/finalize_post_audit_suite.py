@@ -416,7 +416,7 @@ validation or new Protocol 002 confirmation.
 """,
     )
     append_once(
-        ROOT / "reports/INTERVIEW_STUDY_GUIDE.md",
+        ROOT / "reports/DIAGNOSTIC_INTERPRETATION.md",
         "## Post-Audit Industry Analytics Extensions",
         """## Post-Audit Industry Analytics Extensions
 

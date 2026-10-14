@@ -1,4 +1,4 @@
-# Interview Study Guide
+# Diagnostics and Interpretation
 
 ## Core identification
 
